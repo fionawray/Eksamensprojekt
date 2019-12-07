@@ -60,6 +60,7 @@ body {
 @media only screen and (min-width: 600px) {
     .header .logo {
         width: 10rem;
+        padding-left: 2.5rem;
     }
 }
 
@@ -183,22 +184,35 @@ body {
 
 /*Video*/
 
-#home_video {
-    width: 100%;
-    height: auto;
-}
-
 #video {
     max-width: 100%;
     height: auto;
 }
+
+@media only screen and (min-width: 600px) {
+    #splash_video {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #splash_video {
+        width: 100%;
+    }
+}
+
+
 
 /*Artwork*/
 
 #artwork h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    padding-left: 2rem;
+    color: #626262;
+    padding: 1rem;
+    margin: 1rem;
+}
 }
 
 .row {
