@@ -42,7 +42,7 @@ body {
 
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color: #172334;
+    background-color: #9cb7dd;
 }
 
 .header .logo {
@@ -185,11 +185,54 @@ body {
 /*Video*/
 
 #home_video {
-    width: auto;
-    height: 10px;
+    width: 100%;
+    height: auto;
 }
 
 #video {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+/*Exhibititon*/
+
+#exhibition h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.sectionwrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+
+.sectionwrapper .col {
+    flex-basis: 300px;
+    background: #dddddd;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+#exhibition h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#exhibition p {
+    color: #434b59;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.4;
+}
+
+#exhibition .icons {
+    font-size: 60px;
+    color: black;
+    text-align: center;
 }
