@@ -214,14 +214,11 @@ body {
     margin: 1rem;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.column img {
-    width: 100px;
+.col img {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: auto;
 }
 
 /*Exhibititon*/
@@ -246,13 +243,13 @@ body {
 
 .sectionwrapper .col {
     flex-basis: 300px;
-    background: #dddddd;
     margin: 1rem;
     padding: 2rem;
+    height: 260px;
+    overflow: hidden;
 }
 
-
-#exhibition h2 {
+.sectionwrapper .col #exhibition h2 {
     text-align: center;
     color: #626262;
     font-family: 'Montserrat', sans-serif;
