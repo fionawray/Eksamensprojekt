@@ -213,7 +213,6 @@ body {
     padding: 1rem;
     margin: 1rem;
 }
-}
 
 .row {
     display: flex;
@@ -221,15 +220,8 @@ body {
     justify-content: space-around;
 }
 
-.column {
-    float: left;
-    padding: 10px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.column img {
+    width: 100px;
 }
 
 /*Exhibititon*/
