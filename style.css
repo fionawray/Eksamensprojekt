@@ -226,12 +226,19 @@ body {
     font-size: 4.7rem;
 }
 
+#artwork p {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #626262;
+}
+
 @media only screen and (max-width: 600px) {
     #artwork h1 {
         text-align: center;
     }
 }
-
 
 .col img {
     position: relative;
@@ -258,6 +265,7 @@ body {
     flex-direction: row;
     justify-content: center;
     background-color: white;
+    padding-bottom: 5.5rem;
 }
 
 .sectionwrapper .col {
