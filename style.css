@@ -198,7 +198,9 @@ body {
 
 @media only screen and (max-width: 600px) {
     #splash_video {
-        width: 100%;
+        width: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
@@ -213,6 +215,15 @@ body {
     color: #626262;
     padding-top: 3rem;
     margin: 1.5rem;
+}
+
+#artwork h2 {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 4.7rem;
 }
 
 @media only screen and (max-width: 600px) {
