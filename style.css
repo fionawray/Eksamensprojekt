@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+}
+
+/*
+
 * {
     margin: 0 auto;
     padding: 0;
@@ -12,14 +18,10 @@
     --broedtekst-farve: #626262;
 }
 
-body {
-    margin: 0;
-}
-
 h1 {
     font-family: var(--overskrift-h1);
-    text-align: center;
     letter-spacing: 1.5vw;
+    padding-left: 20rem;
 }
 
 h2 {
@@ -27,10 +29,8 @@ h2 {
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
-    /*
     letter-spacing: 1.3vw;
     font-size: 12vw;
-*/
 }
 
 p {
@@ -38,6 +38,7 @@ p {
     color: var(--broedtekst-farve);
     line-height: 1.4;
 }
+*/
 
 /*MENU*/
 .header .logo {
@@ -217,52 +218,6 @@ p {
     .header .menu-icon {
         display: none;
     }
-}
-
-/*Footer*/
-footer {
-    width: 100%;
-    padding: 4vw;
-}
-
-.footerinfo {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    padding: 4vw 0;
-    box-shadow: 0 -5px 5px -5px grey;
-}
-
-.someindhold {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.facesymbol {
-    cursor: pointer;
-    background-image: url(img/facebook_symbol-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4.4vw;
-    width: 2.5vw;
-}
-
-.instasymbol {
-    cursor: pointer;
-    background-image: url(img/insta_symbol-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4vw;
-    width: 4vw;
-}
-
-.pinsymbol {
-    cursor: pointer;
-    background-image: url(img/pinterest-logo-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4vw;
-    width: 4vw;
 }
 
 /*Video*/
@@ -500,4 +455,50 @@ h3 {
 
 .sectionwrapper_about .img_col {
     height: 260px;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    padding: 4vw;
+}
+
+.footerinfo {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 4vw 0;
+    box-shadow: 0 -5px 5px -5px grey;
+}
+
+.someindhold {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.facesymbol {
+    cursor: pointer;
+    background-image: url(img/facebook_symbol-footer.svg);
+    background-size: 100%;
+    margin: 3vw;
+    height: 4.4vw;
+    width: 2.5vw;
+}
+
+.instasymbol {
+    cursor: pointer;
+    background-image: url(img/insta_symbol-footer.svg);
+    background-size: 100%;
+    margin: 3vw;
+    height: 4vw;
+    width: 4vw;
+}
+
+.pinsymbol {
+    cursor: pointer;
+    background-image: url(img/pinterest-logo-footer.svg);
+    background-size: 100%;
+    margin: 3vw;
+    height: 4vw;
+    width: 4vw;
 }
