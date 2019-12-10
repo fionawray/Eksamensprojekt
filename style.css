@@ -2,7 +2,9 @@ body {
     margin: 0;
 }
 
-/*
+html {
+    overflow-x: hidden;
+}
 
 * {
     margin: 0 auto;
@@ -11,6 +13,8 @@ body {
     line-height: inherit;
 }
 
+
+/*
 :root {
     --overskrift-h1: 'futura-pt', sans-serif;
     --overskrift-h2: 'linotype-didot', serif;
@@ -18,17 +22,13 @@ body {
     --broedtekst-farve: #626262;
 }
 
-<<<<<<< HEAD
-html {
-    overflow-x: hidden;
-}
+
 
 body {
     margin: 0;
 }
 
-=======
->>>>>>> origin/master
+
 h1 {
     font-family: var(--overskrift-h1);
     letter-spacing: 1.5vw;
