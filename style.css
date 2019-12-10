@@ -16,7 +16,6 @@ html {
 */
 
 
-/*
 :root {
     --overskrift-h1: 'futura-pt', sans-serif;
     --overskrift-h2: 'linotype-didot', serif;
@@ -25,12 +24,7 @@ html {
 }
 
 
-
-body {
-    margin: 0;
-}
-
-
+/*
 h1 {
     font-family: var(--overskrift-h1);
     letter-spacing: 1.5vw;
@@ -259,7 +253,7 @@ p {
 
 /*Artwork front page*/
 #artwork h1 {
-    font-family: futura-pt, sans-serif;
+    font-family: var(--overskrift-h1);
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.3rem;
