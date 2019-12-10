@@ -191,8 +191,8 @@ body {
 
 @media only screen and (min-width: 600px) {
     #splash_video {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
 }
 
@@ -207,7 +207,6 @@ body {
 
 
 /*Artwork front page*/
-
 #artwork h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
@@ -216,7 +215,7 @@ body {
     text-transform: uppercase;
     color: #626262;
     padding-top: 3rem;
-    padding-left: 2.5rem;
+    padding-left: 6.5rem;
     margin: 1.5rem;
 
 }
@@ -287,7 +286,7 @@ body {
     text-transform: uppercase;
     color: #626262;
     padding-top: 4rem;
-    padding-left: 2.5rem;
+    padding-left: 6.5rem;
     margin: 1.5rem;
 
 }
@@ -327,14 +326,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 4.3rem;
-
 }
 
 h3 {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
-    font-style: normal;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.4rem;
     color: #626262;
 }
 
@@ -355,11 +353,44 @@ h3 {
     font-family: 'Work Sans', sans-serif;
     border: none;
     color: #ffffff;
-    padding: 12px 32px;
-    text-align: center;
+    padding: 12px 34px;
     text-decoration: none;
+    text-align: center;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+/*About*/
+
+
+#about h1 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #626262;
+    padding-top: 3rem;
+    padding-left: 6.5rem;
+    margin: 1.5rem;
+
+}
+
+#about h2 {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 4.3rem;
+}
+
+#about p {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #626262;
 }
