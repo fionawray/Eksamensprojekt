@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+}
+
+/*
+
 * {
     margin: 0 auto;
     padding: 0;
@@ -12,14 +18,10 @@
     --broedtekst-farve: #626262;
 }
 
-body {
-    margin: 0;
-}
-
 h1 {
     font-family: var(--overskrift-h1);
-    text-align: center;
     letter-spacing: 1.5vw;
+    padding-left: 20rem;
 }
 
 h2 {
@@ -27,10 +29,8 @@ h2 {
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
-    /*
     letter-spacing: 1.3vw;
     font-size: 12vw;
-*/
 }
 
 p {
@@ -38,6 +38,7 @@ p {
     color: var(--broedtekst-farve);
     line-height: 1.4;
 }
+*/
 
 /*MENU*/
 .header .logo {
