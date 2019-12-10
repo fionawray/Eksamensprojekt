@@ -2,8 +2,6 @@ body {
     margin: 0;
 }
 
-/*
-
 * {
     margin: 0 auto;
     padding: 0;
@@ -11,6 +9,7 @@ body {
     line-height: inherit;
 }
 
+/*
 :root {
     --overskrift-h1: 'futura-pt', sans-serif;
     --overskrift-h2: 'linotype-didot', serif;
