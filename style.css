@@ -2,6 +2,13 @@ body {
     margin: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+/*
+
+>>>>>>> origin/master
 * {
     margin: 0 auto;
     padding: 0;
@@ -17,17 +24,13 @@ body {
     --broedtekst-farve: #626262;
 }
 
-<<<<<<< HEAD
-html {
-    overflow-x: hidden;
-}
+
 
 body {
     margin: 0;
 }
 
-=======
->>>>>>> origin/master
+
 h1 {
     font-family: var(--overskrift-h1);
     letter-spacing: 1.5vw;
