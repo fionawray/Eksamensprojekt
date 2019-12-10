@@ -1,6 +1,17 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+}
+
+:root {}
+
 body {
     margin: 0;
 }
+
+p {}
 
 /*MENU*/
 .header .logo {
