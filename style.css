@@ -18,6 +18,17 @@ body {
     --broedtekst-farve: #626262;
 }
 
+<<<<<<< HEAD
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+=======
+>>>>>>> origin/master
 h1 {
     font-family: var(--overskrift-h1);
     letter-spacing: 1.5vw;
