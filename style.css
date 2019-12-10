@@ -219,52 +219,6 @@ p {
     }
 }
 
-/*Footer*/
-footer {
-    width: 100%;
-    padding: 4vw;
-}
-
-.footerinfo {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    padding: 4vw 0;
-    box-shadow: 0 -5px 5px -5px grey;
-}
-
-.someindhold {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.facesymbol {
-    cursor: pointer;
-    background-image: url(img/facebook_symbol-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4.4vw;
-    width: 2.5vw;
-}
-
-.instasymbol {
-    cursor: pointer;
-    background-image: url(img/insta_symbol-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4vw;
-    width: 4vw;
-}
-
-.pinsymbol {
-    cursor: pointer;
-    background-image: url(img/pinterest-logo-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4vw;
-    width: 4vw;
-}
-
 /*Video*/
 
 #video {
@@ -500,4 +454,50 @@ h3 {
 
 .sectionwrapper_about .img_col {
     height: 260px;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    padding: 4vw;
+}
+
+.footerinfo {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 4vw 0;
+    box-shadow: 0 -5px 5px -5px grey;
+}
+
+.someindhold {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.facesymbol {
+    cursor: pointer;
+    background-image: url(img/facebook_symbol-footer.svg);
+    background-size: 100%;
+    margin: 3vw;
+    height: 4.4vw;
+    width: 2.5vw;
+}
+
+.instasymbol {
+    cursor: pointer;
+    background-image: url(img/insta_symbol-footer.svg);
+    background-size: 100%;
+    margin: 3vw;
+    height: 4vw;
+    width: 4vw;
+}
+
+.pinsymbol {
+    cursor: pointer;
+    background-image: url(img/pinterest-logo-footer.svg);
+    background-size: 100%;
+    margin: 3vw;
+    height: 4vw;
+    width: 4vw;
 }
