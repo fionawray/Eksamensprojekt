@@ -6,8 +6,6 @@ html {
     overflow-x: hidden;
 }
 
-/*
-
 * {
     margin: 0 auto;
     padding: 0;
@@ -15,6 +13,8 @@ html {
     line-height: inherit;
 }
 
+
+/*
 :root {
     --overskrift-h1: 'futura-pt', sans-serif;
     --overskrift-h2: 'linotype-didot', serif;
