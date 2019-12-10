@@ -5,13 +5,39 @@
     line-height: inherit;
 }
 
-:root {}
+:root {
+    --overskrift-h1: 'futura-pt', sans-serif;
+    --overskrift-h2: 'linotype-didot', serif;
+    --broedtekst-skrift: 'Work Sans', sans-serif;
+    --broedtekst-farve: #626262;
+}
 
 body {
     margin: 0;
 }
 
-p {}
+h1 {
+    font-family: var(--overskrift-h1);
+    text-align: center;
+    letter-spacing: 1.5vw;
+}
+
+h2 {
+    font-family: var(--overskrift-h2);
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    /*
+    letter-spacing: 1.3vw;
+    font-size: 12vw;
+*/
+}
+
+p {
+    font-family: var(--broedtekst-skrift);
+    color: var(--broedtekst-farve);
+    line-height: 1.4;
+}
 
 /*MENU*/
 .header .logo {
@@ -196,12 +222,15 @@ p {}
 /*Footer*/
 footer {
     width: 100%;
+    padding: 4vw;
 }
 
 .footerinfo {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    padding: 4vw 0;
+    box-shadow: 0 -5px 5px -5px grey;
 }
 
 .someindhold {
