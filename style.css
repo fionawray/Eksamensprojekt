@@ -451,6 +451,33 @@ h3 {
     transition-timing-function: ease-in-out;
 }
 
+
+/*SINGLE VIEW OF ONE COLLECTION*/
+.onecol_list {
+    margin: 20vw 3vw;
+}
+
+.apainting {
+    margin: 3vw;
+}
+
+.apainting h2 {
+    font-family: var(--overskrift-h2);
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 5vw;
+    padding: 1vw 0;
+
+}
+
+.apainting h2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /*CONTACT*/
 
 /* Style inputs */
