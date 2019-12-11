@@ -442,7 +442,7 @@ h3 {
 
 /*COLLECTIONS*/
 #contentwp {
-    margin: 10vw 6vw;
+    margin: 20vw 6vw;
 }
 
 #contentwp h1 {
@@ -470,6 +470,7 @@ h3 {
     font-style: normal;
     line-height: 2.8vh;
     color: #626262;
+    padding: 2vw 0;
 }
 
 .acollection {
@@ -510,13 +511,8 @@ h3 {
 /*CONTACT*/
 
 .txt_contact {
-    color: #626262;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
+    color: aqua;
 }
-
-
 
 
 /*FOOTER*/
