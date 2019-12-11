@@ -418,6 +418,8 @@ h3 {
 
 .acollection {
     margin: 4.5vw;
+    display: grid;
+    grid-gap: 2vw;
 }
 
 .seemorebtn {
@@ -452,6 +454,7 @@ h3 {
 }
 
 
+
 /*SINGLE VIEW OF ONE COLLECTION*/
 .onecol_list {
     margin: 20vw 3vw;
@@ -477,6 +480,44 @@ h3 {
     cursor: pointer;
     text-decoration: underline;
 }
+
+/*hvis skærmen er min. 800px og større --- TABLET og andre*/
+@media screen and (min-width: 800px) {
+    #contentwp {
+        margin: 15vw 5vw;
+    }
+
+    .seemorebtn p,
+    .long-arrow-white {
+        font-size: 1.3vw;
+    }
+
+    .seemorebtn {
+        width: 14vw;
+        padding: 0;
+    }
+
+    .seemorebtn:hover {
+        width: 20vw;
+    }
+
+    .describe {
+        line-height: 6vh;
+    }
+
+    .acollection h2 {
+        font-size: 6vw;
+        padding: 2vw;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .acollection {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2vw 1vw;
+    }
+}
+
 
 /*CONTACT*/
 
@@ -519,8 +560,6 @@ input[type=submit]:hover {
     margin-top: 6px;
     padding: 20px;
 }
-
-
 
 /* Clear floats after the columns */
 .row:after {
