@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Baskervville:400i|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/adt6mug.css">
 </head>
+
 
 <body>
 
@@ -25,8 +27,39 @@
         </ul>
     </header>
 
+
+    <section id="contact_page">
+        <div class="container">
+            <div class="txt_contact">
+                <h2>Contact Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="/w3images/map.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                    <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                        </select>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer></footer>
     <!--Hent footer fra script.js-->
     <script src="script.js"></script>
-    <script></script>
 </body></html>

@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header class="header">
         <a href="index.html" class="logo">
             <img src="" alt="">Krista Werdelin</a>
@@ -26,24 +25,67 @@
         </ul>
     </header>
 
-    <footer></footer>
+    <main id="contentwp">
+        <h1>Collections</h1>
+        <section class="contentlist">
+        </section>
+    </main>
+
+    <template id="collections">
+        <section class="acollection">
+            <h2></h2>
+            <img class="motiongraphic" src="" alt="">
+            <p class="describe"></p>
+            <button class="seemorebtn">
+                <p>See more</p><span class="long-arrow-white">&#10230;</span>
+            </button>
+        </section>
+    </template>
+
     <!--Hent footer fra script.js-->
+    <footer></footer>
     <script src="script.js"></script>
+
+    <!--Jscript til at hente indhold fra WP-->
     <script>
         // data fra WP: alle samlinger
-        const url = "http://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/collections";
-        // data fra WP: Black poetry
-        const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=6";
-        // data fra WP: Citylife
-        const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=4";
-        // data fra WP: Dot on Canvas
-        const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=3";
-        // data fra WP: Landscapes
-        const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=2";
-        // data fra WP: Paperwork
-        const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=5";
+        const urlCollections = "http://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/collections";
+        //        // data fra WP: Black poetry
+        // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=6";
+        // // data fra WP: Citylife
+        // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=4";
+        // // data fra WP: Dot on Canvas
+        // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=3";
+        // // data fra WP: Landscapes
+        // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=2";
+        // // data fra WP: Paperwork
+        // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=5";
 
-        let filtre;
+        let collections;
         document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentAlleCols();
+        }
+
+        async function hentAlleCols() {
+            const response = await fetch(urlCollections);
+            collections = await response.json();
+            visCollections();
+        }
+
+        function visCollections() {
+            const pattern = document.querySelector("template");
+            const list = document.querySelector(".contentlist");
+
+            collections.forEach(collection => {
+                const clone = pattern.cloneNode(true).content;
+                clone.querySelector("h2").textContent = collection.name;
+                clone.querySelector(".motiongraphic").src = collection.motion_graphic.guid;
+                clone.querySelector(".describe").textContent = collection.description;
+                list.appendChild(clone);
+
+            })
+        }
     </script>
 </body></html>
