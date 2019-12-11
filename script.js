@@ -10,7 +10,6 @@ function sidenVises() {
     console.log(sidenVises);
     getAbout();
     getAboutCitation();
-    hentFooter();
 }
 
 async function getAbout() {
@@ -26,9 +25,4 @@ async function getAboutCitation() {
 }
 
 
-async function hentFooter() {
-    const footer = await fetch("inc/footer.html");
-    const including = await footer.text();
-    console.log(footer);
-    document.querySelector("footer").innerHTML = including;
-}
+
