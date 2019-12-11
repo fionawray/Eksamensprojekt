@@ -23,30 +23,6 @@ html {
     --broedtekst-farve: #626262;
 }
 
-
-/*
-h1 {
-    font-family: var(--overskrift-h1);
-    letter-spacing: 1.5vw;
-    padding-left: 20rem;
-}
-
-h2 {
-    font-family: var(--overskrift-h2);
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 1.3vw;
-    font-size: 12vw;
-}
-
-p {
-    font-family: var(--broedtekst-skrift);
-    color: var(--broedtekst-farve);
-    line-height: 1.4;
-}
-*/
-
 /*MENU*/
 .header .logo {
     height: 100%;
@@ -248,8 +224,6 @@ p {
         padding-right: 1.5rem;
     }
 }
-
-
 
 /*Artwork front page*/
 #artwork h1 {
