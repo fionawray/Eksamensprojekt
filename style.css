@@ -30,6 +30,10 @@ html {
     overflow-x: hidden;
 }
 
+img {
+    width: 100%;
+}
+
 /*MENU og HEADER*/
 >>>>>>> origin/master
 .header .logo {
@@ -44,6 +48,8 @@ html {
 
 .header {
     background-color: #ffffff;
+    top: 0;
+    /*behold menuen altid på toppen, når siden ikke kører lodret*/
     position: fixed;
     width: 100%;
     z-index: 30;
@@ -442,6 +448,44 @@ h3 {
 .sectionwrapper_about .img_col {
     height: 260px;
 }
+
+
+/*COLLECTIONS*/
+#contentwp {
+    margin: 10vw 6vw;
+}
+
+#contentwp h1 {
+    font-family: var(--overskrift-h1);
+    letter-spacing: 0.5vw;
+    font-weight: 300;
+    font-style: normal;
+    color: #626262;
+}
+
+.acollection h2 {
+    font-family: var(--overskrift-h2);
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 8vw;
+    padding: 2vw 0;
+}
+
+#contentwp p {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.8vh;
+    color: #626262;
+}
+
+.acollection {
+    margin: 4.5vw;
+}
+
 
 
 /*FOOTER*/

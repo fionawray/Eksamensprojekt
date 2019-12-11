@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header class="header">
         <a href="index.html" class="logo">
             <img src="" alt="">Krista Werdelin</a>
@@ -26,8 +25,8 @@
         </ul>
     </header>
 
-    <main>
-        <h1></h1>
+    <main id="contentwp">
+        <h1>Collections</h1>
         <section class="contentlist">
         </section>
     </main>
@@ -35,7 +34,7 @@
     <template id="collections">
         <section class="acollection">
             <h2></h2>
-            <img class="motiongraphic " src="" alt="">
+            <img class="motiongraphic" src="" alt="">
             <p class="describe"></p>
             <div class="seemorebtn"></div>
         </section>
@@ -80,7 +79,7 @@
             collections.forEach(collection => {
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("h2").textContent = collection.name;
-                clone.querySelector(".motiongraphic").src = collection.motion_graphic;
+                clone.querySelector(".motiongraphic").src = collection.motion_graphic.guid;
                 clone.querySelector(".describe").textContent = collection.description;
                 list.appendChild(clone);
 
