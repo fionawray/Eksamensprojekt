@@ -26,9 +26,8 @@
     </header>
 
     <main id="singlecollection">
-        <h1></h1>
-        <p></p>
-        <section class="singleColview">
+        <h1 class="title"></h1>
+        <section class="onecol_list">
             <!--
                 <h1></h1>
                 Gallery-grid/masonry gallery
@@ -42,7 +41,6 @@
         <section class="apainting">
             <img class="onepainting" src="" alt="">
             <h2></h2>
-            <p class="size"></p>
         </section>
     </template>
 
@@ -52,8 +50,9 @@
 
     <script>
         const urlCol = new URLSearchParams(window.location.search);
+        const urlTitle = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/collections";
         let id = urlCol.get("id");
-        let filter = "all";
+        let title;
         let collections = [];
         let paintings = [];
         console.log(id);
@@ -61,38 +60,43 @@
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
-            hentJson();
-            hentFooter();
-            visOnecollection();
+            getJson();
+            getFooter();
+            //            getTitle();
+            showAllpaintings();
         }
-        async function hentJson() {
+        async function getJson() {
             const response = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=" + id);
-            console.log(response);
             paintings = await response.json();
-            console.log(paintings);
+            showAllpaintings();
         }
-        async function hentFooter() {
+        async function getFooter() {
             const footer = await fetch("inc/footer.html");
             const including = await footer.text();
             console.log(footer);
             document.querySelector("footer").innerHTML = including;
         }
+        //        async function getTitle() {
+        //            const colTitle = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/collections");
+        //            title = await colTitle.json();
+        //            console.log(colTitle);
+        //            showTitle();
+        //        }
+        //
+        //        function showTitle() {
+        //            document.querySelector(".title").innerHTML = title.id;
+        //        }
 
-        function visOnecollection() {
+        function showAllpaintings() {
             const pattern = document.querySelector("template");
-            const gridlist = document.querySelector(".singleColview");
+            const gridlist = document.querySelector(".onecol_list");
 
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
-                clone.querySelector(".size").textContent = painting.size;
                 gridlist.appendChild(clone);
-
             })
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
