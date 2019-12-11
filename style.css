@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
     --overskrift-h1: 'futura-pt', sans-serif;
     --overskrift-h2: 'linotype-didot', serif;
@@ -13,6 +14,8 @@
     line-height: inherit;
 }
 
+=======
+>>>>>>> origin/master
 body {
     margin: 0;
 }
@@ -21,15 +24,23 @@ html {
     overflow-x: hidden;
 }
 
-img {
-    width: 100%;
+:root {
+    --overskrift-h1: 'futura-pt', sans-serif;
+    --overskrift-h2: 'linotype-didot', serif;
+    --broedtekst-skrift: 'futura-pt', sans-serif;
+    --broedtekst-farve: #626262;
 }
 
+<<<<<<< HEAD
 button {
     border: none;
 }
 
 /*MENU og HEADER*/
+=======
+/*MENU*/
+
+>>>>>>> origin/master
 .header .logo {
     height: 100%;
     width: auto;
@@ -228,7 +239,7 @@ button {
     }
 }
 
-/*Artwork section on front page*/
+/*Artwork front page*/
 #artwork h1 {
     font-family: var(--overskrift-h1);
     font-weight: 300;
@@ -476,6 +487,7 @@ h3 {
     margin: 4.5vw;
 }
 
+<<<<<<< HEAD
 .seemorebtn {
     display: flex;
     flex-flow: row wrap;
@@ -505,6 +517,12 @@ h3 {
 .seemorebtn:hover {
     width: 40vw;
     transition-timing-function: ease-in-out;
+=======
+/*CONTACT*/
+
+.txt_contact {
+    color: aqua;
+>>>>>>> origin/master
 }
 
 
