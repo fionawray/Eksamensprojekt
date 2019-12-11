@@ -24,7 +24,71 @@
             <li><a href="contact.html">contact</a></li>
         </ul>
     </header>
+
+    <main id="singlecollection">
+        <h1></h1>
+        <p></p>
+        <section class="singleColview">
+            <!--
+                <h1></h1>
+                Gallery-grid/masonry gallery
+                <div class="gridcontainer">
+                </div>
+-->
+        </section>
+    </main>
+
+    <template id="paintings">
+        <section class="apainting">
+            <img class="onepainting" src="" alt="">
+            <h2></h2>
+        </section>
+    </template>
+
     <footer></footer>
-    <!--Hent footer fra script.js-->
-    <script src="script.js"></script>
-</body></html>
+    <!--Hent footer fra inc mappen-->
+
+
+    <script>
+        const urlCol = new URLSearchParams(window.location.search);
+        let id = urlCol.get("id");
+        let filter = "all";
+        let paintings;
+        console.log(id);
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+            hentFooter();
+            visOnecollection();
+        }
+        async function hentJson() {
+            const response = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections");
+            console.log(response);
+            paintings = await response.json();
+            console.log(paintings);
+        }
+        async function hentFooter() {
+            const footer = await fetch("inc/footer.html");
+            const including = await footer.text();
+            console.log(footer);
+            document.querySelector("footer").innerHTML = including;
+        }
+
+        function visOnecollection() {
+            const pattern = document.querySelector("template");
+            const gridlist = document.querySelector(".singleColview");
+
+            paintings.forEach(painting => {
+                const clone = pattern.cloneNode(true).content;
+                clone.querySelector("img").src = painting.picture.guid;
+                clone.querySelector("h2").textContent = painting.title.rendered;
+                gridlist.appendChild(clone);
+            })
+        }
+
+    </script>
+</body>
+
+</html>

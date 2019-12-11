@@ -42,9 +42,9 @@
         </section>
     </template>
 
-    <!--Hent footer fra script.js-->
+    <!--Hent footer fra footer.html-->
     <footer></footer>
-    <script src="script.js"></script>
+
 
     <!--Jscript til at hente indhold fra WP-->
     <script>
@@ -62,6 +62,7 @@
         // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=5";
 
         let collections;
+        let filter = "all";
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -91,10 +92,29 @@
                 clone.querySelector(".describe").textContent = collection.description;
                 list.appendChild(clone);
                 list.lastElementChild.addEventListener("click", () => {
-                    location.href = 'singleCollection.html?id=' + collection.id;
+                    location.href = "singleCollection.html?id=" + collection.id;
                 });
-
             })
+
         }
+
+        //        function clickCollection() {
+        // /*Vælg alle elementer med class .box og for hver box/knap i boxen tilføj en klik-eventlistener. */
+        // document.querySelectorAll(".seemorebtn").forEach(collectioBtn => {
+        // collectioBtn.addEventListener("click", whichCollection);
+        // })
+        // }
+        //
+        // function whichCollection() {
+        // /*Sæt variablen 'lister' til den værdi data-atributten har på den specifikke box, man klikker på*/
+        // location.href
+        // playListeValgt();
+        // }
+        //
+        // function playListeValgt() {
+        // /*Indsæt værdien af data-atributten i url og før over på denne side*/
+        // location.href = `playlist.html?bruger=${brugerID}&brugernavn=${brugerNavn}`;
+        //
+        // }
     </script>
 </body></html>
