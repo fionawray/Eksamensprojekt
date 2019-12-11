@@ -464,8 +464,12 @@ h3 {
 /*CONTACT*/
 
 .txt_contact {
-    color: aqua;
+    color: #626262;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
 }
+
 
 
 
