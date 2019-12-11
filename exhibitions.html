@@ -33,8 +33,11 @@
     <template id="exhibitions">
         <section class="anexhibition">
             <h2></h2>
-            <img class="motiongraphic" src="" alt="">
-            <p class="datetime"> </p>
+            <p class="when"> </p>
+            <p class="where"></p>
+            <p class="until"></p>
+            <img class="poster" src="" alt="">
+            <p class="about_event"></p>
         </section>
     </template>
 
@@ -75,49 +78,18 @@
             exhibitions.forEach(exhibition => {
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("h2").textContent = exhibition.name;
+                clone.querySelector(".poster").src = exhibition.billede.guid;
+                clone.querySelector(".when").textContent = `When: ${exhibition.when} til ${exhibition.until}`;
+                clone.querySelector(".where").textContent = `Where: ${exhibition.where}`;
+                clone.querySelector(".about_event").textContent = exhibition.aboutevent;
                 list.appendChild(clone);
             })
-
         }
+
     </script>
-</body></html>
+</body>
 
+<style>
+</style>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
