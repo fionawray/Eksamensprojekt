@@ -92,7 +92,7 @@
                 clone.querySelector(".describe").textContent = collection.description;
                 list.appendChild(clone);
                 list.lastElementChild.addEventListener("click", () => {
-                    location.href = "singleCollection.html?id=" + collection.id;
+                    location.href = "singleCollection.html?painting?collections=" + collection.id;
                 });
             })
 
