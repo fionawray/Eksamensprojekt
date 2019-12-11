@@ -6,12 +6,14 @@
     --nav-skrift: 'montserrat', sans-serif;
 }
 
+/*
 * {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     line-height: inherit;
 }
+*/
 
 body {
     margin: 0;
