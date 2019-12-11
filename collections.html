@@ -66,8 +66,14 @@
 
         function start() {
             hentAlleCols();
+            hentFooter();
         }
-
+        async function hentFooter() {
+            const footer = await fetch("inc/footer.html");
+            const including = await footer.text();
+            console.log(footer);
+            document.querySelector("footer").innerHTML = including;
+        }
         async function hentAlleCols() {
             const response = await fetch(urlCollections);
             collections = await response.json();
@@ -84,6 +90,9 @@
                 clone.querySelector(".motiongraphic").src = collection.motion_graphic.guid;
                 clone.querySelector(".describe").textContent = collection.description;
                 list.appendChild(clone);
+                list.lastElementChild.addEventListener("click", () => {
+                    location.href = 'singleCollection.html?id=' + collection.id;
+                });
 
             })
         }
