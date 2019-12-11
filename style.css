@@ -1,21 +1,18 @@
-body {
-    margin: 0;
+:root {
+    --overskrift-h1: 'futura-pt', sans-serif;
+    --overskrift-h2: 'linotype-didot', serif;
+    --broedtekst-skrift: 'futura-pt', sans-serif;
+    --broedtekst-farve: #626262;
 }
 
-html {
-    overflow-x: hidden;
-}
-
-/*
 * {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     line-height: inherit;
 }
-*/
 
-
+<<<<<<< HEAD
 :root {
     --overskrift-h1: 'futura-pt', sans-serif;
     --overskrift-h2: 'linotype-didot', serif;
@@ -24,6 +21,17 @@ html {
 }
 
 /*MENU*/
+=======
+body {
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/*MENU og HEADER*/
+>>>>>>> origin/master
 .header .logo {
     height: 100%;
     width: auto;
@@ -105,7 +113,6 @@ html {
 }
 
 /* menu */
-
 .header .menu {
     clear: both;
     max-height: 0;
@@ -114,7 +121,6 @@ html {
 }
 
 /* menu icon */
-
 .header .menu-icon {
     cursor: pointer;
     display: inline-block;
@@ -155,7 +161,6 @@ html {
 }
 
 /* menu btn */
-
 .header .menu-btn {
     display: none;
 }
@@ -181,8 +186,6 @@ html {
     top: 0;
 }
 
-
-
 @media (min-width: 48em) {
     .header li {
         float: left;
@@ -203,8 +206,8 @@ html {
     }
 }
 
-/*Video*/
 
+/*VIDEO*/
 #video {
     max-width: 100%;
     height: auto;
@@ -225,7 +228,11 @@ html {
     }
 }
 
+<<<<<<< HEAD
 /*Artwork front page*/
+=======
+/*Artwork section on front page*/
+>>>>>>> origin/master
 #artwork h1 {
     font-family: var(--overskrift-h1);
     font-weight: 300;
@@ -283,7 +290,6 @@ html {
 }
 
 /*Position fixed picture*/
-
 #pic {
     width: 100%;
     height: 500px;
@@ -295,7 +301,8 @@ html {
     background-attachment: fixed;
 }
 
-/*Exhibititon front page*/
+
+/*Exhibititon section on front page*/
 
 #exhibition h1 {
     font-family: futura-pt, sans-serif;
@@ -307,7 +314,6 @@ html {
     padding-top: 4rem;
     padding-left: 6.5rem;
     margin: 1.5rem;
-
 }
 
 .sectionwrapper {
@@ -381,9 +387,8 @@ h3 {
     cursor: pointer;
 }
 
-/*About*/
 
-
+/*ABOUT*/
 #about h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
@@ -438,10 +443,16 @@ h3 {
     height: 260px;
 }
 
-/*Footer*/
+
+/*FOOTER*/
 footer {
     width: 100%;
     padding: 4vw;
+}
+
+footer p {
+    font-family: var(--broedtekst-skrift);
+    font-weight: 400;
 }
 
 .footerinfo {
