@@ -1,3 +1,18 @@
+:root {
+    --overskrift-h1: 'futura-pt', sans-serif;
+    --overskrift-h2: 'linotype-didot', serif;
+    --broedtekst-skrift: 'futura-pt', sans-serif;
+    --broedtekst-farve: #626262;
+    --nav-skrift: 'montserrat', sans-serif;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+}
+
 body {
     margin: 0;
 }
@@ -6,15 +21,15 @@ html {
     overflow-x: hidden;
 }
 
-:root {
-    --overskrift-h1: 'futura-pt', sans-serif;
-    --overskrift-h2: 'linotype-didot', serif;
-    --broedtekst-skrift: 'futura-pt', sans-serif;
-    --broedtekst-farve: #626262;
+button {
+    border: none;
 }
 
-/*MENU*/
+img {
+    width: 100%;
+}
 
+/*MENU og HEADER*/
 .header .logo {
     height: 100%;
     width: auto;
@@ -449,7 +464,7 @@ h3 {
     padding: 2vw 0;
 }
 
-#contentwp p {
+.describe {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -459,6 +474,37 @@ h3 {
 
 .acollection {
     margin: 4.5vw;
+}
+
+.seemorebtn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #b4a9a9;
+    width: 25vw;
+    padding: 1vw;
+    margin: 2.8vw 0;
+    transition: width 0.8s;
+}
+
+.seemorebtn p,
+.long-arrow-white {
+    text-align: center;
+    font-family: var(--nav-skrift);
+    font-size: 2.8vw;
+    color: white;
+    padding: 1.3vw;
+    transition: width 0.8s;
+}
+
+.seemorebtn img {
+    height: 1.8vw;
+    width: 10vw;
+}
+
+.seemorebtn:hover {
+    width: 40vw;
+    transition-timing-function: ease-in-out;
 }
 
 /*CONTACT*/
