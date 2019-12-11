@@ -1,8 +1,8 @@
 const aboutUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/7";
 
-const aboutCitationUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/about-citation/"
+const aboutCitationUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/305";
 
-const aboutUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/about-2-pt/"
+const aboutPt2Url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/307";
 
 window.addEventListener("DOMContentLoaded", sidenVises);
 
@@ -24,7 +24,6 @@ async function getAboutCitation() {
     parsedResult = await aboutCitation.json();
     document.querySelector(".aboutCitation").innerHTML = parsedResult.content.rendered;
 }
-
 
 async function hentFooter() {
     const footer = await fetch("inc/footer.html");
