@@ -383,63 +383,6 @@ h3 {
     cursor: pointer;
 }
 
-
-/*ABOUT*/
-#about h1 {
-    font-family: futura-pt, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    color: #626262;
-    padding-top: 3rem;
-    padding-left: 6.5rem;
-    margin: 1.5rem;
-}
-
-#about h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
-}
-
-#about p {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.6rem;
-    color: #626262;
-}
-
-.col_citation {}
-
-.sectionwrapper_about {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-
-.sectionwrapper_about .col {
-    flex-basis: 400px;
-    margin: 1rem;
-    padding: 3rem;
-    padding-bottom: 0rem;
-    overflow: hidden;
-}
-
-.sectionwrapper_about .img_col {
-    height: 260px;
-}
-
-
 /*COLLECTIONS*/
 #contentwp {
     margin: 20vw 6vw;

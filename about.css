@@ -199,7 +199,7 @@
 
 /*Artwork front page*/
 #artwork h1 {
-    font-family: futura-pt, sans-serif;
+    font-family: var(--overskrift-h1);
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.3rem;
@@ -254,34 +254,40 @@
     height: auto;
 }
 
-/*Position fixed picture*/
-#pic {
-    width: 100%;
-    height: 500px;
-}
-
-.position_fixed {
-    background-image: url(img/2018_DARE_TO_BE_DELICATE_100X120CM.jpeg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-
-/*Exhibititon section on front page*/
-
-#exhibition h1 {
+/*ABOUT*/
+#about h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     color: #626262;
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-left: 6.5rem;
     margin: 1.5rem;
 }
 
-.sectionwrapper {
+#about h2 {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-size: 4.3rem;
+}
+
+#about p {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #626262;
+}
+
+.col_citation {}
+
+.sectionwrapper_about {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -289,65 +295,15 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    padding-bottom: .5rem;
 }
 
-.sectionwrapper .col {
-    flex-basis: 300px;
+.sectionwrapper_about .col {
+    flex-basis: 400px;
     margin: 1rem;
-    padding: 0.8rem;
+    padding-bottom: 0rem;
     overflow: hidden;
 }
 
-.sectionwrapper .img_col {
+.sectionwrapper_about .img_col {
     height: 260px;
-}
-
-.sectionwrapper .col #exhibition h2 {
-    text-align: center;
-    color: #626262;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#exhibition h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
-}
-
-h3 {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    line-height: 1.8rem;
-    letter-spacing: 0.4rem;
-    color: #626262;
-}
-
-#exhibition p {
-    color: #626262;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.4;
-}
-
-#exhibition .icons {
-    font-size: 60px;
-    color: black;
-    text-align: center;
-}
-
-.exhibition_button {
-    background-color: #b4a9a9;
-    font-family: 'Work Sans', sans-serif;
-    border: none;
-    color: #ffffff;
-    padding: 12px 34px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
 }

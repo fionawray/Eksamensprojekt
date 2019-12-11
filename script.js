@@ -10,6 +10,7 @@ function sidenVises() {
     console.log(sidenVises);
     getAbout();
     getAboutCitation();
+    getAboutPt2();
     hentFooter();
 }
 
@@ -23,6 +24,12 @@ async function getAboutCitation() {
     const aboutCitation = await fetch(aboutCitationUrl);
     parsedResult = await aboutCitation.json();
     document.querySelector(".aboutCitation").innerHTML = parsedResult.content.rendered;
+}
+
+async function getAboutPt2() {
+    const aboutPt2 = await fetch(aboutPt2Url);
+    parsedResult = await aboutPt2.json();
+    document.querySelector(".aboutPt2").innerHTML = parsedResult.content.rendered;
 }
 
 async function hentFooter() {
