@@ -42,6 +42,7 @@
         <section class="apainting">
             <img class="onepainting" src="" alt="">
             <h2></h2>
+            <p class="size"></p>
         </section>
     </template>
 
@@ -53,7 +54,8 @@
         const urlCol = new URLSearchParams(window.location.search);
         let id = urlCol.get("id");
         let filter = "all";
-        let paintings;
+        let collections = [];
+        let paintings = [];
         console.log(id);
 
         document.addEventListener("DOMContentLoaded", start);
@@ -64,7 +66,7 @@
             visOnecollection();
         }
         async function hentJson() {
-            const response = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections");
+            const response = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=" + id);
             console.log(response);
             paintings = await response.json();
             console.log(paintings);
@@ -84,7 +86,9 @@
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
+                clone.querySelector(".size").textContent = painting.size;
                 gridlist.appendChild(clone);
+
             })
         }
 
