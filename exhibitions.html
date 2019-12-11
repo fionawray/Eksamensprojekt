@@ -25,11 +25,99 @@
             <li><a href="contact.html">contact</a></li>
         </ul>
     </header>
+
+    <main id="contentwp">
+        <h1>Exhibitions</h1>
+        <section class="contentlist"></section>
+    </main>
+    <template id="exhibitions">
+        <section class="anexhibition">
+            <h2></h2>
+            <img class="motiongraphic" src="" alt="">
+            <p class="datetime"> </p>
+        </section>
+    </template>
+
+    <!--Hent footer fra footer.html-->
     <footer></footer>
-    <!--Hent footer fra script.js-->
-    <script src="script.js"></script>
+
+
+    <!--Jscript til at hente indhold fra WP-->
     <script>
         //  data fra wordpress
-        const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/286";
+        const urlExhibitions = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/exhibition";
+        let exhibitions;
+        let filter = "all";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("start");
+            hentAllExhibitions();
+            hentFooter();
+        }
+
+        async function hentFooter() {
+            const footer = await fetch("inc/footer.html");
+            const including = await footer.text();
+            document.querySelector("footer").innerHTML = including;
+        }
+
+        async function hentAllExhibitions() {
+            const response = await fetch(urlExhibitions);
+            exhibitions = await response.json();
+            visExhibitions();
+        }
+
+        function visExhibitions() {
+            const pattern = document.querySelector("template");
+            const list = document.querySelector(".contentlist");
+
+            exhibitions.forEach(exhibition => {
+                const clone = pattern.cloneNode(true).content;
+                clone.querySelector("h2").textContent = exhibition.name;
+                list.appendChild(clone);
+            })
+
+        }
     </script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
