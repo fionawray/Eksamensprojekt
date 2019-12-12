@@ -396,6 +396,7 @@ h3 {
     font-family: var(--overskrift-h1);
     letter-spacing: 0.5vw;
     font-weight: 300;
+    font-size: 7vw;
     font-style: normal;
     color: #626262;
 }
@@ -430,8 +431,8 @@ h3 {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background-color: #b4a9a9;
-    width: 25vw;
+    /*    background-color: #b4a9a9;*/
+    width: 35vw;
     padding: 1vw;
     margin: 2.8vw 0;
     transition: width 0.8s;
@@ -442,7 +443,7 @@ h3 {
     text-align: center;
     font-family: var(--nav-skrift);
     font-size: 2.8vw;
-    color: white;
+    color: #626262;
     padding: 1.3vw;
     transition: width 0.8s;
 }
@@ -453,11 +454,22 @@ h3 {
 }
 
 .seemorebtn:hover {
-    width: 40vw;
+    width: 48vw;
     transition-timing-function: ease-in-out;
 }
 
+.seemorebtn p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
+.collection_name {
+    width: 70vw;
+}
+
+.contentlist {
+    padding: 1vw 0;
+}
 
 /*SINGLE VIEW OF ONE COLLECTION*/
 .onecol_list {
@@ -538,8 +550,12 @@ h3 {
 @media screen and (min-width: 800px) {
 
     /*Collection page*/
+    #contentwp h1 {
+        font-size: 3vw;
+    }
+
     #contentwp {
-        margin: 15vw 5vw;
+        margin: 12vw 5vw;
     }
 
     .seemorebtn p,
@@ -548,12 +564,13 @@ h3 {
     }
 
     .seemorebtn {
-        width: 14vw;
+        width: 18vw;
         padding: 0;
+        margin: 0 0 2vw;
     }
 
     .seemorebtn:hover {
-        width: 20vw;
+        width: 25vw;
     }
 
     .acollection h2 {
@@ -565,7 +582,12 @@ h3 {
 
     .acollection {
         grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 5vw;
         margin: 2vw 1vw;
+    }
+
+    .collection_name {
+        width: 35vw;
     }
 
     /*Single view of one collection*/
