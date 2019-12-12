@@ -472,15 +472,12 @@ h3 {
 }
 
 /*SINGLE VIEW OF ONE COLLECTION*/
-.onecol_list {
-    margin: 20vw 3vw;
-}
-
 .onepainting {
     margin: 2vw;
 }
 
 .onecol_list {
+    margin: 20vw 3vw;
     display: grid;
     grid-gap: 2vw;
     grid-template-columns: repeat(2, 1fr);
@@ -591,6 +588,9 @@ h3 {
     }
 
     /*Single view of one collection*/
+    .onecol_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     /*Popup window*/
     .popup {
