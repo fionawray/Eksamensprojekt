@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
@@ -176,138 +180,6 @@
 }
 
 
-/*VIDEO*/
-#video {
-    max-width: 100%;
-    height: auto;
-}
-
-@media only screen and (min-width: 600px) {
-    #splash_video {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #splash_video {
-        width: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-/*Artwork front page*/
-#artwork h1 {
-    font-family: var(--overskrift-h1);
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    color: #626262;
-    padding-top: 3rem;
-    padding-left: 6.5rem;
-    margin: 1.5rem;
-
-}
-
-#artwork h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
-}
-
-#artwork p {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.6rem;
-    color: #626262;
-}
-
-.all_artwork_p {
-    padding-top: 2.5rem;
-    padding-bottom: 4.5rem;
-    padding-left: 8.25rem;
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 0.8rem;
-    letter-spacing: 0.1rem;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 600px) {
-    #artwork h1 {
-        text-align: center;
-    }
-}
-
-.col img {
-    position: relative;
-    top: 0px;
-    width: 100%;
-    height: auto;
-}
-
-/*ABOUT*/
-#about h1 {
-    font-family: futura-pt, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    color: #626262;
-    padding-top: 3rem;
-    padding-left: 6.5rem;
-    margin: 1.5rem;
-}
-
-#about h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
-}
-
-#about p {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.6rem;
-    color: #626262;
-}
-
-.sectionwrapper_about {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-
-.sectionwrapper_about .col {
-    margin: 1rem;
-    overflow: hidden;
-}
-
-.sectionwrapper_about .text_col {
-    flex-basis: 500px;
-}
-
-.sectionwrapper_about .img_col {
-    flex-basis: 300px;
-    height: 260px;
-}
 
 /*Footer*/
 

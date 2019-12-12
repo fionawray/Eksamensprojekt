@@ -177,6 +177,17 @@
 
 /*CONTACT*/
 
+#pic {
+    width: 100%;
+    height: 650px;
+}
+
+.position_fixed {
+    background-image: url(img/smartmockups_k41ve3ki.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 /*Contact*/
 /* Set the size of the div element that contains the map */
 #txt_contact {
