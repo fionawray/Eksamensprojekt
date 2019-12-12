@@ -29,6 +29,10 @@ img {
     width: 100%;
 }
 
+p {
+    color: #626262;
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
@@ -461,7 +465,13 @@ h3 {
 }
 
 .onepainting {
-    margin: 3vw;
+    margin: 2vw;
+}
+
+#singlecollection {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .onepainting h2,
@@ -474,7 +484,6 @@ h3 {
     text-transform: uppercase;
     font-size: 5vw;
     padding: 1vw 0;
-
 }
 
 .size {
@@ -508,7 +517,6 @@ h3 {
 
 .popup_content img {
     width: 90%;
-    text-align: center;
 }
 
 .close {
@@ -528,6 +536,8 @@ h3 {
 
 /*hvis skærmen er min. 800px og større --- TABLET og andre*/
 @media screen and (min-width: 800px) {
+
+    /*Collection page*/
     #contentwp {
         margin: 15vw 5vw;
     }
@@ -546,10 +556,6 @@ h3 {
         width: 20vw;
     }
 
-    .describe {
-        line-height: 6vh;
-    }
-
     .acollection h2 {
         font-size: 6vw;
         padding: 2vw;
@@ -560,6 +566,35 @@ h3 {
     .acollection {
         grid-template-columns: repeat(2, 1fr);
         margin: 2vw 1vw;
+    }
+
+    /*Single view of one collection*/
+    .onepainting img {
+        width: 50%;
+    }
+
+    /*Popup window*/
+    .popup {
+        top: 0;
+        padding: 4vw;
+    }
+
+    .popup_content img {
+        width: 60%;
+    }
+
+    .popup_content {
+        width: 70vw;
+        margin: 2vw 10vw;
+    }
+
+    .close {
+        font-size: 3vw;
+    }
+
+    .onepainting h2,
+    .popup_content h2 {
+        font-size: 3vw;
     }
 }
 
@@ -625,6 +660,11 @@ input[type=submit]:hover {
 
 
 /*FOOTER*/
+hr {
+    width: 85%;
+    border: 0.7px solid #cecdcd;
+}
+
 footer {
     width: 100%;
     padding: 4vw;
@@ -633,17 +673,18 @@ footer {
 footer p {
     font-family: var(--broedtekst-skrift);
     font-weight: 400;
+    padding: 1vw;
 }
 
 .footerinfo {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    justify-content: space-around;
     padding: 4vw 0;
-    box-shadow: 0 -5px 5px -5px grey;
 }
 
-.someindhold {
+.somecontent {
     display: flex;
     flex-flow: row wrap;
 }
@@ -666,11 +707,26 @@ footer p {
     width: 4vw;
 }
 
-.pinsymbol {
-    cursor: pointer;
-    background-image: url(img/pinterest-logo-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4vw;
-    width: 4vw;
+@media screen and (min-width: 800px) {
+    footer {
+        padding: 0 1vw;
+    }
+
+    footer p {
+        padding: 0.5vw;
+    }
+
+    .facesymbol {
+        height: 2.5vw;
+        width: 1.4vw;
+    }
+
+    .instasymbol {
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+
+    .footerinfo {
+        padding: 2vw;
+    }
 }
