@@ -13,7 +13,7 @@
 <body>
 
     <header class="header">
-        <a href="index.html" class="logo">
+        <a href="home.html" class="logo">
             <img src="img/SVG/logo.svg" alt=""></a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
@@ -32,12 +32,19 @@
     </main>
     <template id="exhibitions">
         <section class="anexhibition">
-            <h2></h2>
-            <p class="when"> </p>
-            <p class="where"></p>
-            <p class="until"></p>
-            <img class="poster" src="" alt="">
-            <p class="about_event"></p>
+
+            <div class="flexwrapper">
+                <div class="flexcontent">
+                    <h2></h2>
+                    <img class="poster" src="" alt="">
+                </div>
+                <div class="flexcontent">
+                    <p class="when"> </p>
+                    <p class="where"></p>
+                    <p class="until"></p>
+                    <p class="about_event"></p>
+                </div>
+            </div>
         </section>
     </template>
 
@@ -89,4 +96,70 @@
 </body>
 
 <style>
+    h2 {
+        margin: 15px 0 15px 0;
+        font-family: linotype-didot, serif;
+        font-weight: 400;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+    }
+
+    p {
+        font-family: futura-pt-light, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.6rem;
+        color: #626262;
+    }
+
+    .poster {
+        margin: 15px 0 15px 0;
+    }
+
+    .about_event {
+        margin-bottom: 30px;
+        font-family: futura-pt-light, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.6rem;
+        color: #626262;
+        padding-top: 15px;
+    }
+
+    .anexhibition {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 800px) {
+
+        h1 {
+            padding-top: 10vw font-family: futura-pt, sans-serif;
+            font-family: futura-pt, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: 0.3rem;
+            color: #626262;
+            padding-top: 2rem;
+        }
+    }
+
+    @media screen and (min-width: 1100px) {
+        .flexwrapper {
+            display: flex;
+        }
+
+        .flexcontent {
+            width: 450px;
+            margin: auto;
+
+        }
+
+        .contentlist {}
+
+        .poster {
+            max-width: 500px;
+        }
+
+    }
 </style></html>
