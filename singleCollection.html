@@ -19,7 +19,7 @@
         <ul class="menu">
             <li><a href="home.html">home</a></li>
             <li><a href="about.html">about</a></li>
-            <li><a href="artwork.html">artwork</a></li>
+            <li><a href="artworks.html">artworks</a></li>
             <li><a href="exhibitions.html">exhibitions</a></li>
             <li><a href="contact.html">contact</a></li>
         </ul>
@@ -40,6 +40,7 @@
                 <h2></h2>
                 <img class="picture" src="" alt="">
                 <p class="size"></p>
+                <p class="status"></p>
             </article>
         </section>
     </div>
@@ -74,7 +75,7 @@
             showAllpaintings();
         }
         async function getJson() {
-            const response = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=" + id);
+            const response = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=" + id + "&per_page=50");
             paintings = await response.json();
             showAllpaintings();
         }
@@ -107,6 +108,7 @@
             document.querySelector(".apainting h2").textContent = painting.title.rendered;
             document.querySelector(".apainting img").src = painting.picture.guid;
             document.querySelector(".apainting p").textContent = "Size: " + painting.size;
+            document.querySelector(".apainting p").textContent = "Sold: " + painting.sold;
         }
 
         function closePopup() {
@@ -122,5 +124,8 @@
         //        function showTitle() {
         //            document.querySelector(".title").innerHTML = title.id;
         //        }
+
     </script>
-</body></html>
+</body>
+
+</html>
