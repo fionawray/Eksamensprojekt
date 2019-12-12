@@ -24,25 +24,33 @@
             <li><a href="contact.html">contact</a></li>
         </ul>
     </header>
-
-    <main id="singlecollection">
-        <h1 class="title"></h1>
-        <section class="onecol_list">
-            <!--
-                <h1></h1>
-                Gallery-grid/masonry gallery
-                <div class="gridcontainer">
-                </div>
--->
-        </section>
-    </main>
-
-    <template id="paintings">
-        <section class="apainting">
-            <img class="onepainting" src="" alt="">
+    <!--A template for an item on the content list-->
+    <template>
+        <section class="onepainting">
+            <img src="" alt="">
             <h2></h2>
         </section>
     </template>
+
+    <!--Pop-up window, showing detailed information of one painting-->
+    <div class="popup">
+        <button class="close">X</button>
+        <section class="popup_content">
+            <article class="apainting">
+                <h2></h2>
+                <img class="picture" src="" alt="">
+                <p class="size"></p>
+            </article>
+        </section>
+    </div>
+
+    <!--Placing the list of data - of one collection-->
+    <main id="singlecollection">
+        <h1 class="title"></h1>
+        <section class="onecol_list">
+        </section>
+    </main>
+
 
     <footer></footer>
     <!--Hent footer fra inc mappen-->
@@ -96,7 +104,23 @@
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
                 gridlist.appendChild(clone);
+                gridlist.lastElementChild.addEventListener("click", () => {
+                    showOnepainting(painting)
+                });
             })
+        }
+
+        function showOnepainting(painting) {
+            document.querySelector(".popup").style.display = "block";
+            document.querySelector(".close").addEventListener("click", closePopup);
+
+            document.querySelector(".apainting h2").textContent = painting.title.rendered;
+            document.querySelector(".apainting img").src = painting.picture.guid;
+            document.querySelector(".apainting p").textContent = "Size: " + painting.size;
+        }
+
+        function closePopup() {
+            document.querySelector(".popup").style.display = "none";
         }
     </script>
 </body></html>
