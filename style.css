@@ -29,6 +29,10 @@ img {
     width: 100%;
 }
 
+p {
+    color: #626262;
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
@@ -460,29 +464,80 @@ h3 {
     margin: 20vw 3vw;
 }
 
-.apainting {
-    margin: 3vw;
+.onepainting {
+    margin: 2vw;
 }
 
-.apainting h2 {
+.onecol_list {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.onepainting h2,
+.popup_content h2 {
     font-family: var(--overskrift-h2);
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
-    font-size: 5vw;
+    font-size: 3.7vw;
     padding: 1vw 0;
-
 }
 
-.apainting h2:hover {
+.size {
+    font-family: var(--broedtekst-skrift);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #626262;
+}
+
+.onepainting h2:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
+.popup {
+    position: fixed;
+    top: 0;
+    width: 200vw;
+    height: 200vh;
+    background: white;
+    display: none;
+    padding: 16vw 3vw;
+}
+
+.popup_content {
+    width: 90vw;
+    min-height: 70vh;
+    margin: 10vw 2vw;
+}
+
+.popup_content img {
+    width: 90%;
+}
+
+.close {
+    font-family: var(--nav-skrift);
+    color: #767676;
+    position: fixed;
+    right: 0;
+    font-size: 7vw;
+    background-color: transparent;
+}
+
+.apainting {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
 /*hvis skærmen er min. 800px og større --- TABLET og andre*/
 @media screen and (min-width: 800px) {
+
+    /*Collection page*/
     #contentwp {
         margin: 15vw 5vw;
     }
@@ -501,10 +556,6 @@ h3 {
         width: 20vw;
     }
 
-    .describe {
-        line-height: 6vh;
-    }
-
     .acollection h2 {
         font-size: 6vw;
         padding: 2vw;
@@ -515,6 +566,32 @@ h3 {
     .acollection {
         grid-template-columns: repeat(2, 1fr);
         margin: 2vw 1vw;
+    }
+
+    /*Single view of one collection*/
+
+    /*Popup window*/
+    .popup {
+        top: 2vw;
+        padding: 4vw;
+    }
+
+    .popup_content img {
+        width: 60%;
+    }
+
+    .popup_content {
+        width: 70vw;
+        margin: 2vw 10vw;
+    }
+
+    .close {
+        font-size: 3vw;
+    }
+
+    .onepainting h2,
+    .popup_content h2 {
+        font-size: 3vw;
     }
 }
 
@@ -580,6 +657,11 @@ input[type=submit]:hover {
 
 
 /*FOOTER*/
+hr {
+    width: 85%;
+    border: 0.7px solid #cecdcd;
+}
+
 footer {
     width: 100%;
     padding: 4vw;
@@ -588,17 +670,18 @@ footer {
 footer p {
     font-family: var(--broedtekst-skrift);
     font-weight: 400;
+    padding: 1vw;
 }
 
 .footerinfo {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    justify-content: space-around;
     padding: 4vw 0;
-    box-shadow: 0 -5px 5px -5px grey;
 }
 
-.someindhold {
+.somecontent {
     display: flex;
     flex-flow: row wrap;
 }
@@ -621,11 +704,26 @@ footer p {
     width: 4vw;
 }
 
-.pinsymbol {
-    cursor: pointer;
-    background-image: url(img/pinterest-logo-footer.svg);
-    background-size: 100%;
-    margin: 3vw;
-    height: 4vw;
-    width: 4vw;
+@media screen and (min-width: 800px) {
+    footer {
+        padding: 0 1vw;
+    }
+
+    footer p {
+        padding: 0.5vw;
+    }
+
+    .facesymbol {
+        height: 2.5vw;
+        width: 1.4vw;
+    }
+
+    .instasymbol {
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+
+    .footerinfo {
+        padding: 2vw;
+    }
 }
