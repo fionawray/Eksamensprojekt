@@ -44,6 +44,7 @@
                 <div class="right">
                     <p class="size"></p>
                     <p class="status"></p>
+                    <p class="nameCol"></p>
                 </div>
             </article>
         </section>
@@ -56,9 +57,10 @@
         </section>
     </main>
 
+    <!--Hent footer fra inc mappen-->
     <hr>
     <footer></footer>
-    <!--Hent footer fra inc mappen-->
+
 
 
     <script>
@@ -97,7 +99,6 @@
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
                 gridlist.appendChild(clone);
-
                 gridlist.lastElementChild.addEventListener("click", () => {
                     showOnepainting(painting)
                 });
@@ -112,6 +113,7 @@
             document.querySelector(".apainting img").src = painting.picture.guid;
             document.querySelector(".size").textContent = "Size: " + painting.size;
             document.querySelector(".status").textContent = "Sold: " + painting.sold;
+            document.querySelector(".nameCol").textContent = "Collection: " + painting.collection;
         }
 
         function closePopup() {
@@ -127,8 +129,5 @@
         //        function showTitle() {
         //            document.querySelector(".title").innerHTML = title.id;
         //        }
-
     </script>
-</body>
-
-</html>
+</body></html>
