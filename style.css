@@ -490,7 +490,6 @@ h3 {
     letter-spacing: 0.3vw;
     font-weight: 400;
     font-style: italic;
-    text-transform: uppercase;
     font-size: 3.7vw;
     padding: 1vw 0;
 }
@@ -520,12 +519,8 @@ h3 {
 
 .popup_content {
     width: 90vw;
-    min-height: 70vh;
+    height: 100vh;
     margin: 10vw 2vw;
-}
-
-.popup_content img {
-    width: 90%;
 }
 
 .close {
@@ -538,9 +533,8 @@ h3 {
 }
 
 .apainting {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-gap: 2vw;
 }
 
 /*hvis skærmen er min. 800px og større --- TABLET og andre*/
@@ -593,13 +587,18 @@ h3 {
     }
 
     /*Popup window*/
+    .apainting {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .right {
+        text-align: left;
+        padding: 10vw 4vw;
+    }
+
     .popup {
         top: 2vw;
         padding: 4vw;
-    }
-
-    .popup_content img {
-        width: 60%;
     }
 
     .popup_content {

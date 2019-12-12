@@ -37,10 +37,14 @@
         <button class="close">X</button>
         <section class="popup_content">
             <article class="apainting">
-                <h2></h2>
-                <img class="picture" src="" alt="">
-                <p class="size"></p>
-                <p class="status"></p>
+                <div class="left">
+                    <h2></h2>
+                    <img class="picture" src="" alt="">
+                </div>
+                <div class="right">
+                    <p class="size"></p>
+                    <p class="status"></p>
+                </div>
             </article>
         </section>
     </div>
@@ -106,8 +110,8 @@
 
             document.querySelector(".apainting h2").textContent = painting.title.rendered;
             document.querySelector(".apainting img").src = painting.picture.guid;
-            document.querySelector(".apainting p").textContent = "Size: " + painting.size;
-            document.querySelector(".apainting p").textContent = "Sold: " + painting.sold;
+            document.querySelector(".size").textContent = "Size: " + painting.size;
+            document.querySelector(".status").textContent = "Sold: " + painting.sold;
         }
 
         function closePopup() {
