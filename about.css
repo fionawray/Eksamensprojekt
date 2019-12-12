@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
@@ -175,57 +179,40 @@
     }
 }
 
-
-/*VIDEO*/
-#video {
-    max-width: 100%;
-    height: auto;
-}
-
-@media only screen and (min-width: 600px) {
-    #splash_video {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #splash_video {
-        width: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
+/*ABOUT*/
 
 /*Artwork front page*/
-#artwork h1 {
-    font-family: var(--overskrift-h1);
+#about h1 {
+    font-family: futura-pt, sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     color: #626262;
-    padding-top: 3rem;
+    padding-top: 8rem;
     padding-left: 6.5rem;
+    padding-bottom: 0;
     margin: 1.5rem;
 
 }
 
-#artwork h2 {
+#about h2 {
     font-family: linotype-didot, serif;
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 4.3rem;
+    cursor: pointer;
 }
 
-#artwork p {
+#about p {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.6rem;
     color: #626262;
+    cursor: pointer;
 }
 
 .all_artwork_p {
@@ -242,8 +229,16 @@
 }
 
 @media only screen and (max-width: 600px) {
-    #artwork h1 {
+
+    #about h1,
+    h2,
+    h3 {
+        padding-left: 0;
         text-align: center;
+    }
+
+    #about h2 {
+        margin: 0;
     }
 }
 
@@ -252,40 +247,37 @@
     top: 0px;
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
-/*ABOUT*/
-#about h1 {
+/*Position fixed picture*/
+#pic {
+    width: 100%;
+    height: 500px;
+}
+
+.position_fixed {
+    background-image: url(img/IMG_3093.HEIC);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/*Exhibititon section on front page*/
+
+#exhibition h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     color: #626262;
-    padding-top: 3rem;
+    padding-top: 4rem;
     padding-left: 6.5rem;
     margin: 1.5rem;
 }
 
-#about h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
-}
-
-#about p {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.6rem;
-    color: #626262;
-}
-
-.sectionwrapper_about {
+.sectionwrapper {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -293,21 +285,70 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    padding-bottom: 1rem;
 }
 
-.sectionwrapper_about .col {
+.sectionwrapper .col {
+    flex-basis: 500px;
     margin: 1rem;
+    padding: 0.8rem;
     overflow: hidden;
 }
 
-.sectionwrapper_about .text_col {
-    flex-basis: 500px;
-}
-
-.sectionwrapper_about .img_col {
-    flex-basis: 300px;
+.sectionwrapper .img_col {
     height: 260px;
 }
+
+.sectionwrapper .col #exhibition h2 {
+    text-align: center;
+    color: #626262;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#exhibition h2 {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 4.3rem;
+}
+
+h3 {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.4rem;
+    color: #626262;
+}
+
+#exhibition p {
+    color: #626262;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.4;
+}
+
+#exhibition .icons {
+    font-size: 60px;
+    color: black;
+    text-align: center;
+}
+
+.exhibition_button {
+    background-color: #b4a9a9;
+    font-family: 'Work Sans', sans-serif;
+    border: none;
+    color: #ffffff;
+    padding: 12px 34px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
 
 /*Footer*/
 
