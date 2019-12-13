@@ -606,7 +606,8 @@ video {
 @media screen and (min-width: 800px) {
 
     /*Collection page*/
-    #contentwp h1 {
+    #contentwp h1,
+    #singlecollection h1 {
         font-size: 3vw;
     }
 
