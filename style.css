@@ -591,6 +591,10 @@ h3 {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .title {
+        padding-top: 30vw;
+    }
+
     /*Popup window*/
     .apainting {
         grid-template-columns: repeat(2, 1fr);

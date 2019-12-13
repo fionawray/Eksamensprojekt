@@ -93,6 +93,10 @@
         function showAllpaintings() {
             const pattern = document.querySelector("template");
             const gridlist = document.querySelector(".onecol_list");
+            //tag fat i den første element
+//            console.log(paintings[0].collection);
+            let col = paintings[0].collection;
+            document.querySelector(".title").innerHTML = col;
 
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
