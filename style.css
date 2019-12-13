@@ -491,7 +491,7 @@ video {
 
 /*SINGLE VIEW OF ONE COLLECTION*/
 #singlecollection h1 {
-    padding-top: 28vw;
+    padding-top: 25vw;
 }
 
 .onepainting {
@@ -499,7 +499,7 @@ video {
 }
 
 .onecol_list {
-    margin: 20vw 3vw;
+    margin: 4vw 3vw;
     display: grid;
     grid-gap: 2vw;
     grid-template-columns: repeat(2, 1fr);
@@ -648,7 +648,7 @@ video {
 
     /*Single view of one collection*/
     #singlecollection h1 {
-        padding-top: 17vw;
+        padding-top: 10vw;
     }
 
     .onecol_list {
