@@ -72,7 +72,6 @@
     <script>
         const urlCol = new URLSearchParams(window.location.search);
         let id = urlCol.get("id");
-        let title;
         let paintings = [];
         let gallery_counter = [];
         console.log(id);
@@ -157,5 +156,8 @@
             document.querySelector(".status").textContent = "Sold: " + paintings[gallery_counter].sold;
             document.querySelector(".nameCol").textContent = "Collection: " + paintings[gallery_counter].collection;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

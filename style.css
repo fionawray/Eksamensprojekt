@@ -556,7 +556,8 @@ video {
     color: #626262;
 }
 
-.picture {
+.onepicture,
+.right {
     padding: 0 2vw;
 }
 
