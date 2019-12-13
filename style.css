@@ -577,14 +577,15 @@ video {
     background: white;
     display: none;
     padding: 3vw 2vw;
-    z-index: 9998;
-    overflow: scroll;
+    z-index: 50;
 }
 
 .popup_content {
     width: 90vw;
     height: 100vh;
     margin: 10vw 2vw 0 3vw;
+    overflow: scroll;
+    z-index: 80;
 }
 
 .close {
