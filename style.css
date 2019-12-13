@@ -526,9 +526,8 @@ video {
     position: absolute;
     top: 24%;
     width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: black;
+    padding: 2vw;
+    color: #626262;
     font-weight: bold;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -542,18 +541,12 @@ video {
 }
 
 .prev {
-    left: -2vw;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(136, 136, 136, 0.8);
+    left: 0.9%;
 }
 
 .prev,
 .next {
     font-size: 4vw;
-    color: #626262;
 }
 
 .onepicture,
@@ -591,7 +584,7 @@ video {
 .popup_content {
     width: 90vw;
     height: 100vh;
-    margin: 2vw;
+    margin: 10vw 2vw 0 3vw;
 }
 
 .close {
@@ -669,7 +662,7 @@ video {
 
     .right {
         text-align: left;
-        padding: 10vw 4vw;
+        padding: 15vw 4vw;
     }
 
     .popup {
@@ -681,6 +674,10 @@ video {
         margin: 2vw 10vw;
     }
 
+    .popup_content h2 {
+        padding-left: 1vw;
+    }
+
     .close {
         font-size: 2.5vw;
     }
@@ -688,6 +685,19 @@ video {
     .onepainting h2,
     .popup_content h2 {
         font-size: 3vw;
+    }
+
+    .next {
+        left: 23%;
+    }
+
+    .prev {
+        left: 5.8%;
+    }
+
+    .next,
+    .prev {
+        font-size: 2.2vw;
     }
 }
 

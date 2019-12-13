@@ -47,6 +47,7 @@
                         <a class="prev">&#10094;</a>
                         <a class="next">&#10095;</a>
                     </div>
+
                 </div>
                 <div class="right">
                     <p class="size"></p>
@@ -145,10 +146,10 @@
 
         function clickPrev() {
             console.log(clickPrev);
+            gallery_counter--;
             if (gallery_counter < 0) {
                 gallery_counter = paintings.length - 1;
             }
-            gallery_counter--;
 
             document.querySelector(".apainting img").src = paintings[gallery_counter].picture.guid;
             document.querySelector(".apainting h2").textContent = paintings[gallery_counter].title.rendered;
