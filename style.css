@@ -393,13 +393,30 @@ h3 {
     margin: 20vw 6vw;
 }
 
-#contentwp h1 {
+/*
+video {
+    object-fit: scale-down;
+}*/
+
+.video_container {
+    padding: 3vw;
+}
+
+#contentwp h1,
+#singlecollection h1 {
     font-family: var(--overskrift-h1);
-    letter-spacing: 0.5vw;
+    letter-spacing: 0.3rem;
     font-weight: 300;
     font-size: 7vw;
     font-style: normal;
+    text-transform: uppercase;
     color: #626262;
+    padding: 0 0 0 3.5vw;
+    /*
+    padding-left: 6.5rem;
+    padding-bottom: 0;
+    margin: 1.5rem;
+*/
 }
 
 .acollection h2 {
@@ -417,7 +434,7 @@ h3 {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
     font-style: normal;
-    line-height: 2.8vh;
+    line-height: 3.5vh;
     color: #626262;
     padding: 2vw 0;
 }
@@ -473,6 +490,10 @@ h3 {
 }
 
 /*SINGLE VIEW OF ONE COLLECTION*/
+#singlecollection h1 {
+    padding-top: 28vw;
+}
+
 .onepainting {
     margin: 2vw;
 }
@@ -492,7 +513,51 @@ h3 {
     font-weight: 400;
     font-style: italic;
     font-size: 3.7vw;
-    padding: 1vw 0;
+    padding: 2vw 0;
+}
+
+.popup_content h2 {
+    padding-left: 2vw;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 24%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    left: 46%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: -2vw;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(136, 136, 136, 0.8);
+}
+
+.prev,
+.next {
+    font-size: 4vw;
+    color: #626262;
+}
+
+.picture {
+    padding: 0 2vw;
 }
 
 .size,
@@ -519,6 +584,7 @@ h3 {
     display: none;
     padding: 3vw 2vw;
     z-index: 9998;
+    overflow: scroll;
 }
 
 .popup_content {
@@ -587,12 +653,12 @@ h3 {
     }
 
     /*Single view of one collection*/
-    .onecol_list {
-        grid-template-columns: repeat(3, 1fr);
+    #singlecollection h1 {
+        padding-top: 17vw;
     }
 
-    .title {
-        padding-top: 30vw;
+    .onecol_list {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /*Popup window*/
