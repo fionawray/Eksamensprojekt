@@ -476,7 +476,8 @@ video {
     transition-timing-function: ease-in-out;
 }
 
-.seemorebtn p:hover {
+.seemorebtn p:hover,
+.seemorebtn p:active {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -564,7 +565,8 @@ video {
     color: #626262;
 }
 
-.onepainting h2:hover {
+.onepainting h2:hover,
+.onepainting h2:active {
     cursor: pointer;
     text-decoration: underline;
 }
