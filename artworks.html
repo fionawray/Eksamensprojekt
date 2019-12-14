@@ -31,7 +31,7 @@
         </section>
     </main>
 
-    <template>
+    <template id="setup_1">
         <section class="acollection">
             <div class="collection_name">
                 <h2></h2>
@@ -41,7 +41,7 @@
             </div>
             <div class="collection_content">
                 <img class="motiongraphic" src="" alt="">
-<!--
+                <!--
                 <div class="video_container">
                     <video width="320" height="320" controls>
                         <source class="motiongraphic" src="" type="video/avi">
@@ -50,6 +50,29 @@
 -->
                 <p class="describe"></p>
             </div>
+        </section>
+    </template>
+
+    <template id="setup_2">
+        <section class="acollection">
+            <div class="collection_content">
+                <img class="motiongraphic" src="" alt="">
+                <!--
+                <div class="video_container">
+                    <video width="320" height="320" controls>
+                        <source class="motiongraphic" src="" type="video/avi">
+                    </video>
+                </div>
+-->
+                <p class="describe"></p>
+            </div>
+            <div class="collection_name">
+                <h2></h2>
+                <button class="seemorebtn">
+                    <p>See Collection</p><span class="long-arrow-white">&#10230;</span>
+                </button>
+            </div>
+
         </section>
     </template>
 
@@ -84,7 +107,7 @@
         }
 
         function visCollections() {
-            const pattern = document.querySelector("template");
+            const pattern = document.querySelector("#setup_1");
             const list = document.querySelector(".contentlist");
 
             collections.forEach(collection => {
