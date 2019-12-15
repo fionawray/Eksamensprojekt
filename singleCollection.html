@@ -43,9 +43,10 @@
 
     <!--A template for an item on the content list-->
     <template>
-        <section class="onepainting">
-            <img src="" alt="">
-            <h2></h2>
+        <section class="masonry-brick">
+            <div class="onepainting"> <img src="" alt="">
+                <h2></h2>
+            </div>
         </section>
     </template>
 
@@ -201,20 +202,20 @@ Spanning for any brick = S
             let masonry_grid = document.querySelector(".onecol_list")[0];
             let rowGap = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-row-gap'));
             let rowHeight = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-auto-rows'));
-            let rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+            let rowSpan = Math.ceil((item.querySelector(".onepainting").getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
 
             item.style.gridRowEnd = 'span' + rowSpan;
         }
 
         function resizeAllMasonryItems() {
-            let allItems = document.querySelector(".onepainting");
+            let allItems = document.querySelector(".masonry-brick");
             for (let i = 0; i < allItems.length; i++) {
                 resizeMasonryItem(allItems[i]);
             }
         }
 
         function waitForImages() {
-            let allItems = document.querySelector(".onepainting");
+            let allItems = document.querySelector(".masonry-brick");
             for (let i = 0; i < allItems.length; i++) {
                 imagesLoaded(allItems[i], function(instance) {
                     let item = instance.elements[0];

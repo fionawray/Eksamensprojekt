@@ -221,7 +221,8 @@ h2 {
     display: grid;
     grid-gap: 2vw;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    margin: 3vw;
+    grid-auto-rows: 250px;
+    margin: 3vw 3vw 7vw;
 }
 
 .onepainting {
@@ -554,8 +555,7 @@ footer p {
     }
 
     .onecol_list {
-        column-count: 4;
-        margin: 4vw 3vw 4vw 5.5vw;
+        margin: 3vw 5.4vw;
     }
 
     /*-Popup window-*/
