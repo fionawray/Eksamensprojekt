@@ -387,6 +387,7 @@ h3 {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 /*--------COLLECTIONS/artworks.html-------*/
 
 
@@ -394,6 +395,324 @@ h3 {
 
 /*If the screen is min. 800px and bigger --- TABLET og andre*/
 
+=======
+/*COLLECTIONS*/
+#contentwp {
+    margin: 20vw 6vw;
+}
+
+/*
+video {
+    object-fit: scale-down;
+}*/
+
+.video_container {
+    padding: 3vw;
+}
+
+#contentwp h1,
+#singlecollection h1 {
+    font-family: var(--overskrift-h1);
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+    font-size: 7vw;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #626262;
+    padding: 0 0 0 3.5vw;
+    /*
+    padding-left: 6.5rem;
+    padding-bottom: 0;
+    margin: 1.5rem;
+*/
+}
+
+.acollection h2 {
+    font-family: var(--overskrift-h2);
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 8vw;
+    padding: 2vw 0;
+}
+
+.describe {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 3.5vh;
+    color: #626262;
+    padding: 2vw 0;
+}
+
+.acollection {
+    margin: 4.5vw;
+    display: grid;
+    grid-gap: 2vw;
+}
+
+.seemorebtn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /*    background-color: #b4a9a9;*/
+    width: 35vw;
+    padding: 1vw;
+    margin: 2.8vw 0;
+    transition: width 0.8s;
+}
+
+.seemorebtn p,
+.long-arrow-white {
+    text-align: center;
+    font-family: var(--nav-skrift);
+    font-size: 2.8vw;
+    color: #626262;
+    padding: 1.3vw;
+    transition: width 0.8s;
+}
+
+.seemorebtn img {
+    height: 1.8vw;
+    width: 10vw;
+}
+
+.seemorebtn:hover {
+    width: 48vw;
+    transition-timing-function: ease-in-out;
+}
+
+.seemorebtn p:hover,
+.seemorebtn p:active {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.collection_name {
+    width: 70vw;
+}
+
+.contentlist {
+    padding: 1vw 0;
+}
+
+/*SINGLE VIEW OF ONE COLLECTION*/
+#singlecollection h1 {
+    padding-top: 25vw;
+}
+
+.onepainting {
+    margin: 2vw;
+}
+
+.onecol_list {
+    margin: 4vw 3vw;
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.onepainting h2,
+.popup_content h2 {
+    font-family: var(--overskrift-h2);
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 3.7vw;
+    padding: 2vw 0;
+}
+
+.popup_content h2 {
+    padding-left: 2vw;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 24%;
+    width: auto;
+    padding: 2vw;
+    color: #626262;
+    font-weight: bold;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    left: 46%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0.9%;
+}
+
+.prev,
+.next {
+    font-size: 4vw;
+}
+
+.onepicture,
+.right {
+    padding: 0 2vw;
+}
+
+.size,
+.status,
+.nameCol {
+    font-family: var(--broedtekst-skrift);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #626262;
+}
+
+.onepainting h2:hover,
+.onepainting h2:active {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    width: 200vw;
+    height: 200vh;
+    background: white;
+    display: none;
+    padding: 3vw 2vw;
+    z-index: 50;
+}
+
+.popup_content {
+    width: 90vw;
+    height: 100vh;
+    margin: 10vw 2vw 0 3vw;
+    overflow: scroll;
+    z-index: 80;
+}
+
+.close {
+    font-family: var(--nav-skrift);
+    color: #767676;
+    position: fixed;
+    right: 3vw;
+    font-size: 4.6vw;
+    background-color: transparent;
+}
+
+.apainting {
+    padding: 1vw;
+    display: grid;
+    grid-gap: 2vw;
+}
+
+/*hvis skærmen er min. 800px og større --- TABLET og andre*/
+@media screen and (min-width: 800px) {
+
+    /*Collection page*/
+    #contentwp h1,
+    #singlecollection h1 {
+        font-size: 3vw;
+    }
+
+    #contentwp {
+        margin: 12vw 5vw;
+    }
+
+    .seemorebtn p,
+    .long-arrow-white {
+        font-size: 1.3vw;
+    }
+
+    .seemorebtn {
+        width: 18vw;
+        padding: 0;
+        margin: 0 0 2vw;
+    }
+
+    .seemorebtn:hover {
+        width: 25vw;
+    }
+
+    .acollection h2 {
+        font-size: 5vw;
+        padding-top: 18vw;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .acollection {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 5vw;
+        margin: 2vw 1vw;
+    }
+
+    .collection_name {
+        width: 35vw;
+    }
+
+    /*Single view of one collection*/
+    #singlecollection h1 {
+        padding-top: 10vw;
+    }
+
+    .onecol_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*Popup window*/
+    .apainting {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .right {
+        text-align: left;
+        padding: 15vw 4vw;
+    }
+
+    .popup {
+        padding: 4vw;
+    }
+
+    .popup_content {
+        width: 70vw;
+        margin: 2vw 10vw;
+    }
+
+    .popup_content h2 {
+        padding-left: 1vw;
+    }
+
+    .close {
+        font-size: 2.5vw;
+    }
+
+    .onepainting h2,
+    .popup_content h2 {
+        font-size: 3vw;
+    }
+
+    .next {
+        left: 23%;
+    }
+
+    .prev {
+        left: 5.8%;
+    }
+
+    .next,
+    .prev {
+        font-size: 2.2vw;
+    }
+}
+>>>>>>> Hej
 
 
 /*CONTACT*/
