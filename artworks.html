@@ -92,10 +92,15 @@
         let collections = [];
         let filter = "all";
         document.addEventListener("DOMContentLoaded", start);
+        $(document).ready(function() {
+            $("p:nth-child(2n-1)").css("background-color",
+                "lightgreen");
+        });
 
         function start() {
             hentAlleCols();
             hentFooter();
+
         }
         async function hentFooter() {
             const footer = await fetch("inc/footer.html");
@@ -123,8 +128,8 @@
                     location.href = "singleCollection.html?id=" + collection.id;
                 });
             })
-
         }
+
         //        // data fra WP: Black poetry
         // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=6";
         // // data fra WP: Citylife
