@@ -34,6 +34,26 @@ p {
     color: #626262;
 }
 
+h1 {
+    font-family: var(--overskrift-h1);
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #626262;
+    font-size: 6vw;
+    padding-left: 3vw;
+}
+
+h2 {
+    font-family: var(--overskrift-h2);
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 3.7vw;
+    padding: 2vw 0;
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
@@ -211,250 +231,181 @@ p {
 }
 
 
-/*VIDEO*/
-#video {
-    max-width: 100%;
-    height: auto;
+#singlecollection {
+    margin: 25vw 0;
 }
 
-@media only screen and (min-width: 600px) {
-    #splash_video {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
+.onecol_list {
+    /*
+    column-count: 2;
+    column-gap: 1.3vw;
+    max-width: 768px;
+    margin: 4vw 3vw;
+*/
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin: 3vw;
 }
 
-@media only screen and (max-width: 600px) {
-    #splash_video {
-        width: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+.onepainting {
+    /*
+    display: inline-block;
+    margin: 0 0 1vw;
+*/
+    grid-row-end: span 2;
 }
 
-/*Artwork front page*/
-#artwork h1 {
-    font-family: var(--overskrift-h1);
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
+.popup_content h2 {
+    padding-left: 2vw;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 24%;
+    width: auto;
+    padding: 2vw;
     color: #626262;
-    padding-top: 3rem;
-    padding-left: 6.5rem;
-    margin: 1.5rem;
-
+    font-weight: bold;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-#artwork h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
+/*Positions for the next and previous buttons*/
+
+.next {
+    left: 46%;
+    border-radius: 3px 0 0 3px;
 }
 
-#artwork p {
-    font-family: futura-pt-light, sans-serif;
+.prev {
+    left: 0.9%;
+}
+
+.prev,
+.next {
+    font-size: 4vw;
+}
+
+.onepicture,
+.right {
+    padding: 0 2vw;
+}
+
+.size,
+.status,
+.nameCol {
+    font-family: var(--broedtekst-skrift);
     font-weight: 400;
     font-style: normal;
     line-height: 1.6rem;
     color: #626262;
 }
 
-.all_artwork_p {
-    padding-top: 2.5rem;
-    padding-bottom: 4.5rem;
-    padding-left: 8.25rem;
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 0.8rem;
-    letter-spacing: 0.1rem;
+.onepainting h2:hover,
+.onepainting h2:active {
+    cursor: pointer;
     text-decoration: underline;
-    cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-    #artwork h1 {
-        text-align: center;
-    }
+.popup {
+    position: fixed;
+    top: 0;
+    width: 200vw;
+    height: 200vh;
+    background: white;
+    display: none;
+    padding: 3vw 2vw;
+    z-index: 50;
 }
 
-.col img {
-    position: relative;
-    top: 0px;
-    width: 100%;
-    height: auto;
+.popup_content {
+    width: 90vw;
+    height: 100vh;
+    margin: 10vw 2vw 0 3vw;
+    overflow: scroll;
+    z-index: 80;
 }
 
-/*Position fixed picture*/
-#pic {
-    width: 100%;
-    height: 500px;
+.close {
+    font-family: var(--nav-skrift);
+    color: #767676;
+    position: fixed;
+    right: 3vw;
+    font-size: 4.6vw;
+    background-color: transparent;
 }
 
-.position_fixed {
-    background-image: url(img/2018_DARE_TO_BE_DELICATE_100X120CM.jpeg);
-    background-size: cover;
-    background-attachment: fixed;
+.apainting {
+    padding: 0 1vw;
+    display: grid;
+    grid-gap: 2vw;
 }
-
-
-/*Exhibititon section on front page*/
-
-#exhibition h1 {
-    font-family: futura-pt, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    color: #626262;
-    padding-top: 4rem;
-    padding-left: 6.5rem;
-    margin: 1.5rem;
-}
-
-.sectionwrapper {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding-bottom: .5rem;
-}
-
-.sectionwrapper .col {
-    flex-basis: 300px;
-    margin: 1rem;
-    padding: 0.8rem;
-    overflow: hidden;
-}
-
-.sectionwrapper .img_col {
-    height: 260px;
-}
-
-.sectionwrapper .col #exhibition h2 {
-    text-align: center;
-    color: #626262;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#exhibition h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
-}
-
-h3 {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    line-height: 1.8rem;
-    letter-spacing: 0.4rem;
-    color: #626262;
-}
-
-#exhibition p {
-    color: #626262;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.4;
-}
-
-#exhibition .icons {
-    font-size: 60px;
-    color: black;
-    text-align: center;
-}
-
-.exhibition_button {
-    background-color: #b4a9a9;
-    font-family: 'Work Sans', sans-serif;
-    border: none;
-    color: #ffffff;
-    padding: 12px 34px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-/*--------COLLECTIONS/artworks.html-------*/
-
-
-/*-------ONE COLLECTIONS SINGLE VIEW-------*/
 
 /*If the screen is min. 800px and bigger --- TABLET og andre*/
+@media only screen and (max-width: 1023px) and (min-width: 800px) {
 
+    /*--singleCollection.html--*/
+    #singlecollection {
+        margin: 20vw 0;
+    }
 
+    h1 {
+        padding-left: 5vw;
+    }
 
-/*CONTACT*/
+    .onecol_list {
+        column-count: 3;
+        margin: 4vw 3vw 4vw 5.5vw;
+    }
 
-/* Style inputs */
-input[type=text],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
+    /*-Popup window-*/
+    .apainting {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-input[type=submit] {
-    background-color: #b4a9a9;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-}
+    .right {
+        text-align: left;
+        padding: 15vw 4vw;
+    }
 
-input[type=submit]:hover {
-    background-color: #8c8291;
-}
+    .popup {
+        padding: 4vw;
+    }
 
-/* Style the container/contact section */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-    font-family: futura-pt-light, sans-serif;
-}
+    .popup_content {
+        width: 70vw;
+        margin: 2vw 10vw;
+    }
 
-/* Create two columns that float next to eachother */
-.column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-}
+    .popup_content h2 {
+        padding-left: 1vw;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+    .close {
+        font-size: 2.5vw;
+    }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+    .onepainting h2,
+    .popup_content h2 {
+        font-size: 2.3vw;
+    }
 
-    .column,
-    input[type=submit] {
-        width: 100%;
-        margin-top: 0;
+    .next {
+        left: 23%;
+    }
+
+    .prev {
+        left: 5.8%;
+    }
+
+    .next,
+    .prev {
+        font-size: 2.2vw;
     }
 }
-
 
 /*FOOTER*/
 hr {
@@ -525,5 +476,80 @@ footer p {
 
     .footerinfo {
         padding: 2vw;
+    }
+}
+
+/*If the screen is bigger than 1023px --- desktop*/
+@media only screen and (min-width: 1024px) {
+
+    /*--singleCollection.html--*/
+    #singlecollection {
+        margin: 10vw 2vw;
+    }
+
+    h1 {
+        padding-left: 5vw;
+        font-size: 4vw;
+    }
+
+    .onecol_list {
+        column-count: 4;
+        margin: 4vw 3vw 4vw 5.5vw;
+    }
+
+    /*-Popup window-*/
+    .apainting {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .right {
+        text-align: left;
+        padding: 15vw 4vw;
+    }
+
+    .popup {
+        padding: 4vw;
+    }
+
+    .popup_content {
+        width: 70vw;
+        margin: 2vw 10vw;
+    }
+
+    .popup_content h2 {
+        padding-left: 1vw;
+    }
+
+    .close {
+        font-size: 2.5vw;
+    }
+
+    .onepainting h2,
+    .popup_content h2 {
+        font-size: 1.8vw;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    .next {
+        left: 23%;
+    }
+
+    .prev {
+        left: 5.8%;
+    }
+
+    .next,
+    .prev {
+        font-size: 2.2vw;
+    }
+}
+
+@media only screen and (min-width: 1269px) {
+
+    /*--singleCollection.html--*/
+    .onepainting h2,
+    .popup_content h2 {
+        font-size: 1.5vw;
     }
 }

@@ -1,0 +1,359 @@
+:root {
+    --overskrift-h1: 'futura-pt', sans-serif;
+    --overskrift-h2: 'linotype-didot', serif;
+    --broedtekst-skrift: 'futura-pt', sans-serif;
+    --broedtekst-farve: #626262;
+    --nav-skrift: 'montserrat', sans-serif;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+button {
+    border: none;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    color: #626262;
+}
+
+/*MENU og HEADER*/
+.header .logo {
+    height: 100%;
+    width: auto;
+}
+
+.header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.header {
+    background-color: #ffffff;
+    top: 0;
+    /*behold menuen altid på toppen, når siden ikke kører lodret*/
+    position: fixed;
+    width: 100%;
+    z-index: 30;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    color: #767676;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #9cb7dd;
+}
+
+.header .logo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header .logo {
+        width: 10rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header .logo {
+        width: 10rem;
+        padding-left: 2.5rem;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .header li a {
+        display: block;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
+/* menu */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    z-index: 9999;
+}
+
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    background: #000000;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    background: #000000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 440px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+#contentwp {
+    margin: 20vw 6vw;
+}
+
+/*
+video {
+    object-fit: scale-down;
+}
+.video_container {
+    padding: 3vw;
+}
+*/
+
+#contentwp h1,
+#singlecollection h1 {
+    font-family: var(--overskrift-h1);
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+    font-size: 7vw;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #626262;
+    padding: 0 0 0 3.5vw;
+    /*
+    padding-left: 6.5rem;
+    padding-bottom: 0;
+    margin: 1.5rem;
+*/
+}
+
+.acollection h2 {
+    font-family: var(--overskrift-h2);
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 8vw;
+    padding: 2vw 0;
+}
+
+.describe {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 3.5vh;
+    color: #626262;
+    padding: 2vw 0;
+}
+
+.acollection {
+    margin: 4.5vw;
+    display: grid;
+    grid-gap: 2vw;
+}
+
+.seemorebtn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /*    background-color: #b4a9a9;*/
+    width: 35vw;
+    padding: 1vw;
+    margin: 2.8vw 0;
+    transition: width 0.8s;
+}
+
+.seemorebtn p,
+.long-arrow-white {
+    text-align: center;
+    font-family: var(--nav-skrift);
+    font-size: 2.8vw;
+    color: #626262;
+    padding: 1.3vw;
+    transition: width 0.8s;
+}
+
+.seemorebtn img {
+    height: 1.8vw;
+    width: 10vw;
+}
+
+.seemorebtn:hover {
+    width: 48vw;
+    transition-timing-function: ease-in-out;
+}
+
+.seemorebtn p:hover,
+.seemorebtn p:active {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.collection_name {
+    width: 70vw;
+}
+
+.contentlist {
+    padding: 1vw 0;
+}
+
+/*If the screen is min. 800px and bigger --- TABLET og andre*/
+@media only screen and (min-width: 800px) {
+
+    /*--artworks.html--*/
+    #contentwp h1,
+    #singlecollection h1 {
+        font-size: 3vw;
+    }
+
+    #contentwp {
+        margin: 12vw 5vw;
+    }
+
+    .seemorebtn p,
+    .long-arrow-white {
+        font-size: 1.3vw;
+        padding: 0;
+    }
+
+    .seemorebtn {
+        width: 18vw;
+        padding: 0;
+        margin: 0 0 2vw;
+    }
+
+    .seemorebtn:hover {
+        width: 25vw;
+    }
+
+    .acollection h2 {
+        font-size: 4.5vw;
+        padding-top: 18vw;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .acollection {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 5vw;
+        margin: 2vw 1vw;
+    }
+
+    .collection_name {
+        width: 35vw;
+    }
+}
