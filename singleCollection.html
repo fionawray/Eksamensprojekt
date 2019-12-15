@@ -102,14 +102,8 @@ Spanning for any brick = S
         let id = urlCol.get("id");
         let paintings = [];
         let gallery_counter = [];
-<<<<<<< HEAD
-        let item;
         let allItems = document.querySelector(".onepainting");
         let masonryEvents = ['load', 'resize'];
-
-=======
-        console.log(id);
->>>>>>> Hej
 
         console.log(id);
         document.addEventListener("DOMContentLoaded", start);
@@ -142,12 +136,7 @@ Spanning for any brick = S
             const gridlist = document.querySelector(".onecol_list");
 
             //tag fat i den første element: console.log(paintings[0].collection);
-<<<<<<< HEAD
-            document.querySelector(".title").textContent = paintings[0].collection;
-            document.querySelector(".currentlink").textContent = paintings[0].collection;
-=======
-            document.querySelector(".title").innerHTML = paintings[0].collection;
->>>>>>> Hej
+            document.querySelector(".title").textContent = paintings[0].collection;document.querySelector(".currentlink").textContent = paintings[0].collection;
 
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
@@ -166,7 +155,6 @@ Spanning for any brick = S
             console.log(showOnepainting);
             document.querySelector(".popup").style.display = "block";
             document.querySelector(".close").addEventListener("click", closePopup);
-<<<<<<< HEAD
 
             document.querySelector(".apainting img").src = painting.picture.guid;
             document.querySelector(".apainting h2").textContent = painting.title.rendered;
@@ -177,14 +165,6 @@ Spanning for any brick = S
             //controls til galleriet på pop-up vindue
             document.querySelector(".prev").addEventListener("click", clickPrev);
             document.querySelector(".next").addEventListener("click", clickNext);
-
-=======
-            //controls til galleriet på pop-up vindue
-            document.querySelector(".prev").addEventListener("click", clickPrev);
-            document.querySelector(".next").addEventListener("click", clickNext);
-            clickNext();
-            clickPrev();
->>>>>>> Hej
         }
 
         function closePopup() {
@@ -197,11 +177,8 @@ Spanning for any brick = S
             console.log(clickNext);
 
             if (gallery_counter == paintings.length) {
-<<<<<<< HEAD
                 gallery_counter = [];
-=======
                 gallery_counter = 0;
->>>>>>> Hej
             }
             gallery_counter++;
 
@@ -226,7 +203,6 @@ Spanning for any brick = S
             document.querySelector(".nameCol").textContent = "Collection: " + paintings[gallery_counter].collection;
         }
 
-<<<<<<< HEAD
         //        function resizeMasonryItem(item) {
         //            let masonry_grid = document.querySelector(".onecol_list")[0];
         //            let rowGap = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-row-gap'));
@@ -253,8 +229,6 @@ Spanning for any brick = S
         //            }
         //        }
 
-=======
->>>>>>> Hej
     </script>
 </body>
 
