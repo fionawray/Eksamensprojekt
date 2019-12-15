@@ -30,6 +30,10 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 p {
     color: #626262;
 }
@@ -84,7 +88,6 @@ h2 {
 }
 
 .header li a {
-    display: block;
     padding: 20px 20px;
     background-color: #ffffff;
     color: #767676;
@@ -103,37 +106,6 @@ h2 {
     float: left;
     margin-top: 10px;
     margin-left: 20px;
-}
-
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
 }
 
 /* menu */
@@ -210,29 +182,33 @@ h2 {
     top: 0;
 }
 
-@media (min-width: 48em) {
-    .header li {
-        float: left;
-    }
-
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
+/*Breadcrumbs*/
+.breadcrumbs {
+    margin-top: 20vw;
 }
 
+.breadcrumbs ul {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;
+    padding-left: 3vw;
+}
 
+.breadcrumbs li a,
+.breadcrumbs li + li:before {
+    color: #767676;
+    font-size: 3vw;
+}
+
+.breadcrumbs li + li:before {
+    content: "/\00a0";
+    padding: 2vw;
+}
+
+/*Contents*/
 #singlecollection {
-    margin: 25vw 0;
+    margin: 5vw 0;
 }
 
 .onecol_list {
@@ -349,7 +325,7 @@ h2 {
 
     /*--singleCollection.html--*/
     #singlecollection {
-        margin: 20vw 0;
+        margin: 5vw 0;
     }
 
     h1 {
@@ -455,7 +431,72 @@ footer p {
     width: 4vw;
 }
 
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header .logo {
+        width: 10rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header .logo {
+        width: 10rem;
+        padding-left: 2.5rem;
+    }
+
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .header li a {
+        display: block;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
 @media screen and (min-width: 800px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.5vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
+    }
+
     footer {
         padding: 0 1vw;
     }
@@ -482,11 +523,31 @@ footer p {
 /*If the screen is bigger than 1023px --- desktop*/
 @media only screen and (min-width: 1024px) {
 
-    /*--singleCollection.html--*/
-    #singlecollection {
-        margin: 10vw 2vw;
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
     }
 
+    .breadcrumbs ul {
+        list-style: none;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        display: inline-flex;
+        padding-left: 4vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.2vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
+    }
+
+    /*--singleCollection.html--*/
     h1 {
         padding-left: 5vw;
         font-size: 4vw;
