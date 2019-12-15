@@ -43,10 +43,9 @@
 
     <!--A template for an item on the content list-->
     <template>
-        <section class="masonry-brick">
-            <div class="onepainting"> <img src="" alt="">
-                <h2></h2>
-            </div>
+        <section class="onepainting">
+            <img src="" alt="">
+            <h2></h2>
         </section>
     </template>
 
@@ -102,7 +101,7 @@ Spanning for any brick = S
         const urlCol = new URLSearchParams(window.location.search);
         let id = urlCol.get("id");
         let paintings = [];
-        let gallery_counter = [];
+        let gallery_counter = 0;
         let item;
         let allItems = document.querySelector(".onepainting");
         let masonryEvents = ['load', 'resize'];
@@ -115,12 +114,12 @@ Spanning for any brick = S
             getJson();
             getFooter();
             showAllpaintings();
-            resizeMasonryItem(item);
-            resizeAllMasonryItems();
-            waitForImages();
-            masonryEvents.forEach(function(event) {
-                window.addEventListener(event, resizeAllMasonryItems);
-            });
+            //            resizeMasonryItem(item);
+            // resizeAllMasonryItems();
+            // waitForImages();
+            // masonryEvents.forEach(function(event) {
+            // window.addEventListener(event, resizeAllMasonryItems);
+            // });
         }
         async function getJson() {
             const response = await fetch("https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=" + id + "&per_page=100");
@@ -139,41 +138,50 @@ Spanning for any brick = S
             const gridlist = document.querySelector(".onecol_list");
 
             //tag fat i den første element: console.log(paintings[0].collection);
-            document.querySelector(".title").innerHTML = paintings[0].collection;
-            document.querySelector(".currentlink").innerHTML = paintings[0].collection;
+            document.querySelector(".title").textContent = paintings[0].collection;
+            document.querySelector(".currentlink").textContent = paintings[0].collection;
 
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
+
                 gridlist.appendChild(clone);
                 gridlist.lastElementChild.addEventListener("click", () => {
                     showOnepainting(painting)
                 });
             })
+
         }
 
         function showOnepainting(painting) {
             console.log(showOnepainting);
             document.querySelector(".popup").style.display = "block";
             document.querySelector(".close").addEventListener("click", closePopup);
+
+            document.querySelector(".apainting img").src = painting.picture.guid;
+            document.querySelector(".apainting h2").textContent = painting.title.rendered;
+            document.querySelector(".size").textContent = "Size: " + painting.size;
+            document.querySelector(".status").textContent = "Sold: " + painting.sold;
+            document.querySelector(".nameCol").textContent = "Collection: " + painting.collection;
+
             //controls til galleriet på pop-up vindue
             document.querySelector(".prev").addEventListener("click", clickPrev);
             document.querySelector(".next").addEventListener("click", clickNext);
 
-            clickNext();
-            clickPrev();
         }
 
         function closePopup() {
             document.querySelector(".popup").style.display = "none";
+            clickNext();
+            clickPrev();
         }
 
         function clickNext() {
             console.log(clickNext);
 
             if (gallery_counter == paintings.length) {
-                gallery_counter = 0;
+                gallery_counter = [];
             }
             gallery_counter++;
 
@@ -198,31 +206,31 @@ Spanning for any brick = S
             document.querySelector(".nameCol").textContent = "Collection: " + paintings[gallery_counter].collection;
         }
 
-        function resizeMasonryItem(item) {
-            let masonry_grid = document.querySelector(".onecol_list")[0];
-            let rowGap = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-row-gap'));
-            let rowHeight = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-auto-rows'));
-            let rowSpan = Math.ceil((item.querySelector(".onepainting").getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-
-            item.style.gridRowEnd = 'span' + rowSpan;
-        }
-
-        function resizeAllMasonryItems() {
-            let allItems = document.querySelector(".masonry-brick");
-            for (let i = 0; i < allItems.length; i++) {
-                resizeMasonryItem(allItems[i]);
-            }
-        }
-
-        function waitForImages() {
-            let allItems = document.querySelector(".masonry-brick");
-            for (let i = 0; i < allItems.length; i++) {
-                imagesLoaded(allItems[i], function(instance) {
-                    let item = instance.elements[0];
-                    resizeMasonryItem(item);
-                });
-            }
-        }
+        //        function resizeMasonryItem(item) {
+        //            let masonry_grid = document.querySelector(".onecol_list")[0];
+        //            let rowGap = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-row-gap'));
+        //            let rowHeight = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-auto-rows'));
+        //            let rowSpan = Math.ceil((item.querySelector(".onepainting").getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+        //
+        //            item.style.gridRowEnd = 'span' + rowSpan;
+        //        }
+        //
+        //        function resizeAllMasonryItems() {
+        //            let allItems = document.querySelector(".masonry-brick");
+        //            for (let i = 0; i < allItems.length; i++) {
+        //                resizeMasonryItem(allItems[i]);
+        //            }
+        //        }
+        //
+        //        function waitForImages() {
+        //            let allItems = document.querySelector(".masonry-brick");
+        //            for (let i = 0; i < allItems.length; i++) {
+        //                imagesLoaded(allItems[i], function(instance) {
+        //                    let item = instance.elements[0];
+        //                    resizeMasonryItem(item);
+        //                });
+        //            }
+        //        }
 
     </script>
 </body>
