@@ -102,10 +102,9 @@ Spanning for any brick = S
         let id = urlCol.get("id");
         let paintings = [];
         let gallery_counter = [];
-        let allItems = document.querySelector(".onepainting");
-        let masonryEvents = ['load', 'resize'];
 
         console.log(id);
+
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -136,7 +135,8 @@ Spanning for any brick = S
             const gridlist = document.querySelector(".onecol_list");
 
             //tag fat i den første element: console.log(paintings[0].collection);
-            document.querySelector(".title").textContent = paintings[0].collection;document.querySelector(".currentlink").textContent = paintings[0].collection;
+            document.querySelector(".title").textContent = paintings[0].collection;
+            document.querySelector(".currentlink").textContent = paintings[0].collection;
 
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
@@ -177,7 +177,7 @@ Spanning for any brick = S
             console.log(clickNext);
 
             if (gallery_counter == paintings.length) {
-                gallery_counter = [];
+
                 gallery_counter = 0;
             }
             gallery_counter++;
