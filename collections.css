@@ -185,6 +185,13 @@ video {
     margin: 1.5rem;
 }
 
+@media only screen and (max-width:600px) {
+
+    .acollection h2 {
+        text-align: center;
+    }
+}
+
 .acollection h2 {
     font-family: linotype-didot, serif;
     font-weight: 400;
