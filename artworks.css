@@ -291,6 +291,49 @@ video {
     padding: 1vw 0;
 }
 
+/*Footer*/
+hr {
+    width: 85%;
+    border: 0.7px solid #cecdcd;
+}
+
+.footerinfo {
+    text-align: center;
+    position: sticky;
+    font-family: 'Poppins', sans-serif;
+    color: #626262;
+}
+
+.somecontent {
+    display: flex;
+    justify-content: center;
+}
+
+.footerinfo p {
+    font-size: 0.8rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.footerinfo .txt_1 {
+    padding-bottom: 1rem;
+}
+
+.item {
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0rem 1rem;
+    color: #626262;
+    padding-top: 1rem;
+}
+
+.fa {
+    width: 50px;
+}
+
+.copyright {
+    font-size: 10px;
+}
+
 @media (min-width: 48em) {
     .header li {
         float: left;
