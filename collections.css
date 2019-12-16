@@ -216,9 +216,11 @@ video {
 }
 
 .seemorebtn {
+    position: relative;
+    left: -30%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+
     background-color: #ffffff;
     width: 35vw;
     padding: 1vw;
@@ -227,7 +229,6 @@ video {
 
 .seemorebtn p,
 .long-arrow-white {
-    text-align: center;
     font-family: var(--nav-skrift);
     font-size: 2.8vw;
     color: #000000;
@@ -258,19 +259,20 @@ video {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    padding: 0;
 }
 
 .collection_name {
     flex-basis: 300px;
     flex-grow: 1;
-    max-width: 480px;
+    max-width: 400px;
 }
 
 .collection_content {
     flex-basis: 300px;
     max-width: 400px;
     flex-grow: 1;
+    overflow: hidden;
 }
 
 .acollection:nth-child(even) {
@@ -279,6 +281,8 @@ video {
 
 .motiongraphic {
     height: 350px;
+    margin: 0;
+    padding: 0;
 }
 
 /*Footer*/
@@ -412,7 +416,6 @@ p.txt_1 {
 
     .acollection h2 {
         font-size: 4.5vw;
-        hyphens: auto;
     }
 
 
