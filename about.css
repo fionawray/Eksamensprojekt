@@ -208,7 +208,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 4.3rem;
-    cursor: pointer;
 }
 
 #about p {
@@ -217,7 +216,6 @@ body {
     font-style: normal;
     line-height: 1.6rem;
     color: #626262;
-    cursor: pointer;
 }
 
 .all_artwork_p {
@@ -230,7 +228,6 @@ body {
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
     text-decoration: underline;
-    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -259,7 +256,6 @@ body {
     top: 0px;
     width: 100%;
     height: auto;
-    cursor: pointer;
 }
 
 /*Exhibititon section on front page*/
