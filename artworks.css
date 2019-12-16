@@ -190,26 +190,6 @@ p {
     top: 0;
 }
 
-@media (min-width: 48em) {
-    .header li {
-        float: left;
-    }
-
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
-}
-
 #contentwp {
     margin: 20vw 6vw;
 }
@@ -311,6 +291,26 @@ video {
     padding: 1vw 0;
 }
 
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
 /*If the screen is min. 800px and bigger --- TABLET og andre*/
 @media only screen and (min-width: 800px) {
 
@@ -351,6 +351,10 @@ video {
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 5vw;
         margin: 2vw 1vw;
+    }
+
+    .acollection:nth-child(even) {
+        color: beige;
     }
 
     .collection_name {

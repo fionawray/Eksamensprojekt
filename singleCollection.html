@@ -103,15 +103,8 @@ Spanning for any brick = S
         let paintings = [];
         let gallery_counter = [];
 
-        let item;
-        let allItems = document.querySelector(".onepainting");
-        let masonryEvents = ['load', 'resize'];
-
-
         console.log(id);
 
-
-        console.log(id);
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -142,11 +135,8 @@ Spanning for any brick = S
             const gridlist = document.querySelector(".onecol_list");
 
             //tag fat i den første element: console.log(paintings[0].collection);
-
             document.querySelector(".title").textContent = paintings[0].collection;
             document.querySelector(".currentlink").textContent = paintings[0].collection;
-
-            document.querySelector(".title").innerHTML = paintings[0].collection;
 
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
@@ -166,7 +156,6 @@ Spanning for any brick = S
             document.querySelector(".popup").style.display = "block";
             document.querySelector(".close").addEventListener("click", closePopup);
 
-
             document.querySelector(".apainting img").src = painting.picture.guid;
             document.querySelector(".apainting h2").textContent = painting.title.rendered;
             document.querySelector(".size").textContent = "Size: " + painting.size;
@@ -176,13 +165,6 @@ Spanning for any brick = S
             //controls til galleriet på pop-up vindue
             document.querySelector(".prev").addEventListener("click", clickPrev);
             document.querySelector(".next").addEventListener("click", clickNext);
-
-            //controls til galleriet på pop-up vindue
-            document.querySelector(".prev").addEventListener("click", clickPrev);
-            document.querySelector(".next").addEventListener("click", clickNext);
-            clickNext();
-            clickPrev();
-
         }
 
         function closePopup() {
@@ -196,10 +178,7 @@ Spanning for any brick = S
 
             if (gallery_counter == paintings.length) {
 
-                gallery_counter = [];
-
                 gallery_counter = 0;
-
             }
             gallery_counter++;
 
@@ -223,7 +202,6 @@ Spanning for any brick = S
             document.querySelector(".status").textContent = "Sold: " + paintings[gallery_counter].sold;
             document.querySelector(".nameCol").textContent = "Collection: " + paintings[gallery_counter].collection;
         }
-
 
         //        function resizeMasonryItem(item) {
         //            let masonry_grid = document.querySelector(".onecol_list")[0];
@@ -250,5 +228,8 @@ Spanning for any brick = S
         //                });
         //            }
         //        }
+
     </script>
-</body></html>
+</body>
+
+</html>
