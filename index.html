@@ -141,8 +141,8 @@
         </div>
     </section>
 
-
     <hr>
+
     <footer class="footer">
         <div class="media_wrapper">
             <a href="https://www.facebook.com/KristaWerdelinArt/?ref=bookmarks">
@@ -216,7 +216,7 @@
         async function getUpcomingEvent_1() {
             const upcomingEvent_1 = await fetch(upcomingEvent_1Url);
             parsedResult = await upcomingEvent_1.json();
-            document.querySelector(".upcomingEvent_1").innerHTML = parsedResult.content.rendered;
+            document.querySelector(".upcomingEvent_1").textContent = parsedResult.where;
         }
 
 
