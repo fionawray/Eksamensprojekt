@@ -392,11 +392,19 @@ hr {
 
     .acollection {
         grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 5vw;
+        grid-gap: 5vw;
         margin: 2vw 1vw;
     }
 
     .collection_name {
         width: 35vw;
+    }
+
+    .collection_name:nth-child(2) {
+        grid-column-start: 2;
+    }
+
+    .collection_content:nth-child(1) {
+        grid-column-start: 1;
     }
 }
