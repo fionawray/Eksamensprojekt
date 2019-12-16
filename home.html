@@ -144,5 +144,59 @@
             <p class="txt_1">&#169; Copyright 2019 - All Rights Reserved &#10072; Designed by Group 9</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        const aboutUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/7";
+
+        const paperworksUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/320";
+
+        const citylifeUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/322";
+
+        const landscapesUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/325";
+
+        const blackpoetryUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/327"
+
+        window.addEventListener("DOMContentLoaded", sidenVises);
+
+        function sidenVises() {
+            console.log(sidenVises);
+            getAbout();
+            //    getAboutCitation();
+            //    getAboutPt2();
+            getPaperworks();
+            getCitylife();
+            getLandscapes();
+            getBlackpoetry();
+            hentFooter();
+        }
+
+        async function getAbout() {
+            const about = await fetch(aboutUrl);
+            parsedResult = await about.json();
+            document.querySelector(".about").innerHTML = parsedResult.content.rendered;
+        }
+
+        async function getPaperworks() {
+            const paperworks = await fetch(paperworksUrl);
+            parsedResult = await paperworks.json();
+            document.querySelector(".paperworks").innerHTML = parsedResult.content.rendered;
+        }
+
+        async function getCitylife() {
+            const citylife = await fetch(citylifeUrl);
+            parsedResult = await citylife.json();
+            document.querySelector(".citylife").innerHTML = parsedResult.content.rendered;
+        }
+
+        async function getLandscapes() {
+            const landscapes = await fetch(landscapesUrl);
+            parsedResult = await landscapes.json();
+            document.querySelector(".landscapes").innerHTML = parsedResult.content.rendered;
+        }
+
+        async function getBlackpoetry() {
+            const blackpoetry = await fetch(blackpoetryUrl);
+            parsedResult = await blackpoetry.json();
+            document.querySelector(".blackpoetry").innerHTML = parsedResult.content.rendered;
+        }
+    </script>
 </body></html>
