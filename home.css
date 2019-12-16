@@ -370,30 +370,32 @@ h3 {
 }
 
 /*Footer*/
-hr {
-    width: 85%;
-    border: 0.7px solid #cecdcd;
-}
+/*Footer*/
 
-.footerinfo {
+.footer {
     text-align: center;
     position: sticky;
     font-family: 'Poppins', sans-serif;
     color: #626262;
 }
 
-.somecontent {
+.media_wrapper {
     display: flex;
     justify-content: center;
 }
 
-.footerinfo p {
+hr {
+    width: 85%;
+    border: 0.7px solid #cecdcd;
+}
+
+p.txt {
     font-size: 0.8rem;
     padding-bottom: 2rem;
     padding-top: 1rem;
 }
 
-.footerinfo .txt_1 {
+p.txt_1 {
     padding-bottom: 1rem;
 }
 
