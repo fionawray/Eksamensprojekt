@@ -396,10 +396,6 @@ hr {
         margin: 2vw 1vw;
     }
 
-    .acollection:nth-child(even) {
-        color: beige;
-    }
-
     .collection_name {
         width: 35vw;
     }
