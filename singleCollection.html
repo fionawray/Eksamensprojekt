@@ -191,31 +191,5 @@
             document.querySelector(".status").textContent = "Sold: " + paintings[gallery_counter].sold;
             document.querySelector(".nameCol").textContent = "Collection: " + paintings[gallery_counter].collection;
         }
-
-        //        function resizeMasonryItem(item) {
-        //            let masonry_grid = document.querySelector(".onecol_list")[0];
-        //            let rowGap = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-row-gap'));
-        //            let rowHeight = parseInt(window.getComputedStyle(masonry_grid).getPropertyValue('grid-auto-rows'));
-        //            let rowSpan = Math.ceil((item.querySelector(".onepainting").getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-        //
-        //            item.style.gridRowEnd = 'span' + rowSpan;
-        //        }
-        //
-        //        function resizeAllMasonryItems() {
-        //            let allItems = document.querySelector(".masonry-brick");
-        //            for (let i = 0; i < allItems.length; i++) {
-        //                resizeMasonryItem(allItems[i]);
-        //            }
-        //        }
-        //
-        //        function waitForImages() {
-        //            let allItems = document.querySelector(".masonry-brick");
-        //            for (let i = 0; i < allItems.length; i++) {
-        //                imagesLoaded(allItems[i], function(instance) {
-        //                    let item = instance.elements[0];
-        //                    resizeMasonryItem(item);
-        //                });
-        //            }
-        //        }
     </script>
 </body></html>
