@@ -92,13 +92,33 @@
     <section id="pic" class="position_fixed">
     </section>
 
+    <!-- Show Upcoming exhibitions
+    <main id="upcoming">
+        <h1 class="title"></h1>
+        <section class="list">
+        </section>
+    </main>
+-->
+    <!--
+    A template for one exhibition on the list
+    <template>
+        <section id="exhibitions">
+            <h2></h2>
+            <h3 class="date"></h3>
+            <p class="tekst_exh"></p>
+            <button> <a href="exhibitions.html" class="exhibition_button">Læs mere</a></button>
+        </section>
+    </template>
+-->
+
+
     <section id="exhibition">
         <h1>upcoming exhibitions</h1>
         <div class="sectionwrapper">
             <div class="col">
                 <h2>01</h2>
                 <h3>10 / 12 / 2019</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <p class="tekst_exh">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <a href="exhibitions.html" class="exhibition_button">Læs mere</a>
             </div>
@@ -117,6 +137,7 @@
             </div>
         </div>
     </section>
+
 
     <hr>
     <footer class="footer">
@@ -151,6 +172,10 @@
         const citylifeUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/322";
         const landscapesUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/325";
         const blackpoetryUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/327";
+        //Veronika - correct link for the upcoming exhibition category
+        const upcomingEventUrl = "http://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/single_exhibition?categories=19";
+        let exhibitions = [];
+        let filter = "all";
 
         window.addEventListener("DOMContentLoaded", sidenVises);
 
@@ -160,6 +185,7 @@
             getCitylife();
             getLandscapes();
             getBlackpoetry();
+            //     Veroni       getEvents();
         }
 
         async function getPaperworks() {
@@ -185,5 +211,27 @@
             parsedResult = await blackpoetry.json();
             document.querySelector(".blackpoetry").innerHTML = parsedResult.content.rendered;
         }
+
+        async function getEvents() {
+            const response = await fetch(upcomingEventUrl);
+            console.log(response);
+            events = await response.json();
+            showUpcoming();
+        }
+
+        //   Veronika - todo    function showUpcoming() {
+        //            console.log(showUpcoming);
+        //            const pattern = document.querySelector("template");
+        //            const gridlist = document.querySelector(".list");
+        //
+        //            exhibitions.forEach(exhibition => {
+        //                const clone = pattern.cloneNode(true).content;
+        //                clone.querySelector(".exhibitions h2").textContent = exhibition.title.rendered;
+        //                list.appendChild(clone);
+        //         list.lastElementChild.addEventListener("click", () => {
+        //                    location.href = "exhibitions.html?id=" + exhibition.id;
+        //               });
+        //            })
+        //        }
     </script>
 </body></html>
