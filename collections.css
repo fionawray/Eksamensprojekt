@@ -222,7 +222,6 @@ video {
     background-color: #ffffff;
     width: 35vw;
     padding: 1vw;
-    margin-left: 1rem;
     transition: width 0.8s;
 }
 
