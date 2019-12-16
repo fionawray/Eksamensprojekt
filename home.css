@@ -182,7 +182,6 @@
     height: auto;
 }
 
-
 @media only screen and (max-width: 600px) {
     #splash_video {
         width: auto;
@@ -190,6 +189,7 @@
         padding-right: 1.5rem;
     }
 }
+
 
 /*Artwork front page*/
 #artwork h1 {
@@ -235,6 +235,14 @@
     letter-spacing: 0.1rem;
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media only screen and (max-width:600px) {
+    .all_artwork_p {
+        text-align: center;
+        padding: 0;
+        padding-bottom: 2rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -314,6 +322,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
+@media only screen and (max-width: 600px) {}
+
+
 #exhibition h2 {
     font-family: linotype-didot, serif;
     font-weight: 400;
@@ -334,7 +346,7 @@ h3 {
 #exhibition p {
     color: #626262;
     font-family: 'Work Sans', sans-serif;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 #exhibition .icons {

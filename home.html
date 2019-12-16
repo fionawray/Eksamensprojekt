@@ -141,8 +141,6 @@
 
     <!--Get pages data from WordPress-->
     <script>
-        const aboutUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/7";
-
         const paperworksUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/320";
 
         const citylifeUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/322";
@@ -155,17 +153,19 @@
 
         function sidenVises() {
             console.log(sidenVises);
+<<<<<<< HEAD
             getAbout();
+=======
+>>>>>>> origin/master
             getPaperworks();
             getCitylife();
             getLandscapes();
             getBlackpoetry();
+<<<<<<< HEAD
         }
+=======
+>>>>>>> origin/master
 
-        async function getAbout() {
-            const about = await fetch(aboutUrl);
-            parsedResult = await about.json();
-            document.querySelector(".about").innerHTML = parsedResult.content.rendered;
         }
 
         async function getPaperworks() {

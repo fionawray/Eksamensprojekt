@@ -31,6 +31,12 @@
         <div class="sectionwrapper">
             <div class="col">
                 <h2>Krista<br>Werdelin</h2>
+                <div class="container_video">
+                    <video id=vs_video controls autoplay>
+                        <source src="Video/video_krista.mp4" type="video/mp4">
+                    </video>
+                </div>
+
             </div>
             <div class="col about">
                 <p></p>
@@ -57,5 +63,24 @@
             <p class="txt_1">&#169; Copyright 2019 - All Rights Reserved &#10072; Designed by Group 9</p>
         </div>
     </footer>
+<<<<<<< HEAD
 
+=======
+    <script>
+        const aboutUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/7";
+
+        window.addEventListener("DOMContentLoaded", sidenVises);
+
+        function sidenVises() {
+            console.log(sidenVises);
+            getAbout();
+        }
+
+        async function getAbout() {
+            const about = await fetch(aboutUrl);
+            parsedResult = await about.json();
+            document.querySelector(".about").innerHTML = parsedResult.content.rendered;
+        }
+    </script>
+>>>>>>> origin/master
 </body></html>
