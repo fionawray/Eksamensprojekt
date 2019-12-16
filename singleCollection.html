@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krista Werdelin - One Collection</title>
+    <title class="pagetitle"><a href="singleCollection.html?id="></a></title>
     <link rel="stylesheet" href="singleCollection.css">
     <link href="https://fonts.googleapis.com/css?family=Baskervville:400i|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/adt6mug.css">
@@ -143,6 +143,7 @@ Spanning for any brick = S
             //tag fat i den første element: console.log(paintings[0].collection);
             document.querySelector(".title").textContent = paintings[0].collection;
             document.querySelector(".currentlink").textContent = paintings[0].collection;
+            document.querySelector(".pagetitle").textContent = "Krista Werdelin - " + paintings[0].collection;
 
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
