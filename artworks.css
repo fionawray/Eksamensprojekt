@@ -211,8 +211,6 @@ video {
 
 .acollection {
     margin: 4.5vw;
-    display: grid;
-    grid-gap: 2vw;
 }
 
 .seemorebtn {
