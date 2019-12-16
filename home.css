@@ -177,7 +177,7 @@
 
 
 /*VIDEO*/
-#splash_video {
+#video {
     max-width: 100%;
     height: auto;
 }
@@ -190,12 +190,6 @@
     }
 }
 
-@media only screen and (min-width: 600px) {
-    #splash_video {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
 
 /*Artwork front page*/
 #artwork h1 {
@@ -204,8 +198,9 @@
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
-    text-align: center;
     color: #626262;
+    padding-top: 3rem;
+    padding-left: 6.5rem;
     margin: 1.5rem;
 
 }
@@ -240,6 +235,14 @@
     letter-spacing: 0.1rem;
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media only screen and (max-width:600px) {
+    .all_artwork_p {
+        text-align: center;
+        padding: 0;
+        padding-bottom: 2rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -364,12 +367,6 @@ h3 {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
-
-@media only screen and (max-width:600px) {
-    .exhibition_button {
-        padding: 1rem;
-    }
 }
 
 /*Footer*/
