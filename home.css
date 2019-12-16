@@ -199,6 +199,7 @@
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     text-align: center;
+    text-decoration: none;
     color: #626262;
     padding-top: 3rem;
     padding-left: 6.5rem;
@@ -211,6 +212,7 @@
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
+    text-decoration: none;
     letter-spacing: 0.2rem;
     font-size: 4.3rem;
     cursor: pointer;
@@ -223,6 +225,7 @@
     line-height: 1.6rem;
     color: #626262;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .all_artwork_p {
