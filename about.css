@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
@@ -367,19 +371,54 @@ h3 {
     }
 }
 
-/*Portrait img*/
-.column {
-    float: left;
-    width: 31%;
-    padding: 5px;
-    align-content: center;
+/*Portrait grid*/
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* Clearfix (clear floats) */
-.row::after {
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.row:after {
     content: "";
-    clear: both;
     display: table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
 }
 
 /*Footer*/

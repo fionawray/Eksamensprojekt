@@ -44,58 +44,68 @@
         </div>
     </section>
 
-    <div class="row">
-        <div class="column">
-            <img src="img/smartmockups_k41ve3ki.jpg" alt="Snow" style="width:100%">
-        </div>
-        <div class="column">
-            <img src="img/smartmockups_k41ve3ki.jpg" alt="Forest" style="width:100%">
-        </div>
-        <div class="column">
-            <img src="img/smartmockups_k41ve3ki.jpg" alt="Mountains" style="width:100%">
-        </div>
-    </div>
+    <!-- Portfolio Gallery Grid -->
+    <div class="main">
 
-    <hr>
-
-    <footer class="footer">
-        <div class="media_wrapper">
-            <a href="https://www.facebook.com/KristaWerdelinArt/?ref=bookmarks">
-                <div class="item">
-                    <i class="fa fa-facebook"></i>
+        <div class="row">
+            <div class="column">
+                <div class="content">
+                    <img src="img/smartmockups_k41ve3ki.jpg" alt="Mountains" style="width:100%">
                 </div>
-            </a>
-            <a href="https://www.instagram.com/kristawerdelin/">
-                <div class="item">
-                    <i class="fa fa-instagram"></i>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="img/smartmockups_k41ve3ki.jpg" alt="Lights" style="width:100%">
                 </div>
-            </a>
-            <a href="https://twitter.com/cirkeline123">
-                <div class="item">
-                    <i class="fa fa-twitter"></i>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="img/smartmockups_k41ve3ki.jpg" alt="Nature" style="width:100%">
                 </div>
-            </a>
+            </div>
         </div>
-        <div class="copyright">
-            <p class="txt">Mobiltelefon: +45 20 97 03 23<br>Email: krista@werdelin.dk</p>
-            <p class="txt_1">&#169; Copyright 2019 - All Rights Reserved &#10072; Designed by Group 9</p>
-        </div>
+        <!-- END GRID -->
 
-    </footer>
-    <script>
-        const aboutUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/7";
+        <hr>
 
-        window.addEventListener("DOMContentLoaded", sidenVises);
+        <footer class="footer">
+            <div class="media_wrapper">
+                <a href="https://www.facebook.com/KristaWerdelinArt/?ref=bookmarks">
+                    <div class="item">
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/kristawerdelin/">
+                    <div class="item">
+                        <i class="fa fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://twitter.com/cirkeline123">
+                    <div class="item">
+                        <i class="fa fa-twitter"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="copyright">
+                <p class="txt">Mobiltelefon: +45 20 97 03 23<br>Email: krista@werdelin.dk</p>
+                <p class="txt_1">&#169; Copyright 2019 - All Rights Reserved &#10072; Designed by Group 9</p>
+            </div>
 
-        function sidenVises() {
-            console.log(sidenVises);
-            getAbout();
-        }
+        </footer>
+        <script>
+            const aboutUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/7";
 
-        async function getAbout() {
-            const about = await fetch(aboutUrl);
-            parsedResult = await about.json();
-            document.querySelector(".about").innerHTML = parsedResult.content.rendered;
-        }
-    </script>
+            window.addEventListener("DOMContentLoaded", sidenVises);
+
+            function sidenVises() {
+                console.log(sidenVises);
+                getAbout();
+            }
+
+            async function getAbout() {
+                const about = await fetch(aboutUrl);
+                parsedResult = await about.json();
+                document.querySelector(".about").innerHTML = parsedResult.content.rendered;
+            }
+        </script>
 </body></html>
