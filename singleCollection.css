@@ -317,6 +317,7 @@ h2 {
     right: 3vw;
     font-size: 4.6vw;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .apainting {

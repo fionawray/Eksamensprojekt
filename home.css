@@ -219,7 +219,6 @@ body {
     text-decoration: none;
     letter-spacing: 0.2rem;
     font-size: 4.3rem;
-    cursor: pointer;
 }
 
 #artwork p {
@@ -228,7 +227,6 @@ body {
     font-style: normal;
     line-height: 1.6rem;
     color: #626262;
-    cursor: pointer;
     text-decoration: none;
 }
 
@@ -272,7 +270,6 @@ body {
     top: 0px;
     width: 100%;
     height: auto;
-    cursor: pointer;
 }
 
 /*Position fixed picture*/
