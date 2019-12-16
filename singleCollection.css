@@ -220,7 +220,7 @@ h2 {
 */
     display: grid;
     grid-gap: 2vw;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     margin: 3vw 3vw 7vw;
 }
 
@@ -230,6 +230,11 @@ h2 {
     margin: 0 0 1vw;
 */
     grid-row-end: span 2;
+}
+
+.onepainting .image_container {
+    height: 260px;
+    overflow: hidden;
 }
 
 .popup_content h2 {
