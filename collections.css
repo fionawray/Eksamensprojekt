@@ -303,6 +303,11 @@ p.txt_1 {
     .header .logo {
         width: 10rem;
     }
+
+    #contentwp h1,
+    #singlecollection h1 {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -355,7 +360,7 @@ p.txt_1 {
     /*--artworks.html--*/
     #contentwp h1,
     #singlecollection h1 {
-        font-size: 3vw;
+        font-size: 1.5rem;
     }
 
     #contentwp {
