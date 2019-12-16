@@ -174,30 +174,24 @@ video {
 
 #contentwp h1,
 #singlecollection h1 {
-    font-family: var(--overskrift-h1);
-    letter-spacing: 0.3rem;
+    font-family: futura-pt, sans-serif;
     font-weight: 300;
-    font-size: 7vw;
     font-style: normal;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
+    text-align: center;
     color: #626262;
-    padding: 0 0 0 3.5vw;
-    /*
-    padding-left: 6.5rem;
     padding-bottom: 0;
     margin: 1.5rem;
-*/
 }
 
 .acollection h2 {
-    font-family: var(--overskrift-h2);
-    text-transform: uppercase;
-    letter-spacing: 0.3vw;
+    font-family: linotype-didot, serif;
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
-    font-size: 8vw;
-    padding: 2vw 0;
+    letter-spacing: 0.2rem;
+    font-size: 4.3rem;
 }
 
 .describe {

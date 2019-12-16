@@ -198,6 +198,7 @@
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
+    text-align: center;
     color: #626262;
     padding-top: 3rem;
     padding-left: 6.5rem;
@@ -288,6 +289,7 @@
     font-style: normal;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
+    text-align: center;
     color: #626262;
     padding-top: 4rem;
     padding-left: 6.5rem;
