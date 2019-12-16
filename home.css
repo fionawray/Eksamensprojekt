@@ -379,23 +379,42 @@ h3 {
     cursor: pointer;
 }*/
 
-.seemorebtn p,
-.long-arrow-white {
-    font-size: 0.8rem;
-    ;
-    padding: 0;
+.seemorebtn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #ffffff;
+    width: 35vw;
+    padding: 1vw;
+    margin: 2.8vw 0;
+    transition: width 0.8s;
 }
 
-.seemorebtn {
-    width: 10rem;
-    height: 8vw;
-    padding: 0;
-    margin: 0 0 2vw;
+.seemorebtn p,
+.long-arrow-white {
+    text-align: center;
+    font-family: var(--nav-skrift);
+    font-size: 2.8vw;
+    color: #626262;
+    padding: 1.3vw;
+    transition: width 0.8s;
+}
+
+.seemorebtn img {
+    height: 1rem;
+    width: 5vw;
 }
 
 .seemorebtn:hover {
-    width: 18rem;
+    width: 38vw;
+    transition-timing-function: ease-in-out;
 }
+
+.seemorebtn p:hover,
+.seemorebtn p:active {
+    cursor: pointer;
+}
+
 
 
 /*Footer*/
