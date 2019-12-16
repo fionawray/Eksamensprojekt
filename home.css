@@ -177,17 +177,23 @@
 
 
 /*VIDEO*/
-#video {
+#splash_video {
     max-width: 100%;
     height: auto;
 }
-
 
 @media only screen and (max-width: 600px) {
     #splash_video {
         width: auto;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #splash_video {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -313,6 +319,10 @@
     color: #626262;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+@media only screen and (max-width: 600px) {}
+
 
 #exhibition h2 {
     font-family: linotype-didot, serif;
