@@ -118,10 +118,10 @@
     <section id="exhibition">
         <h1>upcoming exhibitions</h1>
         <div class="sectionwrapper">
-            <div class="col">
+            <div class="col upcomingEvent_1">
                 <h2>01</h2>
                 <h3>10 / 12 / 2019</h3>
-                <p class="tekst_exh">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <p class="">
                 </p>
                 <a href="exhibitions.html" class="exhibition_button">Read More</a>
             </div>
@@ -176,9 +176,7 @@
         const landscapesUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/325";
         const blackpoetryUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/327";
         //Veronika - correct link for the upcoming exhibition category
-        const upcomingEventUrl = "http://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/single_exhibition?categories=19";
-        let exhibitions = [];
-        let filter = "all";
+        const upcomingEvent_1Url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/single_exhibition/366";
 
         window.addEventListener("DOMContentLoaded", sidenVises);
 
@@ -188,7 +186,7 @@
             getCitylife();
             getLandscapes();
             getBlackpoetry();
-            //     Veroni       getEvents();
+            getUpcomingEvent_1();
         }
 
         async function getPaperworks() {
@@ -215,12 +213,14 @@
             document.querySelector(".blackpoetry").innerHTML = parsedResult.content.rendered;
         }
 
-        async function getEvents() {
-            const response = await fetch(upcomingEventUrl);
-            console.log(response);
-            events = await response.json();
-            showUpcoming();
+        async function getUpcomingEvent_1() {
+            const upcomingEvent_1 = await fetch(upcomingEvent_1Url);
+            parsedResult = await upcomingEvent_1.json();
+            document.querySelector(".upcomingEvent_1").innerHTML = parsedResult.content.rendered;
         }
+
+
+
 
         //   Veronika - todo    function showUpcoming() {
         //            console.log(showUpcoming);
