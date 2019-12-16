@@ -239,7 +239,7 @@ body {
     font-family: futura-pt-light, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
     text-decoration: underline;
     cursor: pointer;
@@ -366,16 +366,16 @@ h3 {
 
 
 .exhibition_button {
-    background-color: #b4a9a9;
+    background-color: #ffffff;
     font-family: 'Work Sans', sans-serif;
     border: none;
-    color: #ffffff;
-    padding: 12px 34px;
-    text-decoration: none;
+    color: #000000;
+    padding-top: 1rem;
+    text-decoration: underline;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 1rem;
+    ;
     cursor: pointer;
 }
 
