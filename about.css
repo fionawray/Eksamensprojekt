@@ -242,6 +242,13 @@ body {
     }
 }
 
+@media only screen and (min-width:600px) {
+    #about h2 {
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
 .col img {
     position: relative;
     top: 0px;
@@ -337,6 +344,8 @@ h3 {
 
 /*VIDEO*/
 
+/*VIDEO*/
+
 .container_video {
     width: 100%;
     margin: 0;
@@ -356,6 +365,7 @@ h3 {
         margin: 0;
     }
 }
+
 
 /*Footer*/
 
