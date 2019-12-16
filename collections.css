@@ -219,7 +219,7 @@ video {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background-color: #b4a9a9;
+    background-color: #ffffff;
     width: 35vw;
     padding: 1vw;
     margin: 2.8vw 0;
@@ -231,7 +231,7 @@ video {
     text-align: center;
     font-family: var(--nav-skrift);
     font-size: 2.8vw;
-    color: white;
+    color: #000000;
     padding: 1.3vw;
     transition: width 0.8s;
 }
