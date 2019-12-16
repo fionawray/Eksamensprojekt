@@ -367,6 +367,20 @@ h3 {
     }
 }
 
+/*Portrait img*/
+.column {
+    float: left;
+    width: 31%;
+    padding: 5px;
+    align-content: center;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 /*Footer*/
 
