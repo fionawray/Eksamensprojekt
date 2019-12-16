@@ -235,9 +235,9 @@ video {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
     font-style: normal;
-    line-height: 3.5vh;
     color: #626262;
     padding: 2vw 0;
+    line-height: 1.6rem;
 }
 
 .acollection {
