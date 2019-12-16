@@ -85,37 +85,6 @@ p {
     margin-left: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
-}
-
 /* menu */
 .header .menu {
     clear: both;
@@ -282,10 +251,6 @@ video {
     cursor: pointer;
 }
 
-.collection_name {
-    width: 70vw;
-}
-
 .contentlist {
     padding: 1vw 0;
 }
@@ -333,6 +298,36 @@ hr {
     font-size: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    .header .logo {
+        width: 10rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header .logo {
+        width: 10rem;
+        padding-left: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .header li a {
+        display: block;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
 @media (min-width: 48em) {
     .header li {
         float: left;
@@ -373,13 +368,14 @@ hr {
     }
 
     .seemorebtn {
-        width: 18vw;
+        width: 15vw;
+        height: 4vw;
         padding: 0;
         margin: 0 0 2vw;
     }
 
     .seemorebtn:hover {
-        width: 25vw;
+        width: 18vw;
     }
 
     .acollection h2 {
@@ -390,20 +386,23 @@ hr {
     }
 
     .acollection {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5vw;
-        margin: 2vw 1vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
     }
 
     .collection_name {
-        width: 35vw;
+        flex-basis: 300px;
+        flex-grow: 1;
+        padding: 2vw;
     }
 
-    .collection_name:nth-child(2) {
-        grid-column-start: 2;
+    .collection_content {
+        flex-basis: 300px;
+        flex-grow: 1;
     }
 
-    .collection_content:nth-child(1) {
-        grid-column-start: 1;
+    .acollection:nth-child(even) {
+        flex-direction: row-reverse;
     }
 }
