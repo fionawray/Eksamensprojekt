@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
