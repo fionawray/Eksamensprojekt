@@ -188,6 +188,8 @@
     background-attachment: fixed;
 }
 
+
+
 /*Contact*/
 /* Set the size of the div element that contains the map */
 #txt_contact {
@@ -243,20 +245,6 @@
 
 }
 
-/*Position fixed picture*/
-/*
-#pic {
-    width: 100%;
-    height: 700px;
-}
-
-.position_fixed {
-    background-image: url(img/smartmockups_k41ve3ki.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-*/
-
 input[type=text],
 select,
 textarea {
@@ -292,31 +280,30 @@ input[type=submit]:hover {
 }
 
 /*Footer*/
+hr {
+    width: 85%;
+    border: 0.7px solid #cecdcd;
+}
 
-.footer {
+.footerinfo {
     text-align: center;
     position: sticky;
     font-family: 'Poppins', sans-serif;
     color: #626262;
 }
 
-.media_wrapper {
+.somecontent {
     display: flex;
     justify-content: center;
 }
 
-hr {
-    width: 85%;
-    border: 0.7px solid #cecdcd;
-}
-
-p.txt {
+.footerinfo p {
     font-size: 0.8rem;
     padding-bottom: 2rem;
     padding-top: 1rem;
 }
 
-p.txt_1 {
+.footerinfo .txt_1 {
     padding-bottom: 1rem;
 }
 

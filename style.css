@@ -98,7 +98,6 @@ p {
     }
 }
 
-
 @media only screen and (min-width: 600px) {
     .header {
         background-color: #ffffff;
@@ -793,18 +792,40 @@ footer p {
 }
 
 .footerinfo {
+    /*
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
     padding: 4vw 0;
+*/
+    text-align: center;
+    position: sticky;
+    font-family: 'Poppins', sans-serif;
+    color: #626262;
 }
 
 .somecontent {
     display: flex;
-    flex-flow: row wrap;
+    justify-content: center;
 }
 
+.item {
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0rem 1rem;
+    color: #626262;
+    padding-top: 1rem;
+}
+
+.fa {
+    width: 50px;
+}
+
+.copyright {
+    font-size: 10px;
+}
+
+/*
 .facesymbol {
     cursor: pointer;
     background-image: url(img/facebook_symbol-footer.svg);
@@ -822,6 +843,7 @@ footer p {
     height: 4vw;
     width: 4vw;
 }
+*/
 
 @media screen and (min-width: 800px) {
     footer {

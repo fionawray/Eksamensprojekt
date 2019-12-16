@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krista Werdelin - Collections</title>
     <link rel="stylesheet" href="artworks.css">
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Baskervville:400i|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/adt6mug.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -85,7 +80,12 @@
         </section>
     </template>
 
+
     <!-- <template id="setup_2">
+
+<!--
+    <template id="setup_2">
+
         <section class="acollection">
             <div class="collection_content">
                 <img class="motiongraphic" src="" alt="">
@@ -95,6 +95,9 @@
                         <source class="motiongraphic" src="" type="video/avi">
                     </video>
                 </div>
+
+
+
                 <p class="describe"></p>
             </div>
             <div class="collection_name">
@@ -105,36 +108,33 @@
             </div>
 
         </section>
+
+    </template>
     </template> -->
 
-    <hr>
 
-    <footer class="footer">
-        <div class="media_wrapper">
-            <a href="https://www.facebook.com/KristaWerdelinArt/?ref=bookmarks">
-                <div class="item">
-                    <i class="fa fa-facebook"></i>
-                </div>
-            </a>
-            <a href="https://www.instagram.com/kristawerdelin/">
-                <div class="item">
-                    <i class="fa fa-instagram"></i>
-                </div>
-            </a>
-            <a href="contact.html">
-                <div class="item">
-                    <i class="fa fa-envelope"></i>
-                </div>
-            </a>
-        </div>
-        <div class="copyright">
-            <p class="txt">Mobiltelefon: +45 20 97 03 23<br>Email: krista@werdelin.dk</p>
+    <hr>
+    <footer>
+        <div class="footerinfo">
+            <div class="somecontent">
+                <a href="https://www.facebook.com/KristaWerdelinArt/?ref=bookmarks">
+                    <div class="item">
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/kristawerdelin/">
+                    <div class="item">
+                        <i class="fa fa-instagram"></i>
+                    </div>
+                </a>
+            </div>
+            <p>Mobiltelefon: +45 20 97 03 23 </p>
+            <p>Email: krista@werdelin.dk</p>
             <p class="txt_1">&#169; Copyright 2019 - All Rights Reserved &#10072; Designed by Group 9</p>
         </div>
     </footer>
 
-
-    <!--Jscript til at hente indhold fra WP-->
+    <!--Get pages data from WordPress-->
     <script>
         // data fra WP: alle samlinger
         const urlCollections = "http://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/collections";
@@ -142,29 +142,18 @@
         let collections = [];
         let filter = "all";
         document.addEventListener("DOMContentLoaded", start);
-        $(document).ready(function() {
-            $("p:nth-child(2n-1)").css("background-color",
-                "lightgreen");
-        });
 
         function start() {
-            hentAlleCols();
-            hentFooter();
+            getAllCols();
+        }
 
-        }
-        async function hentFooter() {
-            const footer = await fetch("inc/footer.html");
-            const including = await footer.text();
-            console.log(footer);
-            document.querySelector("footer").innerHTML = including;
-        }
-        async function hentAlleCols() {
+        async function getAllCols() {
             const response = await fetch(urlCollections);
             collections = await response.json();
-            visCollections();
+            showCollections();
         }
 
-        function visCollections() {
+        function showCollections() {
             const pattern = document.querySelector("#setup_1");
             const list = document.querySelector(".contentlist");
 
@@ -190,8 +179,5 @@
         // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=2";
         // // data fra WP: Paperwork
         // const url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/painting?collections=5";
-
     </script>
-</body>
-
-</html>
+</body></html>
