@@ -372,22 +372,16 @@ h3 {
 }
 
 /*Portrait grid*/
-/* Center website */
 .main {
     max-width: 1000px;
     margin: auto;
-}
-
-h1 {
-    font-size: 50px;
-    word-break: break-all;
 }
 
 .row {
     margin: 8px -16px;
 }
 
-/* Add padding BETWEEN each column */
+/* Padding BETWEEN each column */
 .row,
 .row > .column {
     padding: 8px;
