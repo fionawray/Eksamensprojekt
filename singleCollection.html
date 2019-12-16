@@ -20,7 +20,7 @@
         <ul class="menu">
             <li><a href="index.html">home</a></li>
             <li><a href="about.html">about</a></li>
-            <li><a href="artworks.html">artworks</a></li>
+            <li><a href="collections.html">collections</a></li>
             <li><a href="exhibitions.html">exhibitions</a></li>
             <li><a href="contact.html">contact</a></li>
         </ul>
@@ -30,7 +30,7 @@
     <div class="breadcrumbs">
         <ul>
             <li><a href="home.html">home </a></li>
-            <li><a href="artworks.html">artworks</a></li>
+            <li><a href="collections.html">collections</a></li>
             <li><a class="currentlink" href="singleCollection.html?id="></a></li>
         </ul>
     </div>
@@ -122,7 +122,7 @@
             const pattern = document.querySelector("template");
             const gridlist = document.querySelector(".onecol_list");
 
-            //tag fat i den første element: console.log(paintings[0].collection);
+            //get the first objects' element, which is name of the collection: console.log(paintings[0].collection);
             document.querySelector(".title").textContent = paintings[0].collection;
             document.querySelector(".currentlink").textContent = paintings[0].collection;
             document.querySelector(".pagetitle").textContent = "Krista Werdelin - " + paintings[0].collection;
@@ -151,7 +151,7 @@
             document.querySelector(".status").textContent = "Sold: " + painting.sold;
             document.querySelector(".nameCol").textContent = "Collection: " + painting.collection;
 
-            //controls til galleriet på pop-up vindue
+            //controls for galleriet in pop-up window
             document.querySelector(".prev").addEventListener("click", clickPrev);
             document.querySelector(".next").addEventListener("click", clickNext);
         }
@@ -164,13 +164,14 @@
 
         function clickNext() {
             console.log(clickNext);
-
+            //click Next button and the gallery counts one more image in the list
+            gallery_counter++;
+            //if the gallery counter equals the length of the paintings' list/the collection, then the gallery counter start with 0
             if (gallery_counter == paintings.length) {
-
                 gallery_counter = 0;
             }
-            gallery_counter++;
 
+            //show the information that belongs to one image from one collection
             document.querySelector(".apainting img").src = paintings[gallery_counter].picture.guid;
             document.querySelector(".apainting h2").textContent = paintings[gallery_counter].title.rendered;
             document.querySelector(".size").textContent = "Size: " + paintings[gallery_counter].size;
@@ -180,7 +181,10 @@
 
         function clickPrev() {
             console.log(clickPrev);
+            //click Prev button and the gallery counts one image backward in the list
             gallery_counter--;
+
+            //if the gallery counter smaller than 0, means the user stops at an image further down the list, then the gallery counter stops at that point of the list
             if (gallery_counter < 0) {
                 gallery_counter = paintings.length - 1;
             }
