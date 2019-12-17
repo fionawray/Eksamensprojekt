@@ -186,39 +186,11 @@ button p {
     top: 0;
 }
 
-@media (min-width: 48em) {
-    .header li {
-        float: left;
-    }
-
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
-}
-
 
 /*VIDEO*/
 #video {
     max-width: 100%;
     height: auto;
-}
-
-@media only screen and (max-width: 600px) {
-    #splash_video {
-        width: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
 }
 
 
@@ -255,6 +227,8 @@ p {
     color: #626262;
 }
 
+.sectionwrapper {}
+
 .seemorebtn {
     position: relative;
     left: 1.5vw;
@@ -266,7 +240,7 @@ p {
     transition: width 0.8s;
     cursor: pointer;
     text-align: center;
-    margin: 1vw 7vw;
+    margin: 1vw 10vw;
 }
 
 .seemorebtn p,
@@ -349,16 +323,18 @@ p {
     color: #626262;
     font-family: 'Work Sans', sans-serif;
     line-height: 1.6;
+    margin: 1rem 1.3rem;
 }
 
 .sectionwrapper {
     display: flex;
-    width: 100%;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     background-color: white;
     padding-bottom: 1rem;
+    margin: 1rem;
+    padding: 0.8rem;
 }
 
 .list {
@@ -371,7 +347,7 @@ p {
     flex-grow: 1;
     flex-basis: 150px;
     padding: 0 4vw;
-    margin: 6vw;
+    margin: 3vw;
 }
 
 .sectionwrapper .col {
@@ -433,7 +409,33 @@ p.txt_1 {
     font-size: 10px;
 }
 
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    #splash_video {
+        width: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
     .all_artwork_p {
         text-align: center;
         padding: 0;
@@ -457,6 +459,10 @@ p.txt_1 {
 }
 
 @media only screen and (min-width:800px) {
+    .tekst_exh {
+        margin: 1rem 0;
+    }
+
     #exhibitions h2 {
         font-size: 2.5rem;
     }
