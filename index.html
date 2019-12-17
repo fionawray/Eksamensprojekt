@@ -82,27 +82,49 @@
                 <h2>black<br>poetry</h2>
             </div>
         </div>
-
-        <a href="collections.html">
-            <div class="all_artwork_p">
-                <p>
-                    View All Collections
-                </p>
-            </div>
-        </a>
+        <button class="seemorebtn">
+            <p>View All Collections</p><span class="long-arrow-white">&#10230;</span>
+            <a href="collections.html"></a>
+        </button>
     </section>
 
     <section id="pic" class="position_fixed">
     </section>
 
-    <!-- Veronika Show Upcoming exhibitions
+
+    <section id="exhibition">
+        <h1>upcoming exhibitions</h1>
+        <div class="sectionwrapper">
+            <div class="col upcomingEvent_1">
+                <h2>01</h2>
+                <h3>10 / 12 / 2019</h3>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <!--                <a href="exhibitions.html" class="exhibition_button">Read More</a>-->
+            </div>
+            <div class="col">
+                <h2>02</h2>
+                <h3>10 / 12 / 2019</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <!--                <a href="exhibitions.html" class="exhibition_button">Read More</a>-->
+            </div>
+
+            <div class="col">
+                <h2>03</h2>
+                <h3>10 / 12 / 2019</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <!--                <a href="exhibitions.html" class="exhibition_button">Read More</a>-->
+            </div>
+        </div>
+
+        <!-- Veronika Show Upcoming exhibitions
     <main id="upcoming">
         <h1 class="title"></h1>
         <section class="list">
         </section>
     </main>
 -->
-    <!--
+        <!--
     A template for one exhibition on the list
     <template>
         <section id="exhibitions">
@@ -113,32 +135,6 @@
         </section>
     </template>
 -->
-
-
-    <section id="exhibition">
-        <h1>upcoming exhibitions</h1>
-        <div class="sectionwrapper">
-            <div class="col upcomingEvent_1">
-                <h2>01</h2>
-                <h3>10 / 12 / 2019</h3>
-                <p class="">
-                </p>
-                <a href="exhibitions.html" class="exhibition_button">Read More</a>
-            </div>
-            <div class="col">
-                <h2>02</h2>
-                <h3>10 / 12 / 2019</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <a href="exhibitions.html" class="exhibition_button">Read More</a>
-            </div>
-
-            <div class="col">
-                <h2>03</h2>
-                <h3>10 / 12 / 2019</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <a href="exhibitions.html" class="exhibition_button">Read More</a>
-            </div>
-        </div>
     </section>
 
     <hr>
@@ -222,7 +218,11 @@
 
 
 
-        //   Veronika - todo    function showUpcoming() {
+        //   Veronika - todo
+
+        //https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/single_exhibition?categories=19
+
+        //function showUpcoming() {
         //            console.log(showUpcoming);
         //            const pattern = document.querySelector("template");
         //            const gridlist = document.querySelector(".list");
