@@ -258,20 +258,6 @@ body {
     height: auto;
 }
 
-/*Exhibititon section on front page*/
-
-#exhibition h1 {
-    font-family: futura-pt, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    color: #626262;
-    padding-top: 4rem;
-    padding-left: 6.5rem;
-    margin: 1.5rem;
-}
-
 .sectionwrapper {
     display: flex;
     width: 100%;
@@ -294,19 +280,9 @@ body {
     height: 260px;
 }
 
-.sectionwrapper .col #exhibition h2 {
-    text-align: center;
+.sectionwrapper .col {
     color: #626262;
     font-family: 'Montserrat', sans-serif;
-}
-
-#exhibition h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
 }
 
 h3 {
@@ -315,32 +291,6 @@ h3 {
     line-height: 1.8rem;
     letter-spacing: 0.4rem;
     color: #626262;
-}
-
-#exhibition p {
-    color: #626262;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.4;
-}
-
-#exhibition .icons {
-    font-size: 60px;
-    color: black;
-    text-align: center;
-}
-
-.exhibition_button {
-    background-color: #b4a9a9;
-    font-family: 'Work Sans', sans-serif;
-    border: none;
-    color: #ffffff;
-    padding: 12px 34px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
 }
 
 /*VIDEO*/
@@ -358,13 +308,6 @@ h3 {
     height: 0;
     width: 80%;
     height: auto;
-}
-
-@media only screen and (max-width: 600px) {
-    #vs_video {
-        border: 20px solid #ddd;
-        margin: 0;
-    }
 }
 
 /*Portrait grid*/
@@ -406,19 +349,6 @@ h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
-@media screen and (max-width: 900px) {
-    .column {
-        width: 50%;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
-}
-
 /*Footer*/
 
 .footer {
@@ -433,7 +363,8 @@ h3 {
     justify-content: center;
 }
 
-hr {
+hr,
+.topbar {
     width: 85%;
     border: 0.7px solid #cecdcd;
 }
@@ -461,4 +392,24 @@ p.txt_1 {
 
 .copyright {
     font-size: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    #vs_video {
+        border: 20px solid #ddd;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
 }

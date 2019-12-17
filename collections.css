@@ -185,12 +185,6 @@ video {
     margin: 1.5rem;
 }
 
-@media only screen and (max-width:600px) {
-
-    .acollection h2 {
-        text-align: center;
-    }
-}
 
 .acollection h2 {
     font-family: linotype-didot, serif;
@@ -333,7 +327,6 @@ p.txt_1 {
     font-size: 10px;
 }
 
-
 @media only screen and (max-width: 600px) {
     .header .logo {
         width: 10rem;
@@ -343,12 +336,9 @@ p.txt_1 {
     #singlecollection h1 {
         font-size: 1.5rem;
     }
-}
 
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
+    .acollection h2 {
+        text-align: center;
     }
 }
 
@@ -366,6 +356,11 @@ p.txt_1 {
         text-align: center;
         text-decoration: none;
         background-color: transparent;
+    }
+
+    .header .logo {
+        width: 10rem;
+        padding-left: 2.5rem;
     }
 }
 

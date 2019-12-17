@@ -1,5 +1,36 @@
+:root {
+    --overskrift-h1: 'futura-pt', sans-serif;
+    --overskrift-h2: 'linotype-didot', serif;
+    --broedtekst-skrift: 'futura-pt', sans-serif;
+    --broedtekst-farve: #626262;
+    --nav-skrift: 'montserrat', sans-serif;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+}
+
+img {
+    width: 100%;
+}
+
 body {
     margin: 0;
+}
+
+h1 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #626262;
+    padding-bottom: 0;
+    margin: 1.5rem;
 }
 
 /*MENU og HEADER*/
@@ -51,38 +82,6 @@ body {
     float: left;
     margin-top: 10px;
     margin-left: 20px;
-}
-
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
 }
 
 /* menu */
@@ -159,26 +158,6 @@ body {
     top: 0;
 }
 
-@media (min-width: 48em) {
-    .header li {
-        float: left;
-    }
-
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
-}
-
 h2 {
     margin: 15px 0 15px 0;
     font-family: linotype-didot, serif;
@@ -194,6 +173,16 @@ p {
     font-style: normal;
     line-height: 1.6rem;
     color: #626262;
+}
+
+#contentwp {
+    margin: 20vw 6vw;
+}
+
+.topbar {
+    width: 85%;
+    margin: 5vw;
+    border: 0.7px solid black;
 }
 
 .poster {
@@ -215,7 +204,6 @@ p {
 }
 
 /*Footer*/
-
 .footer {
     text-align: center;
     position: sticky;
@@ -228,7 +216,7 @@ p {
     justify-content: center;
 }
 
-hr {
+.bottombar {
     width: 85%;
     border: 0.7px solid #cecdcd;
 }
@@ -258,17 +246,52 @@ p.txt_1 {
     font-size: 10px;
 }
 
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header .logo {
+        width: 10rem;
+        padding-left: 2.5rem;
+    }
+
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header li a {
+        display: block;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
 
 @media screen and (min-width: 800px) {
-
-    h1 {
-        padding-top: 10vw font-family: futura-pt, sans-serif;
-        font-family: futura-pt, sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        letter-spacing: 0.3rem;
-        color: #626262;
-        padding-top: 2rem;
+    #contentwp {
+        margin: 12vw 5vw;
     }
 }
 
@@ -282,8 +305,6 @@ p.txt_1 {
         margin: auto;
 
     }
-
-    .contentlist {}
 
     .poster {
         max-width: 500px;
