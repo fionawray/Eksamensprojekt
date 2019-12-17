@@ -104,9 +104,7 @@
         const urlCol = new URLSearchParams(window.location.search);
         let id = urlCol.get("id");
         let paintings = [];
-        let gallery_counter = [];
-
-        console.log(id);
+        let gallery_counter = 0;
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -124,26 +122,32 @@
             const pattern = document.querySelector("template");
             const gridlist = document.querySelector(".onecol_list");
 
-            //get the first objects' element, which is name of the collection: console.log(paintings[0].collection);
-            document.querySelector(".title").textContent = paintings[0].collection;
-            document.querySelector(".currentlink").textContent = paintings[0].collection;
-            document.querySelector(".pagetitle").textContent = "Krista Werdelin - " + paintings[0].collection;
-
             paintings.forEach(painting => {
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
-
+                //Set a varible that saves/equals to the gallery_counter
+                let gallery_num = gallery_counter;
                 gridlist.appendChild(clone);
                 gridlist.lastElementChild.addEventListener("click", () => {
-                    showOnepainting(painting)
+                    //show one painting in the array (gallery_counter), which is clicked on
+                    showOnepainting(painting, gallery_num)
                 });
+                //the counter should start when one painting is clicked
+                gallery_counter++;
             })
+
+            //get the first objects' element, which is name of the collection
+            console.log(paintings[0].collection);
+            document.querySelector(".title").textContent = paintings[0].collection;
+            document.querySelector(".currentlink").textContent = paintings[0].collection;
+            document.querySelector(".pagetitle").textContent = "Krista Werdelin - " + paintings[0].collection;
 
         }
 
-        function showOnepainting(painting) {
-            console.log(showOnepainting);
+        function showOnepainting(painting, counter) {
+            console.log("showOnepainting" + counter);
+            gallery_counter = counter;
             document.querySelector(".popup").style.display = "block";
             document.querySelector(".close").addEventListener("click", closePopup);
 
@@ -160,37 +164,37 @@
 
         function closePopup() {
             document.querySelector(".popup").style.display = "none";
-            clickNext();
-            clickPrev();
         }
 
         function clickNext() {
-            console.log(clickNext);
+            console.log("clickNext" + gallery_counter);
             //click Next button and the gallery counts one more image in the list
             gallery_counter++;
-            //if the gallery counter equals the length of the paintings' list/the collection, then the gallery counter start with 0
+            console.log("clickNext" + gallery_counter);
+            //if the gallery counter equals the length of the paintings' list/the collection, then the gallery counter returns to 0
             if (gallery_counter == paintings.length) {
                 gallery_counter = 0;
             }
 
             //show the information that belongs to one image from one collection
-            document.querySelector(".apainting img").src = paintings[gallery_counter].picture.guid;
-            document.querySelector(".apainting h2").textContent = paintings[gallery_counter].title.rendered;
-            document.querySelector(".size").textContent = "Size: " + paintings[gallery_counter].size;
-            document.querySelector(".status").textContent = "Sold: " + paintings[gallery_counter].sold;
-            document.querySelector(".nameCol").textContent = "Collection: " + paintings[gallery_counter].collection;
+            showPaintingsinfo();
         }
 
         function clickPrev() {
-            console.log(clickPrev);
+            console.log("clickPrev");
             //click Prev button and the gallery counts one image backward in the list
             gallery_counter--;
 
-            //if the gallery counter smaller than 0, means the user stops at an image further down the list, then the gallery counter stops at that point of the list
+            //if the gallery counter counts below 0, so we come back to the last object in the array - the last place in the array is the length of the list - 1
             if (gallery_counter < 0) {
                 gallery_counter = paintings.length - 1;
             }
+            //show the information that belongs to one image from one collection
+            showMalinfo();
+        }
 
+        function showPaintingsinfo() {
+            //show the information that belongs to one image from one collection
             document.querySelector(".apainting img").src = paintings[gallery_counter].picture.guid;
             document.querySelector(".apainting h2").textContent = paintings[gallery_counter].title.rendered;
             document.querySelector(".size").textContent = "Size: " + paintings[gallery_counter].size;
