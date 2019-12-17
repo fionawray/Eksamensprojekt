@@ -244,7 +244,7 @@ button p {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.2rem;
-    font-size: 4.3rem;
+    font-size: 4.5rem;
 }
 
 p {
@@ -254,7 +254,6 @@ p {
     line-height: 1.6rem;
     color: #626262;
 }
-
 
 .seemorebtn {
     position: relative;
@@ -267,7 +266,7 @@ p {
     transition: width 0.8s;
     cursor: pointer;
     text-align: center;
-    margin: 3vw;
+    margin: 1vw 7vw;
 }
 
 .seemorebtn p,
@@ -335,7 +334,7 @@ p {
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 4.3rem;
+    font-size: 3rem;
 }
 
 .date {
@@ -371,8 +370,8 @@ p {
 #exhibitions {
     flex-grow: 1;
     flex-basis: 150px;
-    padding: 4vw;
-    margin 3vw;
+    padding: 0 4vw;
+    margin: 6vw;
 }
 
 .sectionwrapper .col {
@@ -460,6 +459,10 @@ p.txt_1 {
 @media only screen and (min-width:800px) {
     #exhibitions h2 {
         font-size: 2.5rem;
+    }
+
+    #exhibitions {
+        margin: 3vw;
     }
 
     .seemorebtn p,
