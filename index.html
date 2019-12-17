@@ -91,58 +91,27 @@
     <section id="pic" class="position_fixed">
     </section>
 
-
-    <!--  <section id="exhibition">
-        <h1>upcoming exhibitions</h1>
-        <div class="sectionwrapper">
-            <div class="col upcomingEvent_1">
-                <h2>01</h2>
-                <h3>10 / 12 / 2019</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>-->
-    <!--                <a href="exhibitions.html" class="exhibition_button">Read More</a>-->
-    <!--    </div>
-            <div class="col">
-                <h2>02</h2>
-                <h3>10 / 12 / 2019</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         -->
-    <!--                <a href="exhibitions.html" class="exhibition_button">Read More</a>-->
-    <!-- </div>
-
-            <div class="col">
-                <h2>03</h2>
-                <h3>10 / 12 / 2019</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              -->
-    <!--                <a href="exhibitions.html" class="exhibition_button">Read More</a>-->
-    <!--  </div>
-        </div>
--->
-
+    <!--Show a list of upcoming exhibitions-->
     <main id="upcoming">
-        <h1 class="title"></h1>
+        <h1 class="title">upcoming exhbitions</h1>
         <section class="list">
         </section>
+        <button class="seemorebtn">
+            <p>View All Collections</p><span class="long-arrow-white">&#10230;</span>
+            <a href="collections.html"></a>
+        </button>
     </main>
 
-    <!--
-    A template for one exhibition on the list -->
+    <!-- A template for one exhibition on the list -->
     <template class="upcoming_template">
         <section id="exhibitions">
-            <div class="ex_wrapper">
-                <h2 class="navn"></h2>
-                <h3 class="date"></h3>
-                <p class="tekst_exh"></p>
-            </div>
-            <!-- <button> <a href="exhibitions.html" class="exhibition_button">Læs mere</a></button>-->
+            <h2 class="navn"></h2>
+            <h3 class="date"></h3>
+            <p class="tekst_exh"></p>
         </section>
     </template>
 
-    <!-- </section>-->
-
     <hr>
-
     <footer class="footer">
         <div class="media_wrapper">
             <a href="https://www.facebook.com/KristaWerdelinArt/?ref=bookmarks">
@@ -184,7 +153,7 @@
 
 
         function sidenVises() {
-            console.log(sidenVises);
+            console.log("sidenVises");
             getPaperworks();
             getCitylife();
             getLandscapes();

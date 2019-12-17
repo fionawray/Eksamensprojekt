@@ -25,6 +25,10 @@ button {
     border: none;
 }
 
+button p {
+    font-size: var(--nav-skrift);
+}
+
 /*MENU og HEADER*/
 .header .logo {
     height: 100%;
@@ -255,7 +259,7 @@ p {
 
 .seemorebtn {
     position: relative;
-    left: 18vw;
+    left: 1.5vw;
     display: flex;
     flex-flow: row wrap;
     background-color: #ffffff;
@@ -291,50 +295,6 @@ p {
     cursor: pointer;
 }
 
-@media only screen and (max-width:600px) {
-    .all_artwork_p {
-        text-align: center;
-        padding: 0;
-        padding-bottom: 2rem;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-
-    #artwork h1,
-    h2,
-    h3 {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    #artwork h2 {
-        margin: 0;
-    }
-}
-
-@media only screen and (min-width:800px) {
-
-    .seemorebtn p,
-    .long-arrow-white {
-        font-size: 1.3vw;
-        padding: 0;
-    }
-
-    .seemorebtn {
-        margin: 1vw 0 1vw 3vw;
-        left: 13vw;
-        width: 28vw;
-        height: 4vw;
-        padding: 0;
-    }
-
-    .seemorebtn:hover {
-        width: 34vw;
-    }
-
-}
-
 .col img {
     position: relative;
     top: 0px;
@@ -357,7 +317,7 @@ p {
 
 /*Exhibititon section on front page*/
 
-#exhibition h1 {
+#upcoming h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -369,19 +329,55 @@ p {
     margin: 1.5rem;
 }
 
+#upcoming h2 {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 4.3rem;
+}
+
+.date {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.4rem;
+    color: #626262;
+}
+
+.tekst_exh {
+    color: #626262;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+}
+
 .sectionwrapper {
     display: flex;
     width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     background-color: white;
     padding-bottom: 1rem;
 }
 
+.list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#exhibitions {
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 4vw;
+    margin 3vw;
+}
+
 .sectionwrapper .col {
     flex-basis: 300px;
+    flex-grow: 1;
     margin: 1rem;
     padding: 0.8rem;
     overflow: hidden;
@@ -391,63 +387,7 @@ p {
     height: 260px;
 }
 
-@media only screen and (max-width: 600px) {
-    .sectionwrapper .item-3 {
-        order: -1;
-    }
-}
-
-.sectionwrapper .col #exhibition h2 {
-    text-align: center;
-    color: #626262;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#exhibition h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 4.3rem;
-}
-
-h3 {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    line-height: 1.8rem;
-    letter-spacing: 0.4rem;
-    color: #626262;
-}
-
-#exhibition p {
-    color: #626262;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.6;
-}
-
-#exhibition .icons {
-    font-size: 60px;
-    color: black;
-    text-align: center;
-}
-
-
-.exhibition_button {
-    background-color: #ffffff;
-    font-family: 'Work Sans', sans-serif;
-    border: none;
-    color: #000000;
-    padding-top: 1rem;
-    text-decoration: underline;
-    text-align: center;
-    display: inline-block;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
 /*Footer*/
-
 .footer {
     text-align: center;
     position: sticky;
@@ -492,4 +432,52 @@ p.txt_1 {
 
 .copyright {
     font-size: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .all_artwork_p {
+        text-align: center;
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+
+    #artwork h1,
+    h2,
+    h3 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #artwork h2 {
+        margin: 0;
+    }
+
+    .sectionwrapper .item-3 {
+        order: -1;
+    }
+}
+
+@media only screen and (min-width:800px) {
+    #exhibitions h2 {
+        font-size: 2.5rem;
+    }
+
+    .seemorebtn p,
+    .long-arrow-white {
+        font-size: 1.3vw;
+        padding: 0;
+    }
+
+    .seemorebtn {
+        margin: 1vw 0 1vw 3vw;
+        left: 73vw;
+        width: 28vw;
+        height: 4vw;
+        padding: 0;
+    }
+
+    .seemorebtn:hover {
+        width: 34vw;
+    }
+
 }
