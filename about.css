@@ -373,10 +373,6 @@ h3 {
     margin: auto;
 }
 
-.row {
-    margin: 8px -16px;
-}
-
 /* Padding BETWEEN each column */
 .row,
 .row > .column {
@@ -400,10 +396,21 @@ h3 {
     border-color: aliceblue;
 }
 
+.citat {
+    align-self: center;
+}
+
+
+.citat p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
 @media screen and (max-width: 900px) {
     .column {
         width: 50%;
     }
+
 }
 
 @media screen and (max-width: 600px) {
