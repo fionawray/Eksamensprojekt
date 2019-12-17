@@ -32,6 +32,7 @@ img {
 
 a {
     text-decoration: none;
+    margin: 0;
 }
 
 p {
@@ -213,12 +214,6 @@ h2 {
 }
 
 .onecol_list {
-    /*
-    column-count: 2;
-    column-gap: 1.3vw;
-    max-width: 768px;
-    margin: 4vw 3vw;
-*/
     display: grid;
     grid-gap: 2vw;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -226,10 +221,6 @@ h2 {
 }
 
 .onepainting {
-    /*
-    display: inline-block;
-    margin: 0 0 1vw;
-*/
     grid-row-end: span 2;
 }
 
@@ -327,6 +318,94 @@ h2 {
     grid-gap: 2vw;
 }
 
+/*Footer*/
+hr {
+    width: 85%;
+    border: 0.7px solid #cecdcd;
+}
+
+.footerinfo {
+    text-align: center;
+    position: sticky;
+    font-family: 'Poppins', sans-serif;
+    color: #626262;
+}
+
+.somecontent {
+    display: flex;
+    justify-content: center;
+}
+
+p.txt {
+    font-size: 0.8rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.item {
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0rem 1rem;
+    color: #626262;
+    padding-top: 1rem;
+}
+
+.fa {
+    width: 50px;
+}
+
+.copyright {
+    font-size: 10px;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header .logo {
+        width: 10rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header .logo {
+        width: 10rem;
+        padding-left: 2.5rem;
+    }
+
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .header li a {
+        display: block;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
 /*If the screen is min. 800px and bigger --- TABLET og andre*/
 @media only screen and (max-width: 1023px) and (min-width: 800px) {
 
@@ -388,100 +467,6 @@ h2 {
     .prev {
         font-size: 2.2vw;
     }
-}
-
-/*Footer*/
-hr {
-    width: 85%;
-    border: 0.7px solid #cecdcd;
-}
-
-.footerinfo {
-    text-align: center;
-    position: sticky;
-    font-family: 'Poppins', sans-serif;
-    color: #626262;
-}
-
-.somecontent {
-    display: flex;
-    justify-content: center;
-}
-
-.footerinfo p {
-    font-size: 0.8rem;
-    padding-bottom: 2rem;
-    padding-top: 1rem;
-}
-
-.footerinfo .txt_1 {
-    padding-bottom: 1rem;
-}
-
-.item {
-    font-size: 1.5rem;
-    margin: 1rem 1rem 0rem 1rem;
-    color: #626262;
-    padding-top: 1rem;
-}
-
-.fa {
-    width: 50px;
-}
-
-.copyright {
-    font-size: 10px;
-}
-
-@media (min-width: 48em) {
-    .header li {
-        float: left;
-    }
-
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
-}
-
-@media screen and (min-width: 800px) {
 
     /*Breadcrumbs*/
     .breadcrumbs {
@@ -507,20 +492,11 @@ hr {
         padding: 0.5vw;
     }
 
-    .facesymbol {
-        height: 2.5vw;
-        width: 1.4vw;
-    }
-
-    .instasymbol {
-        height: 2.5vw;
-        width: 2.5vw;
-    }
-
     .footerinfo {
         padding: 2vw;
     }
 }
+
 
 /*If the screen is bigger than 1023px --- desktop*/
 @media only screen and (min-width: 1024px) {

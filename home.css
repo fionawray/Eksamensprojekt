@@ -333,7 +333,7 @@ p {
     transition: width 0.8s;
     cursor: pointer;
     text-align: center;
-    margin: 1vw 8vw;
+    margin: 1vw 8vw 5vw;
 }
 
 .seemorebtn p,
