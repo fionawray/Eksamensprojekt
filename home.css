@@ -13,6 +13,10 @@
     --nav-skrift: 'montserrat', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
 }
@@ -240,40 +244,27 @@ button {
     font-size: 4.3rem;
 }
 
-#artwork p {
+p {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.6rem;
     color: #626262;
-    text-decoration: none;
 }
 
-.seemorebtn p {
-    /*
-    padding-top: 2.5rem;
-    padding-bottom: 4.5rem;
-    padding-left: 7.69rem;
-*/
-    font-family: var(--nav-skrift);
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    text-decoration: underline;
-    color: #000;
-}
 
 .seemorebtn {
     position: relative;
+    left: 18vw;
     display: flex;
     flex-flow: row wrap;
     background-color: #ffffff;
     width: 45vw;
-    padding: 1vw;
+    padding: 2vw 0;
     transition: width 0.8s;
     cursor: pointer;
     text-align: center;
+    margin: 3vw;
 }
 
 .seemorebtn p,
@@ -284,9 +275,10 @@ button {
     transition: width 0.8s;
 }
 
-.seemorebtn img {
+.long-arrow-white {
     height: 1.8vw;
-    width: 5vw;
+    width: 8vw;
+    transition: width 0.8s;
 }
 
 .seemorebtn:hover {
@@ -330,13 +322,15 @@ button {
     }
 
     .seemorebtn {
-        width: 15vw;
+        margin: 1vw 0 1vw 3vw;
+        left: 13vw;
+        width: 28vw;
         height: 4vw;
         padding: 0;
     }
 
     .seemorebtn:hover {
-        width: 18vw;
+        width: 34vw;
     }
 
 }
