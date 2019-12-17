@@ -5,6 +5,14 @@
     line-height: inherit;
 }
 
+:root {
+    --overskrift-h1: 'futura-pt', sans-serif;
+    --overskrift-h2: 'linotype-didot', serif;
+    --broedtekst-skrift: 'futura-pt', sans-serif;
+    --broedtekst-farve: #626262;
+    --nav-skrift: 'montserrat', sans-serif;
+}
+
 body {
     margin: 0;
 }
