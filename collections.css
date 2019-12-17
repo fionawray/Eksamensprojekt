@@ -414,6 +414,10 @@ p.txt_1 {
         width: 18vw;
     }
 
+    .collection_name:nth-child(even) {
+        padding-left: 3vw;
+    }
+
     .acollection h2 {
         font-size: 4.5vw;
     }

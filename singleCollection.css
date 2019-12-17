@@ -41,6 +41,7 @@ p {
 h1 {
     font-family: var(--overskrift-h1);
     font-weight: 300;
+    text-align: center;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     color: #626262;
@@ -335,7 +336,7 @@ h2 {
     }
 
     h1 {
-        padding-left: 5vw;
+        font-size: 2rem;
     }
 
     .onecol_list {
