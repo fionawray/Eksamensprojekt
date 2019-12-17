@@ -227,46 +227,6 @@ p {
     color: #626262;
 }
 
-.sectionwrapper {}
-
-.seemorebtn {
-    position: relative;
-    left: 1.5vw;
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #ffffff;
-    width: 45vw;
-    padding: 2vw 0;
-    transition: width 0.8s;
-    cursor: pointer;
-    text-align: center;
-    margin: 1vw 10vw;
-}
-
-.seemorebtn p,
-.long-arrow-white {
-    font-family: var(--nav-skrift);
-    font-size: 2.8vw;
-    color: #000000;
-    transition: width 0.8s;
-}
-
-.long-arrow-white {
-    height: 1.8vw;
-    width: 8vw;
-    transition: width 0.8s;
-}
-
-.seemorebtn:hover {
-    width: 50vw;
-    transition-timing-function: ease-in-out;
-}
-
-.seemorebtn p:hover,
-.seemorebtn p:active {
-    cursor: pointer;
-}
-
 .col img {
     position: relative;
     top: 0px;
@@ -311,6 +271,19 @@ p {
     font-size: 3rem;
 }
 
+.list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#exhibitions {
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 0 4vw;
+    margin: 3vw;
+}
+
 .date {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
@@ -337,20 +310,7 @@ p {
     padding: 0.8rem;
 }
 
-.list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-#exhibitions {
-    flex-grow: 1;
-    flex-basis: 150px;
-    padding: 0 4vw;
-    margin: 3vw;
-}
-
-.sectionwrapper .col {
+.col {
     flex-basis: 300px;
     flex-grow: 1;
     margin: 1rem;
@@ -360,6 +320,44 @@ p {
 
 .sectionwrapper .img_col {
     height: 260px;
+}
+
+.seemorebtn {
+    position: relative;
+    left: 1.5vw;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #ffffff;
+    width: 45vw;
+    padding: 2vw 0;
+    transition: width 0.8s;
+    cursor: pointer;
+    text-align: center;
+    margin: 1vw 8vw;
+}
+
+.seemorebtn p,
+.long-arrow-white {
+    font-family: var(--nav-skrift);
+    font-size: 2.8vw;
+    color: #000000;
+    transition: width 0.8s;
+}
+
+.long-arrow-white {
+    height: 1.8vw;
+    width: 8vw;
+    transition: width 0.8s;
+}
+
+.seemorebtn:hover {
+    width: 50vw;
+    transition-timing-function: ease-in-out;
+}
+
+.seemorebtn p:hover,
+.seemorebtn p:active {
+    cursor: pointer;
 }
 
 /*Footer*/
@@ -467,26 +465,25 @@ p.txt_1 {
         font-size: 2.5rem;
     }
 
-    #exhibitions {
-        margin: 3vw;
-    }
-
     .seemorebtn p,
     .long-arrow-white {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
         padding: 0;
     }
 
     .seemorebtn {
         margin: 1vw 0 1vw 3vw;
         left: 73vw;
-        width: 28vw;
+        width: 21vw;
         height: 4vw;
         padding: 0;
     }
 
     .seemorebtn:hover {
-        width: 34vw;
+        width: 25vw;
     }
 
+    .sectionwrapper {
+        margin: 4.5vw;
+    }
 }
