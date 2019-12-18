@@ -336,7 +336,7 @@ p {
     margin: 1vw 8vw 5vw;
 }
 
-.seemorebtn p,
+.seemorebtn a,
 .long-arrow-white {
     font-family: var(--nav-skrift);
     font-size: 2.8vw;
@@ -355,9 +355,9 @@ p {
     transition-timing-function: ease-in-out;
 }
 
-.seemorebtn p:hover,
-.seemorebtn p:active {
+.seemorebtn a:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 /*Footer*/

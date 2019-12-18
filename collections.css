@@ -235,9 +235,9 @@ video {
     transition-timing-function: ease-in-out;
 }
 
-.seemorebtn p:hover,
-.seemorebtn p:active {
+.seemorebtn p:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .contentlist {
