@@ -378,8 +378,7 @@ p.txt_1 {
     }
 
     #vs_video {
-        border: 20px solid #ddd;
-        margin: 0;
+        margin-top: 6vh;
     }
 
     #about h1,
