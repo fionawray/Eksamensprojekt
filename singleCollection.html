@@ -130,7 +130,7 @@
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
-                //Set a varible that saves/equals to the gallery_counter
+                //Set a variable that saves/equals to the gallery_counter
                 let gallery_num = gallery_counter;
                 gridlist.appendChild(clone);
                 gridlist.lastElementChild.addEventListener("click", () => {
@@ -190,7 +190,7 @@
             //click Prev button and the gallery counts one image backward in the list
             gallery_counter--;
 
-            //if the gallery counter counts below 0, so we come back to the last object in the array - the last place in the array is the length of the list - 1
+            //if the gallery counter is less than 0, we come back to the last object in the array - the last place in the array is the length of the list - 1
             if (gallery_counter < 0) {
                 gallery_counter = paintings.length - 1;
             }
