@@ -425,6 +425,13 @@ p.txt_1 {
     .sectionwrapper .item-3 {
         order: -1;
     }
+
+    .sectionwrapper .col {
+        flex-basis: auto;
+        margin: 1rem;
+        padding: 0.8rem;
+        overflow: hidden;
+    }
 }
 
 @media only screen and (min-width:800px) {
