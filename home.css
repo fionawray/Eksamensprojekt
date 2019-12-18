@@ -188,6 +188,7 @@ button p {
     font-style: italic;
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
     letter-spacing: 0.2rem;
     font-size: 4.3rem;
 }
