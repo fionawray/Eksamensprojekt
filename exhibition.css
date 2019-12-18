@@ -186,7 +186,11 @@ p {
     flex-basis: 300px;
 }
 
-.f .topbar {
+.when {
+    margin: 2.8vw 0;
+}
+
+.topbar {
     width: 85%;
     margin: 5vw;
     border: 0.7px solid black;
