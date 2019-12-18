@@ -408,12 +408,12 @@ h3 {
 .media_wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 6rem;
+    padding-top: 2rem;
 }
 
 hr {
     width: 85%;
-    border: 0.3px solid #b7b7b7;
+    border: 0.6px solid #b7b7b7;
 }
 
 p.txt {
