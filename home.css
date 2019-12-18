@@ -373,6 +373,9 @@ p.txt_1 {
     font-size: 10px;
 }
 
+
+/*MEDIA QUERY START*/
+
 @media (min-width: 48em) {
     .header li {
         float: left;
