@@ -338,6 +338,7 @@ p.txt_1 {
     }
 }
 
+
 @media only screen and (min-width: 600px) {
     .header {
         background-color: #ffffff;
@@ -380,6 +381,12 @@ p.txt_1 {
     }
 }
 
+@media only screen and (min-width: 760px) {
+    .seemorebtn {
+        left: -18%;
+    }
+}
+
 /*If the screen is min. 800px and bigger --- TABLET og andre*/
 @media only screen and (min-width: 800px) {
 
@@ -416,6 +423,16 @@ p.txt_1 {
 
     .acollection h2 {
         font-size: 4.5vw;
+    }
+
+
+}
+
+@media only screen and (min-width: 1075px) {
+
+    .seemorebtn {
+        left: -30%;
+
     }
 
 

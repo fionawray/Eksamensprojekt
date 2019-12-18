@@ -168,7 +168,6 @@ button p {
     color: #626262;
     padding-top: 3rem;
     margin: 1.5rem;
-
 }
 
 #artwork h2 {
@@ -298,6 +297,40 @@ h3 {
     display: inline-block;
     font-size: 1rem;
     cursor: pointer;
+}
+
+/*UPCOMING EXHIBITION*/
+
+.title {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: #626262;
+    padding-top: 3rem;
+    margin: 1.5rem;
+}
+
+#upcoming {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 1rem;
+}
+
+.upcoming_template {
+    flex-basis: 300px;
+    margin: 1rem;
+    padding: 0.8rem;
+    overflow: hidden;
 }
 
 /*Footer*/
