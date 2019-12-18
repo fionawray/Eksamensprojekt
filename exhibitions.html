@@ -113,14 +113,13 @@
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("h2").textContent = exhibition.name;
                 clone.querySelector(".poster").src = exhibition.billede.guid;
-                clone.querySelector(".when").textContent = `When: ${exhibition.when} to ${exhibition.until}`;
+                clone.querySelector(".when").textContent = `When: ${exhibition.when} until ${exhibition.until}`;
                 clone.querySelector(".where").textContent = `Where: ${exhibition.where}`;
                 clone.querySelector(".about_event").textContent = exhibition.aboutevent;
                 clone.querySelector(".extradetail").textContent = "Exhibitions event: " + exhibition.exhibition_type;
                 list.appendChild(clone);
             })
         }
-
     </script>
 </body>
 
