@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }
@@ -51,38 +55,6 @@ body {
     float: left;
     margin-top: 10px;
     margin-left: 20px;
-}
-
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
 }
 
 /* menu */
@@ -165,7 +137,7 @@ body {
     }
 
     .header li a {
-        padding: 20px 30px;
+        padding: 20px 20px;
     }
 
     .header .menu {

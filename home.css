@@ -164,7 +164,7 @@ button p {
 #video {
     max-width: 100%;
     height: auto;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 
@@ -468,7 +468,6 @@ p.txt_1 {
 @media only screen and (min-width: 600px) {
     .header .logo {
         width: 10rem;
-        padding-left: 2.5rem;
     }
 
     .header {
