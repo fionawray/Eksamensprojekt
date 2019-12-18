@@ -457,6 +457,12 @@ p.txt_1 {
 }
 
 @media only screen and (min-width:800px) {
+
+    .seemorebtn a,
+    .long-arrow-white {
+        font-size: 1.2vw;
+    }
+
     .tekst_exh {
         margin: 1rem 0;
     }
