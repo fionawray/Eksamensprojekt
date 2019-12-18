@@ -180,6 +180,7 @@ p {
 .breadcrumbs li + li:before {
     color: #767676;
     font-size: 3vw;
+    text-decoration: none;
 }
 
 .breadcrumbs li + li:before {
