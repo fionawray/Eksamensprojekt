@@ -6,8 +6,19 @@
     --nav-skrift: 'montserrat', sans-serif;
 }
 
+* {
+    margin: 0 auto;
+    padding: 0;
+    /*    box-sizing: border-box;*/
+    line-height: inherit;
+}
+
 a {
     text-decoration: none;
+}
+
+a:active {
+    color: #626262;
 }
 
 body {
@@ -261,7 +272,7 @@ button p {
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 4.3rem;
+    font-size: 1.5rem;
 }
 
 h3 {
@@ -285,23 +296,12 @@ h3 {
 }
 
 
-.exhibition_button {
-    background-color: #ffffff;
-    font-family: 'Work Sans', sans-serif;
-    border: none;
-    color: #000000;
-    padding-top: 1rem;
-    text-decoration: underline;
-    text-align: center;
-    display: inline-block;
-    font-size: 1rem;
-    cursor: pointer;
-}
 
 /*UPCOMING EXHIBITION*/
 
 .list {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     background-color: white;
     padding-bottom: 1rem;
@@ -309,11 +309,12 @@ h3 {
 
 #exhibitions {
     flex-grow: 1;
-    flex-basis: 200px;
+    flex-basis: 300px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .title {
@@ -338,7 +339,7 @@ h3 {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.2rem;
-    font-size: 4.3rem;
+    font-size: 1.5rem;
 }
 
 .date {
@@ -357,6 +358,40 @@ h3 {
     color: #626262;
 }
 
+.seemorebtn {
+    position: relative;
+    left: -30%;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #ffffff;
+    width: 35vw;
+    padding: 2vw 0;
+    transition: width 0.8s;
+}
+
+.seemorebtn a,
+.long-arrow-white {
+    font-family: var(--nav-skrift);
+    font-size: 2.8vw;
+    color: #000000;
+    padding: 0;
+    transition: width 0.8s;
+}
+
+.long-arrow-white {
+    height: 1.8vw;
+    width: 5vw;
+}
+
+.seemorebtn:hover {
+    width: 38vw;
+    transition-timing-function: ease-in-out;
+}
+
+.seemorebtn a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 
 /*Footer*/
@@ -493,10 +528,14 @@ p.txt_1 {
     }
 
     .seemorebtn {
-        padding-left: 32%;
-        padding-bottom: 2rem;
+        padding: 0 0 2rem 0;
         font-size: 1.2rem;
+        transition: width 0.8s;
 
+    }
+
+    #exhibitions {
+        padding: 1rem 1rem 1rem 2rem;
     }
 
 }
@@ -506,6 +545,7 @@ p.txt_1 {
     .seemorebtn a,
     .long-arrow-white {
         font-size: 1.2vw;
+        transition: width 0.8s;
     }
 
     .tekst_exh {
@@ -516,24 +556,33 @@ p.txt_1 {
         padding: 1rem 1rem 1rem 2rem;
     }
 
-    #exhibitions h2 {
+    /*#exhibitions h2 {
         font-size: 2.5rem;
+    }*/
+
+    #exhibitions h2 {
+        font-size: 1.5rem;
     }
+
+
 
     .seemorebtn p,
     .long-arrow-white {
         font-size: 1.2vw;
         padding: 0;
+        transition: width 0.8s;
     }
 
     .seemorebtn {
         padding-left: 8.24rem;
         padding-bottom: 3rem;
+        transition: width 0.5s;
 
     }
 
     .seemorebtn:hover {
-        width: 25vw;
+        width: 30vw;
+        transition: width 0.8s;
     }
 
 }
