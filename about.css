@@ -155,12 +155,10 @@ body {
     color: black;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-<<<<<<< HEAD
     font-size: 3.5rem;
-=======
     font-size: 4.3rem;
     margin: 0;
->>>>>>> origin/master
+
 }
 
 #about p {
