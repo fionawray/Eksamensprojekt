@@ -572,8 +572,12 @@ p.txt_1 {
     }
 
     .seemorebtn {
+<<<<<<< HEAD
         /*        padding-left: 8.24rem;*/
         padding-left: 10rem;
+=======
+        padding-left: 4.49rem;
+>>>>>>> origin/master
         padding-bottom: 3rem;
         transition: width 0.5s;
     }
