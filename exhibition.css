@@ -1,7 +1,7 @@
 * {
     margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
+    /*    box-sizing: border-box;*/
     line-height: inherit;
 }
 
@@ -172,6 +172,11 @@ p {
     color: #626262;
 }
 
+hr {
+    width: 85%;
+    border: 0.6px solid #b7b7b7;
+}
+
 /*Breadcrumbs*/
 .breadcrumbs {
     margin-top: 20vw;
@@ -262,10 +267,6 @@ p {
     justify-content: center;
 }
 
-.bottombar {
-    width: 85%;
-    border: 0.7px solid #cecdcd;
-}
 
 p.txt {
     font-size: 0.8rem;
