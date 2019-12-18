@@ -167,7 +167,6 @@ button p {
     text-decoration: none;
     color: #626262;
     padding-top: 3rem;
-    margin: 1.5rem;
 }
 
 #artwork h2 {
@@ -301,6 +300,22 @@ h3 {
 
 /*UPCOMING EXHIBITION*/
 
+.list {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 1rem;
+}
+
+#exhibitions {
+    flex-grow: 1;
+    flex-basis: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
@@ -309,29 +324,40 @@ h3 {
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     text-align: center;
-    text-decoration: none;
     color: #626262;
     padding-top: 3rem;
     margin: 1.5rem;
+    padding-bottom: 2rem;
 }
 
-#upcoming {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding-bottom: 1rem;
+
+.navn {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    font-size: 4.3rem;
 }
 
-.upcoming_template {
-    flex-basis: 300px;
-    margin: 1rem;
-    padding: 0.8rem;
-    overflow: hidden;
+.date {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.4rem;
+    color: #626262;
 }
+
+.tekst_exh {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #626262;
+}
+
+
 
 /*Footer*/
 .footer {
@@ -465,12 +491,17 @@ p.txt_1 {
         padding: 0.8rem;
         overflow: hidden;
     }
+
+    .seemorebtn {
+        padding-left: 32%;
+        padding-bottom: 2rem;
+        font-size: 1.2rem;
+
+    }
+
 }
 
 @media only screen and (min-width:800px) {
-    .list {
-        margin: 0 2vw;
-    }
 
     .seemorebtn a,
     .long-arrow-white {
@@ -482,8 +513,7 @@ p.txt_1 {
     }
 
     #exhibitions {
-        padding: 0;
-        margin: 0 7vw;
+        padding: 1rem 1rem 1rem 2rem;
     }
 
     #exhibitions h2 {
