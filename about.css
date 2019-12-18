@@ -155,7 +155,7 @@ body {
     color: black;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 4.3rem;
+    font-size: 3.5rem;
 }
 
 #about p {
@@ -198,8 +198,8 @@ body {
 
 .sectionwrapper .col {
     flex-basis: 500px;
-    margin: 1rem;
-    padding: 0.8rem;
+    margin: 0 1rem;
+    padding: 0 0.8rem;
     overflow: hidden;
 }
 
@@ -398,6 +398,10 @@ p.txt_1 {
 @media screen and (max-width: 900px) {
     .container_video {
         margin-top: 0vh;
+    }
+
+    #about {
+        margin-bottom: 4vw;
     }
 
 }
