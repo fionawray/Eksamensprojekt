@@ -229,14 +229,10 @@ h3 {
     width: 100%;
     margin: 0;
     text-align: center;
+    margin-top: 8vh;
 }
 
-#vs_video {
-    position: relative;
-    height: 0;
-    width: 80%;
-    height: auto;
-}
+
 
 /*Portrait grid*/
 .main {
@@ -377,10 +373,6 @@ p.txt_1 {
         width: 10rem;
     }
 
-    #vs_video {
-        margin-top: 6vh;
-    }
-
     #about h1,
     h2,
     h3 {
@@ -400,6 +392,13 @@ p.txt_1 {
 @media screen and (max-width: 900px) {
     .column {
         width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .container_video {
+        margin-top: 0vh;
     }
 
 }
