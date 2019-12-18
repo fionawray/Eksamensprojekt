@@ -444,7 +444,7 @@ p.txt_1 {
 
 /*MEDIA QUERY START*/
 
-@media (min-width: 48em) {
+@media (min-width: 800px) {
     .header li {
         float: left;
     }
