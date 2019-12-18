@@ -218,6 +218,11 @@ p {
     padding: 0.8rem;
 }
 
+.extradetail {
+    font-size: 3vw;
+    font-style: italic;
+}
+
 /*Footer*/
 .footer {
     text-align: center;

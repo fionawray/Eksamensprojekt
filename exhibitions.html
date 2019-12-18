@@ -29,8 +29,6 @@
 
     <main id="contentwp">
         <h1>Exhibitions</h1>
-        <!--teste om det ser pænt ud.-->
-        <hr class="topbar">
         <section class="contentlist"></section>
     </main>
 
@@ -46,6 +44,7 @@
                     <p class="where"></p>
                     <p class="until"></p>
                     <p class="about_event"></p>
+                    <p class="extradetail"></p>
                 </div>
             </div>
         </section>
@@ -108,6 +107,7 @@
                 clone.querySelector(".when").textContent = `When: ${exhibition.when} til ${exhibition.until}`;
                 clone.querySelector(".where").textContent = `Where: ${exhibition.where}`;
                 clone.querySelector(".about_event").textContent = exhibition.aboutevent;
+                clone.querySelector(".extradetail").textContent = "Exhibitions event: " + exhibition.exhibition_type;
                 list.appendChild(clone);
             })
         }
