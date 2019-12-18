@@ -156,9 +156,6 @@ button p {
 
 
 /*Artwork front page*/
-#artwork {
-    margin: 0 5vw;
-}
 
 #artwork h1 {
     font-family: futura-pt, sans-serif;
@@ -170,7 +167,6 @@ button p {
     text-decoration: none;
     color: #626262;
     padding-top: 3rem;
-    padding-left: 6.5rem;
     margin: 1.5rem;
 
 }
@@ -215,11 +211,10 @@ button p {
 
 /*Exhibititon section on front page*/
 
-#upcoming h1 {
+#exhibition h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 1.5rem;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     text-align: center;
@@ -228,57 +223,19 @@ button p {
     margin: 1.5rem;
 }
 
-#upcoming h2 {
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 3rem;
-}
-
-.list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-#exhibitions {
-    flex-grow: 1;
-    flex-basis: 150px;
-    padding: 0 4vw;
-    margin: 3vw;
-}
-
-.date {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    line-height: 1.8rem;
-    letter-spacing: 0.4rem;
-    color: #626262;
-}
-
-.tekst_exh {
-    color: #626262;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.6;
-    margin: 1rem 1.3rem;
-}
-
 .sectionwrapper {
     display: flex;
-    flex-flow: row wrap;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: white;
     padding-bottom: 1rem;
-    margin: 1rem;
-    padding: 0.8rem;
 }
 
-.col {
+.sectionwrapper .col {
     flex-basis: 300px;
-    flex-grow: 1;
     margin: 1rem;
     padding: 0.8rem;
     overflow: hidden;
@@ -288,42 +245,59 @@ button p {
     height: 260px;
 }
 
-.seemorebtn {
-    position: relative;
-    left: 1.5vw;
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #ffffff;
-    width: 45vw;
-    padding: 2vw 0;
-    transition: width 0.8s;
-    cursor: pointer;
+@media only screen and (max-width: 600px) {
+    .sectionwrapper .item-3 {
+        order: -1;
+    }
+}
+
+.sectionwrapper .col #exhibition h2 {
     text-align: center;
-    margin: 1vw 8vw 5vw;
+    color: #626262;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.seemorebtn a,
-.long-arrow-white {
-    font-family: var(--nav-skrift);
-    font-size: 2.8vw;
+#exhibition h2 {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 4.3rem;
+}
+
+h3 {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.4rem;
+    color: #626262;
+}
+
+#exhibition p {
+    color: #626262;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+}
+
+#exhibition .icons {
+    font-size: 60px;
+    color: black;
+    text-align: center;
+}
+
+
+.exhibition_button {
+    background-color: #ffffff;
+    font-family: 'Work Sans', sans-serif;
+    border: none;
     color: #000000;
-    transition: width 0.8s;
-}
-
-.long-arrow-white {
-    height: 1.8vw;
-    width: 8vw;
-    transition: width 0.8s;
-}
-
-.seemorebtn:hover {
-    width: 50vw;
-    transition-timing-function: ease-in-out;
-}
-
-.seemorebtn a:hover {
-    cursor: pointer;
+    padding-top: 1rem;
     text-decoration: underline;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 /*Footer*/
@@ -483,18 +457,13 @@ p.txt_1 {
     }
 
     .seemorebtn {
-        margin: 1vw 0 1vw 3vw;
-        left: 73vw;
-        width: 21vw;
-        height: 4vw;
-        padding: 0;
+        padding-left: 8.24rem;
+        padding-bottom: 3rem;
+
     }
 
     .seemorebtn:hover {
         width: 25vw;
     }
 
-    .sectionwrapper {
-        margin: 4.5vw;
-    }
 }
