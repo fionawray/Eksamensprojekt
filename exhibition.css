@@ -212,6 +212,7 @@ p {
     line-height: 1.6rem;
     color: #626262;
     padding-top: 15px;
+
 }
 
 .anexhibition {
@@ -220,7 +221,7 @@ p {
 }
 
 .extradetail {
-    font-style: italic;
+    font-size: 1.2rem;
 }
 
 /*Footer*/
