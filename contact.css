@@ -48,7 +48,7 @@ body {
 
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color: #9cb7dd;
+    color: #000000;
 }
 
 .header .logo {
