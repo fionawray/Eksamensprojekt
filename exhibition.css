@@ -203,7 +203,8 @@ p {
 }
 */
 
-.about_event {
+.about_event,
+.extradetail {
     margin-bottom: 30px;
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
@@ -219,7 +220,6 @@ p {
 }
 
 .extradetail {
-    font-size: 3vw;
     font-style: italic;
 }
 
@@ -311,6 +311,7 @@ p.txt_1 {
 }
 
 @media screen and (min-width: 800px) {
+
     #contentwp {
         margin: 12vw 5vw;
     }
