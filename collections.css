@@ -266,7 +266,7 @@ video {
 }
 
 .contentlist {
-    padding: 1vw 0;
+    padding: 4vw 0;
 }
 
 .acollection {
@@ -321,7 +321,7 @@ video {
 
 hr {
     width: 85%;
-    border: 0.3px solid #cecdcd;
+    border: 0.5px solid #cecdcd;
 }
 
 p.txt {
