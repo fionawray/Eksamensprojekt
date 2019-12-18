@@ -412,8 +412,9 @@ h3 {
 }
 
 hr {
+
     width: 85%;
-    border: 0.7px solid #cecdcd;
+    border: 0.3px solid #cecdcd;
 }
 
 p.txt {
@@ -571,11 +572,19 @@ p.txt_1 {
     }
 
     .seemorebtn {
+<<<<<<< HEAD
+        <<<<<<< HEAD
+        /*        padding-left: 8.24rem;*/
+        padding-left: 10rem;
+        =======padding-left: 4.49rem;
+        > > > > > > > origin/master padding-bottom: 3rem;
+=======
         width: 18vw;
         /*        padding-left: 8.24rem;*/
         /*        padding-left: 10rem;*/
         /*        padding-left: 4.49rem;*/
         padding-bottom: 3rem;
+>>>>>>> origin/master
         transition: width 0.5s;
     }
 
