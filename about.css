@@ -244,6 +244,7 @@ h3 {
 .row > .column {
     padding: 8px;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .column {
