@@ -23,6 +23,7 @@ a:active {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 button {
@@ -303,7 +304,6 @@ h3 {
 .list {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     background-color: white;
     padding-bottom: 1rem;
 }
@@ -361,7 +361,6 @@ h3 {
 
 .seemorebtn {
     position: relative;
-    left: -30%;
     display: flex;
     flex-flow: row wrap;
     background-color: #ffffff;
@@ -385,7 +384,7 @@ h3 {
 }
 
 .seemorebtn:hover {
-    width: 38vw;
+    width: 40vw;
     transition-timing-function: ease-in-out;
 }
 
@@ -523,7 +522,7 @@ p.txt_1 {
 
     .sectionwrapper .col {
         flex-basis: auto;
-        margin: 1rem;
+        margin: 2rem 3.8rem;
         padding: 0.8rem;
         overflow: hidden;
     }
@@ -536,7 +535,7 @@ p.txt_1 {
     }
 
     #exhibitions {
-        padding: 1rem 1rem 1rem 2rem;
+        padding: 2rem 4.5rem;
     }
 
 }
@@ -557,17 +556,15 @@ p.txt_1 {
         padding: 1rem 1rem 1rem 2rem;
     }
 
-    /*#exhibitions h2 {
-        font-size: 2.5rem;
-    }*/
+    .list {
+        padding: 0 13vw;
+    }
 
     #exhibitions h2 {
         font-size: 1.5rem;
     }
 
-
-
-    .seemorebtn p,
+    .seemorebtn a,
     .long-arrow-white {
         font-size: 1.2vw;
         padding: 0;
@@ -575,10 +572,10 @@ p.txt_1 {
     }
 
     .seemorebtn {
-        padding-left: 8.24rem;
+        /*        padding-left: 8.24rem;*/
+        padding-left: 10rem;
         padding-bottom: 3rem;
         transition: width 0.5s;
-
     }
 
     .seemorebtn:hover {
