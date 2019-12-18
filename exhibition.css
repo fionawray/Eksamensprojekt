@@ -222,12 +222,10 @@ p {
     border: 0.7px solid black;
 }
 
-/*
 .poster {
     margin: 15px 0;
     max-width: 300px;
 }
-*/
 
 .about_event,
 .extradetail {
@@ -383,4 +381,3 @@ p.txt_1 {
     }
 
 }
-
