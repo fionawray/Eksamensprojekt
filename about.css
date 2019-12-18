@@ -155,7 +155,12 @@ body {
     color: black;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+<<<<<<< HEAD
     font-size: 3.5rem;
+=======
+    font-size: 4.3rem;
+    margin: 0;
+>>>>>>> origin/master
 }
 
 #about p {
@@ -262,8 +267,9 @@ h3 {
     border-color: aliceblue;
 }
 
-.citat {
-    align-self: center;
+.column .citat {
+    padding: 70px 0;
+    text-align: center;
 }
 
 
@@ -289,7 +295,7 @@ h3 {
 hr,
 .topbar {
     width: 85%;
-    border: 0.7px solid #cecdcd;
+    border: 0.3px solid #cecdcd;
 }
 
 p.txt {
