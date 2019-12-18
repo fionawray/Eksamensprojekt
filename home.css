@@ -168,7 +168,6 @@ button p {
     color: #626262;
     padding-top: 3rem;
     margin: 1.5rem;
-
 }
 
 #artwork h2 {
@@ -298,6 +297,12 @@ h3 {
     display: inline-block;
     font-size: 1rem;
     cursor: pointer;
+}
+
+/*UPCOMING EXHIBITION*/
+
+.title {
+    text-align: center;
 }
 
 /*Footer*/
