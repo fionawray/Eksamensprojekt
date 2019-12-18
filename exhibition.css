@@ -172,8 +172,34 @@ p {
     color: #626262;
 }
 
+/*Breadcrumbs*/
+.breadcrumbs {
+    margin-top: 20vw;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;
+    padding-left: 3vw;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li + li:before {
+    color: #767676;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+.breadcrumbs li + li:before {
+    content: "/\00a0";
+    padding: 2vw;
+}
+
+
 #contentwp {
-    margin: 20vw 6vw;
+    margin: 3vw 6vw;
 }
 
 .flexwrapper {
@@ -311,21 +337,50 @@ p.txt_1 {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
 
-    #contentwp {
-        margin: 12vw 5vw;
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
     }
 
-    img {
-        width: 63%;
+    .breadcrumbs ul {
+        list-style: none;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        display: inline-flex;
+        padding-left: 4vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.2vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
     }
 }
 
-@media screen and (min-width: 1100px) {
-    .flexcontent {
-        width: 450px;
-        margin: auto;
+@media only screen and (max-width: 1023px) and (min-width: 800px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.5vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
     }
 
 }
+

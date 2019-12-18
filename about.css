@@ -135,7 +135,7 @@ body {
 
 /*Breadcrumbs*/
 .breadcrumbs {
-    margin-top: 20vw;
+    margin-top: 17vw;
 }
 
 .breadcrumbs ul {
@@ -168,10 +168,8 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: #626262;
-    padding-top: 8rem;
     padding-bottom: 0;
     margin: 1.5rem;
-
 }
 
 #about h2 {
@@ -183,7 +181,6 @@ body {
     letter-spacing: 0.2rem;
     font-size: 3.5rem;
     margin: 0;
-
 }
 
 #about p {
@@ -446,7 +443,7 @@ p.txt_1 {
 
     /*Breadcrumbs*/
     .breadcrumbs {
-        margin-top: 10vw;
+        margin-top: 8.7vw;
     }
 
     .breadcrumbs ul {
