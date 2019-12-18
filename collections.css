@@ -250,6 +250,7 @@ video {
     justify-content: center;
     align-items: center;
     margin: 4.5vw;
+    margin-bottom: 11vh;
 }
 
 .collection_name {
@@ -383,7 +384,11 @@ p.txt_1 {
 
 @media only screen and (min-width: 760px) {
     .seemorebtn {
-        left: -18%;
+        left: -5%;
+    }
+
+    .seemorebtn p {
+        font-size: 1rem;
     }
 }
 
@@ -410,7 +415,7 @@ p.txt_1 {
         width: 15vw;
         height: 4vw;
         padding: 0;
-        margin-left: 8vw;
+        margin-left: 1vw;
     }
 
     .seemorebtn:hover {
@@ -425,13 +430,17 @@ p.txt_1 {
         font-size: 4.5vw;
     }
 
+    .acollection {
+        margin-bottom: 0;
+    }
+
 
 }
 
 @media only screen and (min-width: 1075px) {
 
     .seemorebtn {
-        left: -30%;
+        left: -15%;
 
     }
 
