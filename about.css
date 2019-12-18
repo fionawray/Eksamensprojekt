@@ -155,12 +155,9 @@ body {
     color: black;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-<<<<<<< HEAD
     font-size: 3.5rem;
-=======
-    font-size: 4.3rem;
     margin: 0;
->>>>>>> origin/master
+
 }
 
 #about p {
@@ -235,7 +232,6 @@ h3 {
     text-align: center;
     margin-top: 8vh;
 }
-
 
 
 /*Portrait grid*/
@@ -371,6 +367,7 @@ p.txt_1 {
         text-align: center;
         margin-top: 0;
     }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -408,6 +405,10 @@ p.txt_1 {
 
     #about {
         margin-bottom: 4vw;
+    }
+
+    .container_video {
+        margin-top: 8vh;
     }
 
 }
