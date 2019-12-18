@@ -139,6 +139,7 @@
                 });
                 //the counter should start when one painting is clicked
                 gallery_counter++;
+                gallery_counter--;
             })
 
             //get the first objects' element, which is name of the collection
@@ -194,7 +195,7 @@
                 gallery_counter = paintings.length - 1;
             }
             //show the information that belongs to one image from one collection
-            showMalinfo();
+            showPaintingsinfo();
         }
 
         function showPaintingsinfo() {
