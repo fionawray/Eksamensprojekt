@@ -80,38 +80,6 @@ button p {
     margin-left: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
-}
-
 /* menu */
 .header .menu {
     clear: both;
@@ -195,6 +163,10 @@ button p {
 
 
 /*Artwork front page*/
+#artwork {
+    margin: 0 5vw;
+}
+
 #artwork h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
@@ -205,6 +177,7 @@ button p {
     text-decoration: none;
     color: #626262;
     padding-top: 3rem;
+    padding-left: 6.5rem;
     margin: 1.5rem;
 
 }
@@ -216,10 +189,10 @@ button p {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.2rem;
-    font-size: 4.5rem;
+    font-size: 4.3rem;
 }
 
-p {
+#artwork p {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -427,7 +400,35 @@ p.txt_1 {
     }
 }
 
+
+@media only screen and (min-width: 600px) {
+    .header .logo {
+        width: 10rem;
+        padding-left: 2.5rem;
+    }
+
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header li a {
+        display: block;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    .header .logo {
+        width: 10rem;
+    }
+
     #splash_video {
         width: auto;
         padding-left: 1.5rem;
@@ -457,6 +458,9 @@ p.txt_1 {
 }
 
 @media only screen and (min-width:800px) {
+    .list {
+        margin: 0 2vw;
+    }
 
     .seemorebtn a,
     .long-arrow-white {
@@ -465,6 +469,11 @@ p.txt_1 {
 
     .tekst_exh {
         margin: 1rem 0;
+    }
+
+    #exhibitions {
+        padding: 0;
+        margin: 0 7vw;
     }
 
     #exhibitions h2 {
