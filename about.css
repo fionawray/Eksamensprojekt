@@ -243,6 +243,7 @@ h3 {
 .row,
 .row > .column {
     padding: 8px;
+    padding-top: 2rem;
 }
 
 .column {
@@ -263,7 +264,9 @@ h3 {
 }
 
 .column .citat {
-    padding: 70px 0;
+    padding: 42px 0;
+    margin-top: 0.6rem;
+    border: 2px solid #626262;
     text-align: center;
 }
 
