@@ -278,15 +278,7 @@ button p {
     font-size: 1.5rem;
 }
 
-h3 {
-    font-family: futura-pt-light, sans-serif;
-    font-weight: 400;
-    line-height: 1.8rem;
-    letter-spacing: 0.4rem;
-    color: #626262;
-}
-
-#exhibition p {
+#exhibitions p {
     color: #626262;
     font-family: 'Work Sans', sans-serif;
     line-height: 1.6;
@@ -346,7 +338,10 @@ h3 {
 
 .date {
     font-family: futura-pt-light, sans-serif;
+    text-align: center;
     font-weight: 400;
+    margin: 2vw 0;
+    font-size: 1.17rem;
     line-height: 1.8rem;
     letter-spacing: 0.4rem;
     color: #626262;
@@ -502,8 +497,7 @@ p.txt_1 {
     }
 
     #artwork h1,
-    h2,
-    h3 {
+    h2 {
         padding-left: 0;
         text-align: center;
     }
