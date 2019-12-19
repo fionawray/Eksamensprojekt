@@ -9,7 +9,7 @@
 * {
     margin: 0 auto;
     padding: 0;
-    /*    box-sizing: border-box;*/
+    box-sizing: border-box;
     line-height: inherit;
 }
 
@@ -26,13 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-button {
-    border: none;
-}
-
-button p {
-    font-size: var(--nav-skrift);
-}
 
 /*MENU og HEADER*/
 .header .logo {
@@ -163,10 +156,6 @@ button p {
     top: 0;
 }
 
-#contentwp {
-    margin: 20vw 6vw;
-}
-
 /*Breadcrumbs*/
 .breadcrumbs {
     margin-top: 20vw;
@@ -192,14 +181,9 @@ button p {
     padding: 2vw;
 }
 
-/*
-video {
-    object-fit: scale-down;
+#contentwp {
+    margin: 20vw 6vw;
 }
-.video_container {
-    padding: 3vw;
-}
-*/
 
 #contentwp h1,
 #singlecollection h1 {
@@ -235,37 +219,29 @@ video {
 }
 
 .seemorebtn {
-    position: relative;
-    left: -30%;
     display: flex;
     flex-flow: row wrap;
+    align-content: flex-start;
     background-color: #ffffff;
-    width: 35vw;
-    padding: 2vw 0;
+    width: 45vw;
     transition: width 0.3s;
+    margin: 3vw 0;
 }
 
 .seemorebtn p,
 .long-arrow-white {
     font-family: var(--nav-skrift);
-    font-size: 2.8vw;
+    font-size: 1rem;
     color: #000000;
-    padding: 0;
-    transition: width 0.3s;
-}
-
-.long-arrow-white {
-    height: 1.8vw;
-    width: 5vw;
 }
 
 .seemorebtn:hover {
-    width: 38vw;
+    cursor: pointer;
+    width: 50vw;
     transition-timing-function: ease-in-out;
 }
 
 .seemorebtn p:hover {
-    cursor: pointer;
     text-decoration: underline;
 }
 
@@ -444,9 +420,7 @@ p.txt_1 {
 
     .seemorebtn {
         width: 15vw;
-        height: 4vw;
-        padding: 0;
-        margin-left: 1vw;
+        margin: 2vw 0 0;
     }
 
     .seemorebtn:hover {
@@ -516,8 +490,10 @@ p.txt_1 {
 
 @media only screen and (min-width: 1075px) {
 
+    /*
     .seemorebtn {
         left: -5%;
 
     }
+*/
 }
