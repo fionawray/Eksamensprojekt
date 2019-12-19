@@ -27,7 +27,7 @@
     </header>
 
     <section id="splash_video">
-        <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <video controls autoplay id="video" preload="auto" loop="loop" muted="muted">
             <source src="video/video_krista.mp4">
         </video>
     </section>
@@ -42,7 +42,7 @@
                 <p></p>
             </div>
             <div class="col img_col">
-                <img src="img/2019_24.jpeg">
+                <img src="img/2019_24.jpeg" alt="paperworks_picture">
             </div>
         </div>
 
@@ -51,7 +51,7 @@
                 <p></p>
             </div>
             <div class="col img_col">
-                <img src="img/COMFORT_ZONE_100X120CM_300dpi.jpeg">
+                <img src="img/COMFORT_ZONE_100X120CM_300dpi.jpeg" alt="citylife_picture">
             </div>
             <div class="col item-3">
                 <h2>city<br>life</h2>
@@ -66,7 +66,7 @@
                 <p></p>
             </div>
             <div class="col img_col">
-                <img src="img/2019_GOOD_INTENTIONS_100X140CM.jpeg">
+                <img src="img/2019_GOOD_INTENTIONS_100X140CM.jpeg" alt="landscapes_picture">
             </div>
         </div>
 
@@ -75,16 +75,16 @@
                 <p></p>
             </div>
             <div class="col img_col">
-                <img src="img/H%C3%A5befuldeHensigter2.0110x110cm.jpeg">
+                <img src="img/H%C3%A5befuldeHensigter2.0110x110cm.jpeg" alt="blackpoetry_picture">
             </div>
             <div class="col item-3">
                 <h2>black<br>poetry</h2>
             </div>
         </div>
-        <button class="seemorebtn">
-            <a href="collections.html">View All Collections</a><span class="long-arrow-white">&#10230;</span>
-            <a href="collections.html"></a>
-        </button>
+        <div class="seemorebtn">
+            <a href="collections.html">View All Collections</a>
+            <span class="long-arrow-white">&#10230;</span>
+        </div>
     </section>
 
     <section id="pic" class="position_fixed">
@@ -95,11 +95,10 @@
         <h1 class="title">upcoming exhibitions</h1>
         <section class="list">
         </section>
-        <button class="seemorebtn">
+        <div class="seemorebtn">
             <a href="exhibitions.html">View All Exhibitions</a>
             <span class="long-arrow-white">&#10230;</span>
-
-        </button>
+        </div>
     </main>
 
     <!-- A template for one exhibition on the list a child element -->
@@ -144,8 +143,6 @@
         const citylifeUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/322";
         const landscapesUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/325";
         const blackpoetryUrl = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/pages/327";
-        //Veronika - correct link for the upcoming exhibition category
-        //  const upcomingEvent_1Url = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/single_exhibition/366";
         const futureExh = "https://uwei.eu/kea/2_semester/eksamen/kristawerdelin/wordpress/wp-json/wp/v2/single_exhibition?categories=19";
         let events = [];
         window.addEventListener("DOMContentLoaded", sidenVises);
@@ -185,20 +182,7 @@
             document.querySelector(".blackpoetry").innerHTML = parsedResult.content.rendered;
         }
 
-        /*      async function getUpcomingEvent_1() {
-            const upcomingEvent_1 = await fetch(futureExh);
-            parsedResult = await upcomingEvent_1.json();
-            const pattern = document.querySelector(".upcoming_template");
-            const clone = pattern.cloneNode(true).content;
-            document.querySelector(".navn").textContent = parsedResult.navn;
-            document.querySelector(".upcomingEvent_1").textContent = parsedResult.when;
-            list.appendChild(clone);
-        }
-*/
-
-
         async function showFutureEvents() {
-
             const upcomingEv = await fetch(futureExh);
             events = await upcomingEv.json();
             showEx();
@@ -215,24 +199,5 @@
                 list.appendChild(clone);
             })
         }
-        //   Veronika - todo
-
-        //    //function showUpcoming() {
-        //            console.log(showUpcoming);
-        //            const pattern = document.querySelector("template");
-        //            const gridlist = document.querySelector(".list");
-        //
-        //            exhibitions.forEach(exhibition => {
-        //                const clone = pattern.cloneNode(true).content;
-        //                clone.querySelector(".exhibitions h2").textContent = exhibition.title.rendered;
-        //                list.appendChild(clone);
-        //         list.lastElementChild.addEventListener("click", () => {
-        //                    location.href = "exhibitions.html?id=" + exhibition.id;
-        //               });
-        //            })
-        //        }
-
     </script>
-</body>
-
-</html>
+</body></html>
