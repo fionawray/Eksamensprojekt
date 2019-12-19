@@ -9,7 +9,6 @@
 * {
     margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
     line-height: inherit;
 }
 
@@ -221,11 +220,11 @@ body {
 .seemorebtn {
     display: flex;
     flex-flow: row wrap;
-    align-content: flex-start;
+    box-sizing: border-box;
     background-color: #ffffff;
     width: 45vw;
     transition: width 0.3s;
-    margin: 3vw 0;
+    margin: 1vw 0 10vw 0;
 }
 
 .seemorebtn p,
@@ -420,7 +419,8 @@ p.txt_1 {
 
     .seemorebtn {
         width: 15vw;
-        margin: 2vw 0 0;
+        margin-top: 1vw;
+        ;
     }
 
     .seemorebtn:hover {
