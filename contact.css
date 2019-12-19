@@ -13,6 +13,10 @@ body {
     width: auto;
 }
 
+.header .black a {
+    color: black;
+}
+
 .header {
     background-color: #ffffff;
     top: 0;
