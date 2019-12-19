@@ -229,10 +229,6 @@ h2 {
     overflow: hidden;
 }
 
-.popup_content h2 {
-    padding-left: 2vw;
-}
-
 .prev,
 .next {
     cursor: pointer;
@@ -300,6 +296,7 @@ h2 {
     margin: 10vw 2vw 0 3vw;
     overflow: scroll;
     z-index: 80;
+    padding: 6%;
 }
 
 .close {
@@ -442,10 +439,6 @@ p.txt {
         margin: 2vw 10vw;
     }
 
-    .popup_content h2 {
-        padding-left: 1vw;
-    }
-
     .close {
         font-size: 2.5vw;
     }
@@ -554,10 +547,6 @@ p.txt {
         margin: 2vw 10vw;
     }
 
-    .popup_content h2 {
-        padding-left: 1vw;
-    }
-
     .close {
         font-size: 2.5vw;
     }
@@ -581,6 +570,18 @@ p.txt {
     .prev {
         font-size: 2.2vw;
     }
+}
+
+@media only screen and (min-width: 800px) {
+    .popup_content {
+        padding: 0;
+    }
+
+    .onepicture {
+        display: block;
+        align-content: center;
+    }
+
 }
 
 @media only screen and (min-width: 1269px) {

@@ -44,45 +44,13 @@ body {
 
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color: #9cb7dd;
+    color: #000000;
 }
 
 .header .logo {
     float: left;
     margin-top: 10px;
     margin-left: 20px;
-}
-
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
 }
 
 /* menu */
@@ -165,7 +133,7 @@ body {
     }
 
     .header li a {
-        padding: 20px 30px;
+        padding: 20px 20px;
     }
 
     .header .menu {
@@ -180,6 +148,31 @@ body {
 }
 
 /*CONTACT*/
+
+/*Breadcrumbs*/
+.breadcrumbs {
+    margin-top: 4vw;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;
+    padding-left: 3vw;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li + li:before {
+    color: #767676;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+.breadcrumbs li + li:before {
+    content: "/\00a0";
+    padding: 2vw;
+}
 
 #pic {
     width: 100%;
@@ -228,7 +221,7 @@ body {
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 #contact p {
@@ -297,7 +290,7 @@ input[type=submit]:hover {
 
 hr {
     width: 85%;
-    border: 0.7px solid #cecdcd;
+    border: 0.5px solid #cecdcd;
 }
 
 p.txt {
@@ -323,4 +316,51 @@ p.txt_1 {
 
 .copyright {
     font-size: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 1vw;
+    }
+
+    .breadcrumbs ul {
+        list-style: none;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        display: inline-flex;
+        padding-left: 4vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.2vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 800px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 1vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.5vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
+    }
+
 }

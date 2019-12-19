@@ -1,10 +1,3 @@
-* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: inherit;
-}
-
 :root {
     --overskrift-h1: 'futura-pt', sans-serif;
     --overskrift-h2: 'linotype-didot', serif;
@@ -13,12 +6,24 @@
     --nav-skrift: 'montserrat', sans-serif;
 }
 
+* {
+    margin: 0 auto;
+    padding: 0;
+    /*    box-sizing: border-box;*/
+    line-height: inherit;
+}
+
 a {
     text-decoration: none;
 }
 
+a:active {
+    color: #626262;
+}
+
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 button {
@@ -71,45 +76,13 @@ button p {
 
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color: #9cb7dd;
+    color: #000000;
 }
 
 .header .logo {
     float: left;
     margin-top: 10px;
     margin-left: 20px;
-}
-
-@media only screen and (max-width: 600px) {
-    .header .logo {
-        width: 10rem;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .header .logo {
-        width: 10rem;
-        padding-left: 2.5rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .header {
-        background-color: #ffffff;
-        position: fixed;
-        width: 100%;
-        z-index: 3;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .header li a {
-        display: block;
-        padding: 20px 20px;
-        text-align: center;
-        text-decoration: none;
-        background-color: transparent;
-    }
 }
 
 /* menu */
@@ -191,10 +164,12 @@ button p {
 #video {
     max-width: 100%;
     height: auto;
+    margin-top: 4rem;
 }
 
 
 /*Artwork front page*/
+
 #artwork h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
@@ -205,8 +180,6 @@ button p {
     text-decoration: none;
     color: #626262;
     padding-top: 3rem;
-    margin: 1.5rem;
-
 }
 
 #artwork h2 {
@@ -215,11 +188,12 @@ button p {
     font-style: italic;
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
     letter-spacing: 0.2rem;
-    font-size: 4.5rem;
+    font-size: 4.3rem;
 }
 
-p {
+#artwork p {
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -249,11 +223,10 @@ p {
 
 /*Exhibititon section on front page*/
 
-#upcoming h1 {
+#exhibition h1 {
     font-family: futura-pt, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 1.5rem;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     text-align: center;
@@ -262,26 +235,113 @@ p {
     margin: 1.5rem;
 }
 
-#upcoming h2 {
+.sectionwrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 1rem;
+}
+
+.sectionwrapper .col {
+    flex-basis: 300px;
+    margin: 1rem;
+    padding: 0.8rem;
+    overflow: hidden;
+}
+
+.sectionwrapper .img_col {
+    height: 260px;
+}
+
+@media only screen and (max-width: 600px) {
+    .sectionwrapper .item-3 {
+        order: -1;
+    }
+}
+
+.sectionwrapper .col #exhibition h2 {
+    text-align: center;
+    color: #626262;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#exhibition h2 {
     font-family: linotype-didot, serif;
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
+
+h3 {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.4rem;
+    color: #626262;
+}
+
+#exhibition p {
+    color: #626262;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+}
+
+#exhibition .icons {
+    font-size: 60px;
+    color: black;
+    text-align: center;
+}
+
+
+
+/*UPCOMING EXHIBITION*/
 
 .list {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    padding-bottom: 1rem;
 }
 
 #exhibitions {
     flex-grow: 1;
-    flex-basis: 150px;
-    padding: 0 4vw;
-    margin: 3vw;
+    flex-basis: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.title {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #626262;
+    padding-top: 3rem;
+    margin: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+
+.navn {
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
 }
 
 .date {
@@ -293,47 +353,21 @@ p {
 }
 
 .tekst_exh {
+    font-family: futura-pt-light, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6rem;
     color: #626262;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.6;
-    margin: 1rem 1.3rem;
-}
-
-.sectionwrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding-bottom: 1rem;
-    margin: 1rem;
-    padding: 0.8rem;
-}
-
-.col {
-    flex-basis: 300px;
-    flex-grow: 1;
-    margin: 1rem;
-    padding: 0.8rem;
-    overflow: hidden;
-}
-
-.sectionwrapper .img_col {
-    height: 260px;
 }
 
 .seemorebtn {
     position: relative;
-    left: 1.5vw;
     display: flex;
     flex-flow: row wrap;
     background-color: #ffffff;
-    width: 45vw;
+    width: 35vw;
     padding: 2vw 0;
-    transition: width 0.8s;
-    cursor: pointer;
-    text-align: center;
-    margin: 1vw 8vw 5vw;
+    transition: width 0.3s;
 }
 
 .seemorebtn a,
@@ -341,17 +375,16 @@ p {
     font-family: var(--nav-skrift);
     font-size: 2.8vw;
     color: #000000;
-    transition: width 0.8s;
+    padding: 0;
 }
 
 .long-arrow-white {
     height: 1.8vw;
-    width: 8vw;
-    transition: width 0.8s;
+    width: 5vw;
 }
 
 .seemorebtn:hover {
-    width: 50vw;
+    width: 40vw;
     transition-timing-function: ease-in-out;
 }
 
@@ -359,6 +392,7 @@ p {
     cursor: pointer;
     text-decoration: underline;
 }
+
 
 /*Footer*/
 .footer {
@@ -375,11 +409,12 @@ p {
 .media_wrapper {
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
 }
 
 hr {
     width: 85%;
-    border: 0.7px solid #cecdcd;
+    border: 0.6px solid #b7b7b7;
 }
 
 p.txt {
@@ -407,7 +442,10 @@ p.txt_1 {
     font-size: 10px;
 }
 
-@media (min-width: 48em) {
+
+/*MEDIA QUERY START*/
+
+@media (min-width: 800px) {
     .header li {
         float: left;
     }
@@ -427,7 +465,34 @@ p.txt_1 {
     }
 }
 
+
+@media only screen and (min-width: 600px) {
+    .header .logo {
+        width: 10rem;
+    }
+
+    .header {
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header li a {
+        display: block;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    .header .logo {
+        width: 10rem;
+    }
+
     #splash_video {
         width: auto;
         padding-left: 1.5rem;
@@ -454,36 +519,60 @@ p.txt_1 {
     .sectionwrapper .item-3 {
         order: -1;
     }
+
+    .sectionwrapper .col {
+        flex-basis: auto;
+        margin: 2rem 2.5rem;
+        padding: 0.8rem;
+        overflow: hidden;
+    }
+
+    .seemorebtn {
+        padding: 0 0 4rem 0;
+        font-size: 1.2rem;
+        transition: width 0.3s;
+        margin: 0 0 0 10.5rem;
+    }
+
+    #exhibitions {
+        padding: 2rem 3.5rem;
+    }
+
 }
 
 @media only screen and (min-width:800px) {
+
     .tekst_exh {
         margin: 1rem 0;
     }
 
-    #exhibitions h2 {
-        font-size: 2.5rem;
+    #exhibitions {
+        padding: 1rem 1rem 1rem 2rem;
     }
 
-    .seemorebtn p,
+    .list {
+        padding: 0 8vw;
+    }
+
+    #exhibitions h2 {
+        font-size: 1.5rem;
+    }
+
+    .seemorebtn a,
     .long-arrow-white {
         font-size: 1.2vw;
         padding: 0;
     }
 
     .seemorebtn {
-        margin: 1vw 0 1vw 3vw;
-        left: 73vw;
-        width: 21vw;
-        height: 4vw;
-        padding: 0;
+        padding-left: 4.49rem;
+        padding-bottom: 3rem;
+        width: 26vw;
+        margin: 0 0 0 29rem;
     }
 
     .seemorebtn:hover {
-        width: 25vw;
+        width: 30vw;
     }
 
-    .sectionwrapper {
-        margin: 4.5vw;
-    }
 }

@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <a href="index.html" class="logo">
-            <img src="img/SVG/logo.svg" alt=""></a>
+            <img src="img/nitiya_logo.svg" alt=""></a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
@@ -27,10 +27,17 @@
         </ul>
     </header>
 
+    <!--Breadcrumbs-->
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="index.html">home </a></li>
+            <li><a href="exhibitions.html">exhibitions</a></li>
+        </ul>
+    </div>
+
+
     <main id="contentwp">
         <h1>Exhibitions</h1>
-        <!--teste om det ser pænt ud.-->
-        <hr class="topbar">
         <section class="contentlist"></section>
     </main>
 
@@ -46,6 +53,7 @@
                     <p class="where"></p>
                     <p class="until"></p>
                     <p class="about_event"></p>
+                    <p class="extradetail"></p>
                 </div>
             </div>
         </section>
@@ -105,11 +113,14 @@
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("h2").textContent = exhibition.name;
                 clone.querySelector(".poster").src = exhibition.billede.guid;
-                clone.querySelector(".when").textContent = `When: ${exhibition.when} til ${exhibition.until}`;
+                clone.querySelector(".when").textContent = `When: ${exhibition.when} until ${exhibition.until}`;
                 clone.querySelector(".where").textContent = `Where: ${exhibition.where}`;
                 clone.querySelector(".about_event").textContent = exhibition.aboutevent;
+                clone.querySelector(".extradetail").textContent = "Exhibitions event: " + exhibition.exhibition_type;
                 list.appendChild(clone);
             })
         }
     </script>
-</body></html>
+</body>
+
+</html>

@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <a href="index.html" class="logo">
-            <img src="img/SVG/logo.svg" alt=""></a>
+            <img src="img/nitiya_logo.svg" alt=""></a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
@@ -26,15 +26,21 @@
         </ul>
     </header>
 
+    <!--Breadcrumbs-->
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="index.html">home </a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </div>
+
     <section id="about">
         <h1>about</h1>
         <div class="sectionwrapper">
             <div class="col">
                 <h2>Krista<br>Werdelin</h2>
                 <div class="container_video">
-                    <video id=vs_video controls autoplay>
-                        <source src="Video/krista_werdelin.mp4" type="video/mp4">
-                    </video>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KMUduPWEym8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
             </div>
@@ -48,22 +54,22 @@
     <div class="row">
         <div class="column">
             <div class="content">
-                <img src="img/krista_1.png" alt="krista_werdelin" style="width:100%">
+                <img src="img/krista_1.jpg" alt="krista_werdelin" style="width:100%">
             </div>
         </div>
         <div class="column">
             <div class="content">
-                <img src="img/krista_2.2.png" alt="krista_werdelin" style="width:100%">
+                <img src="img/krista_2.2.jpg" alt="krista_werdelin" style="width:100%">
             </div>
         </div>
-        <div class="column">
+        <div class="column citat">
             <div class="citat">
                 <p>'Beauty for the sake of beauty' - Krista Werdelin</p>
             </div>
         </div>
         <div class="column">
             <div class="content">
-                <img src="img/krista_3.png" alt="krista_werdelin" style="width:100%">
+                <img src="img/krista_3.jpg" alt="krista_werdelin" style="width:100%">
             </div>
         </div>
     </div>
@@ -110,7 +116,6 @@
             parsedResult = await about.json();
             document.querySelector(".about").innerHTML = parsedResult.content.rendered;
         }
-
     </script>
 </body>
 

@@ -9,29 +9,29 @@
 * {
     margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
+    /*    box-sizing: border-box;*/
     line-height: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    color: #626262;
 }
 
 body {
     margin: 0;
-}
-
-html {
     overflow-x: hidden;
-    height: 100%;
 }
 
 button {
     border: none;
 }
 
-img {
-    width: 100%;
-}
-
-p {
-    color: #626262;
+button p {
+    font-size: var(--nav-skrift);
 }
 
 /*MENU og HEADER*/
@@ -76,7 +76,7 @@ p {
 
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color: #9cb7dd;
+    color: #000000;
 }
 
 .header .logo {
@@ -163,6 +163,31 @@ p {
     margin: 20vw 6vw;
 }
 
+/*Breadcrumbs*/
+.breadcrumbs {
+    margin-top: 20vw;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;
+    padding-left: 3vw;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li + li:before {
+    color: #767676;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+.breadcrumbs li + li:before {
+    content: "/\00a0";
+    padding: 2vw;
+}
+
 /*
 video {
     object-fit: scale-down;
@@ -182,7 +207,7 @@ video {
     text-align: center;
     color: #626262;
     padding-bottom: 0;
-    margin: 1.5rem;
+    margin-top: 2.2rem;
 }
 
 
@@ -192,7 +217,7 @@ video {
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: 4.3rem;
+    font-size: 3.5rem;
     word-wrap: break-word;
 }
 
@@ -213,7 +238,7 @@ video {
     background-color: #ffffff;
     width: 35vw;
     padding: 2vw 0;
-    transition: width 0.8s;
+    transition: width 0.3s;
 }
 
 .seemorebtn p,
@@ -222,7 +247,7 @@ video {
     font-size: 2.8vw;
     color: #000000;
     padding: 0;
-    transition: width 0.8s;
+    transition: width 0.3s;
 }
 
 .long-arrow-white {
@@ -241,7 +266,9 @@ video {
 }
 
 .contentlist {
-    padding: 1vw 0;
+    padding-top: 0;
+    padding-bottom: 4rem;
+    margin: 0;
 }
 
 .acollection {
@@ -250,6 +277,7 @@ video {
     justify-content: center;
     align-items: center;
     margin: 4.5vw;
+    margin-bottom: 11vh;
 }
 
 .collection_name {
@@ -295,7 +323,7 @@ video {
 
 hr {
     width: 85%;
-    border: 0.7px solid #cecdcd;
+    border: 0.6px solid #cecdcd;
 }
 
 p.txt {
@@ -323,6 +351,7 @@ p.txt_1 {
     font-size: 10px;
 }
 
+
 @media only screen and (max-width: 600px) {
     .header .logo {
         width: 10rem;
@@ -337,6 +366,7 @@ p.txt_1 {
         text-align: center;
     }
 }
+
 
 @media only screen and (min-width: 600px) {
     .header {
@@ -356,7 +386,6 @@ p.txt_1 {
 
     .header .logo {
         width: 10rem;
-        padding-left: 2.5rem;
     }
 }
 
@@ -366,7 +395,7 @@ p.txt_1 {
     }
 
     .header li a {
-        padding: 20px 30px;
+        padding: 20px 20px;
     }
 
     .header .menu {
@@ -380,6 +409,16 @@ p.txt_1 {
     }
 }
 
+@media only screen and (min-width: 760px) {
+    .seemorebtn {
+        left: -5%;
+    }
+
+    .seemorebtn p {
+        font-size: 1rem;
+    }
+}
+
 /*If the screen is min. 800px and bigger --- TABLET og andre*/
 @media only screen and (min-width: 800px) {
 
@@ -390,7 +429,7 @@ p.txt_1 {
     }
 
     #contentwp {
-        margin: 12vw 5vw;
+        margin: 1vw 5vw;
     }
 
     .seemorebtn p,
@@ -403,7 +442,7 @@ p.txt_1 {
         width: 15vw;
         height: 4vw;
         padding: 0;
-        margin-left: 8vw;
+        margin-left: 1vw;
     }
 
     .seemorebtn:hover {
@@ -418,5 +457,63 @@ p.txt_1 {
         font-size: 4.5vw;
     }
 
+    .acollection {
+        margin-bottom: 0;
+    }
 
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
+    }
+
+    .breadcrumbs ul {
+        list-style: none;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        display: inline-flex;
+        padding-left: 4vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.2vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 800px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.5vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
+    }
+
+}
+
+@media only screen and (min-width: 1075px) {
+
+    .seemorebtn {
+        left: -5%;
+
+    }
 }

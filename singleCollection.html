@@ -29,7 +29,7 @@
     <!--Breadcrumbs-->
     <div class="breadcrumbs">
         <ul>
-            <li><a href="home.html">home </a></li>
+            <li><a href="index.html">home </a></li>
             <li><a href="collections.html">collections</a></li>
             <li><a class="currentlink" href="singleCollection.html?id="></a></li>
         </ul>
@@ -51,7 +51,6 @@
         <section class="popup_content">
             <article class="apainting">
                 <div class="left">
-                    <h2></h2>
                     <div class="gallery_container">
                         <div class="onepicture">
                             <img class="picture" src="" alt="">
@@ -63,6 +62,7 @@
 
                 </div>
                 <div class="right">
+                    <h2></h2>
                     <p class="size"></p>
                     <p class="status"></p>
                     <p class="nameCol"></p>
@@ -130,7 +130,7 @@
                 const clone = pattern.cloneNode(true).content;
                 clone.querySelector("img").src = painting.picture.guid;
                 clone.querySelector("h2").textContent = painting.title.rendered;
-                //Set a varible that saves/equals to the gallery_counter
+                //Set a variable that saves/equals to the gallery_counter
                 let gallery_num = gallery_counter;
                 gridlist.appendChild(clone);
                 gridlist.lastElementChild.addEventListener("click", () => {
@@ -189,12 +189,12 @@
             //click Prev button and the gallery counts one image backward in the list
             gallery_counter--;
 
-            //if the gallery counter counts below 0, so we come back to the last object in the array - the last place in the array is the length of the list - 1
+            //if the gallery counter is less than 0, we come back to the last object in the array - the last place in the array is the length of the list - 1
             if (gallery_counter < 0) {
                 gallery_counter = paintings.length - 1;
             }
             //show the information that belongs to one image from one collection
-            showMalinfo();
+            showPaintingsinfo();
         }
 
         function showPaintingsinfo() {

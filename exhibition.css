@@ -1,7 +1,7 @@
 * {
     margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
+    /*    box-sizing: border-box;*/
     line-height: inherit;
 }
 
@@ -28,6 +28,7 @@ h1 {
     color: #626262;
     padding-bottom: 0;
     margin: 1.5rem;
+    font-size: 1.5rem;
 }
 
 /*MENU og HEADER*/
@@ -72,7 +73,7 @@ h1 {
 
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color: #9cb7dd;
+    color: #000000;
 }
 
 .header .logo {
@@ -172,8 +173,39 @@ p {
     color: #626262;
 }
 
+hr {
+    width: 85%;
+    border: 0.6px solid #b7b7b7;
+}
+
+/*Breadcrumbs*/
+.breadcrumbs {
+    margin-top: 20vw;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: inline-flex;
+    padding-left: 3vw;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li + li:before {
+    color: #767676;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+.breadcrumbs li + li:before {
+    content: "/\00a0";
+    padding: 2vw;
+}
+
+
 #contentwp {
-    margin: 20vw 6vw;
+    margin: 3vw 6vw;
 }
 
 .flexwrapper {
@@ -196,14 +228,13 @@ p {
     border: 0.7px solid black;
 }
 
-/*
 .poster {
     margin: 15px 0;
     max-width: 300px;
 }
-*/
 
-.about_event {
+.about_event,
+.extradetail {
     margin-bottom: 30px;
     font-family: futura-pt-light, sans-serif;
     font-weight: 400;
@@ -211,11 +242,16 @@ p {
     line-height: 1.6rem;
     color: #626262;
     padding-top: 15px;
+
 }
 
 .anexhibition {
     margin: 4.5vw;
     padding: 0.8rem;
+}
+
+.extradetail {
+    font-size: 1.2rem;
 }
 
 /*Footer*/
@@ -232,10 +268,6 @@ p {
     justify-content: center;
 }
 
-.bottombar {
-    width: 85%;
-    border: 0.7px solid #cecdcd;
-}
 
 p.txt {
     font-size: 0.8rem;
@@ -285,7 +317,6 @@ p.txt_1 {
 @media only screen and (min-width: 600px) {
     .header .logo {
         width: 10rem;
-        padding-left: 2.5rem;
     }
 
     .header {
@@ -305,20 +336,49 @@ p.txt_1 {
     }
 }
 
-@media screen and (min-width: 800px) {
-    #contentwp {
-        margin: 12vw 5vw;
+@media only screen and (min-width: 1024px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
     }
 
-    img {
-        width: 63%;
+    .breadcrumbs ul {
+        list-style: none;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        display: inline-flex;
+        padding-left: 4vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.2vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
     }
 }
 
-@media screen and (min-width: 1100px) {
-    .flexcontent {
-        width: 450px;
-        margin: auto;
+@media only screen and (max-width: 1023px) and (min-width: 800px) {
+
+    /*Breadcrumbs*/
+    .breadcrumbs {
+        margin-top: 10vw;
+    }
+
+    .breadcrumbs li a,
+    .breadcrumbs li + li:before {
+        color: #767676;
+        font-size: 1.5vw;
+    }
+
+    .breadcrumbs li + li:before {
+        content: "/\00a0";
+        padding: 2vw;
     }
 
 }
